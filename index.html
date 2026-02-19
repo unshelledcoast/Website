@@ -31,7 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle parchment texture */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -50,7 +49,6 @@ body::before {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
 }
-
 .announcement a { color: #f5c98a; text-decoration: none; border-bottom: 1px solid currentColor; }
 
 /* ─── NAVIGATION ─── */
@@ -66,7 +64,6 @@ nav {
   justify-content: space-between;
   height: 72px;
 }
-
 .nav-logo {
   font-family: 'Cormorant SC', serif;
   font-size: 1.15rem;
@@ -75,7 +72,6 @@ nav {
   color: var(--ink);
   text-decoration: none;
 }
-
 .nav-logo span {
   display: block;
   font-size: 0.6rem;
@@ -84,13 +80,7 @@ nav {
   color: var(--gold);
   margin-top: -2px;
 }
-
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
+.nav-links { display: flex; gap: 40px; list-style: none; }
 .nav-links a {
   font-family: 'Cormorant SC', serif;
   font-size: 0.85rem;
@@ -100,22 +90,18 @@ nav {
   transition: color 0.2s;
   position: relative;
 }
-
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -3px;
-  left: 0; right: 0;
+  bottom: -3px; left: 0; right: 0;
   height: 1px;
   background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s;
 }
-
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { transform: scaleX(1); }
-
 .nav-enroll {
   font-family: 'Cormorant SC', serif;
   font-size: 0.8rem;
@@ -137,15 +123,13 @@ nav {
   grid-template-columns: 1fr 1fr;
   position: relative;
 }
-
 .hero-left {
-  padding: 80px 60px 80px 60px;
+  padding: 80px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-right: 1px solid var(--divider);
 }
-
 .hero-eyebrow {
   font-family: 'Cormorant SC', serif;
   font-size: 0.75rem;
@@ -153,7 +137,6 @@ nav {
   color: var(--gold);
   margin-bottom: 24px;
 }
-
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 5vw, 5rem);
@@ -162,12 +145,7 @@ nav {
   letter-spacing: -0.01em;
   margin-bottom: 32px;
 }
-
-.hero-title em {
-  font-style: italic;
-  color: var(--crimson);
-}
-
+.hero-title em { font-style: italic; color: var(--crimson); }
 .hero-subtitle {
   font-size: 1.05rem;
   color: var(--muted);
@@ -175,14 +153,7 @@ nav {
   margin-bottom: 48px;
   line-height: 1.8;
 }
-
-.hero-cta-group {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
+.hero-cta-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .btn-primary {
   font-family: 'Cormorant SC', serif;
   font-size: 0.8rem;
@@ -197,7 +168,6 @@ nav {
   display: inline-block;
 }
 .btn-primary:hover { background: var(--crimson); }
-
 .btn-secondary {
   font-family: 'Cormorant SC', serif;
   font-size: 0.8rem;
@@ -212,13 +182,7 @@ nav {
   display: inline-block;
 }
 .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-
-.hero-right {
-  position: relative;
-  overflow: hidden;
-  background: var(--ink);
-}
-
+.hero-right { position: relative; overflow: hidden; background: var(--ink); }
 .hero-image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -226,37 +190,17 @@ nav {
   height: 100%;
   gap: 2px;
 }
-
-.hero-img-cell {
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-img-cell, .course-img, .featured-img {
-  background: #1a1610;
-}
-
-.hero-img-cell img, .course-img img, .featured-img img {
+.hero-img-cell { overflow: hidden; position: relative; background: #1a1610; }
+.hero-img-cell img {
+  width: 100%; height: 100%; object-fit: cover;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.6s ease, filter 0.4s;
 }
-
-.hero-img-cell img.loaded,
-.course-img img.loaded,
-.featured-img img.loaded {
-  opacity: 1;
-}
-
-
-.hero-img-cell:hover img {
-  transform: scale(1.04);
-  filter: sepia(10%) contrast(1.1);
-}
-
+.hero-img-cell img.loaded { opacity: 1; }
+.hero-img-cell:hover img { transform: scale(1.04); filter: sepia(10%) contrast(1.1); }
 .hero-img-label {
   position: absolute;
-  bottom: 12px;
-  left: 14px;
+  bottom: 12px; left: 14px;
   font-family: 'Cormorant SC', serif;
   font-size: 0.65rem;
   letter-spacing: 0.2em;
@@ -266,7 +210,7 @@ nav {
   backdrop-filter: blur(4px);
 }
 
-/* ─── ORNAMENTAL DIVIDER ─── */
+/* ─── ORNAMENT ─── */
 .ornament {
   text-align: center;
   padding: 40px 0;
@@ -276,14 +220,8 @@ nav {
   opacity: 0.6;
 }
 
-/* ─── INTRO SECTION ─── */
-.intro {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 80px 40px;
-  text-align: center;
-}
-
+/* ─── INTRO ─── */
+.intro { max-width: 800px; margin: 0 auto; padding: 80px 40px; text-align: center; }
 .intro-heading {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
@@ -291,21 +229,11 @@ nav {
   line-height: 1.2;
   margin-bottom: 28px;
 }
-
 .intro-heading em { font-style: italic; color: var(--crimson); }
+.intro p { font-size: 1.05rem; color: var(--muted); line-height: 1.9; margin-bottom: 20px; }
 
-.intro p {
-  font-size: 1.05rem;
-  color: var(--muted);
-  line-height: 1.9;
-  margin-bottom: 20px;
-}
-
-/* ─── COURSES SECTION ─── */
-.section {
-  padding: 80px 60px;
-}
-
+/* ─── COURSES ─── */
+.section { padding: 80px 60px; }
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -314,28 +242,14 @@ nav {
   padding-bottom: 20px;
   margin-bottom: 60px;
 }
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 300;
-}
-
-.section-subtitle {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-}
-
-/* Course cards */
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; }
+.section-subtitle { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--gold); }
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   background: var(--divider);
 }
-
 .course-card {
   background: var(--parchment);
   display: grid;
@@ -343,39 +257,23 @@ nav {
   min-height: 340px;
   transition: background 0.3s;
 }
-
-.course-card.upcoming { grid-template-columns: 280px 1fr; }
 .course-card.future { opacity: 0.55; cursor: default; }
-
-.course-img {
-  overflow: hidden;
-  position: relative;
-}
-
+.course-img { overflow: hidden; position: relative; background: #1a1610; }
 .course-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; height: 100%; object-fit: cover;
   filter: sepia(25%) contrast(1.05);
   transition: transform 0.5s ease;
+  opacity: 0;
 }
-
+.course-img img.loaded { opacity: 1; }
 .course-card:hover .course-img img { transform: scale(1.05); }
-
 .course-body {
   padding: 40px 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.course-meta {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-  align-items: center;
-}
-
+.course-meta { display: flex; gap: 16px; margin-bottom: 16px; align-items: center; }
 .course-tag {
   font-family: 'Cormorant SC', serif;
   font-size: 0.65rem;
@@ -383,94 +281,31 @@ nav {
   padding: 4px 12px;
   border: 1px solid;
 }
-
 .course-tag.available { border-color: var(--gold); color: var(--gold); }
-.course-tag.upcoming { border-color: var(--crimson); color: var(--crimson); }
+.course-tag.enrolling { border-color: var(--crimson); color: var(--crimson); }
 .course-tag.coming-soon { border-color: var(--muted); color: var(--muted); }
+.course-quarter { font-family: 'Cormorant SC', serif; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); }
+.course-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; line-height: 1.2; margin-bottom: 8px; }
+.course-author { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-bottom: 16px; }
+.course-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
+.course-details { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.course-detail-item { display: flex; flex-direction: column; gap: 2px; }
+.detail-label { font-family: 'Cormorant SC', serif; font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); }
+.detail-value { font-size: 0.88rem; color: var(--ink-light); }
 
-.course-quarter {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  color: var(--muted);
-}
-
-.course-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.course-author {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
-.course-desc {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.75;
-  margin-bottom: 24px;
-}
-
-.course-details {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 28px;
-}
-
-.course-detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.detail-label {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.25em;
-  color: var(--gold);
-}
-
-.detail-value {
-  font-size: 0.88rem;
-  color: var(--ink-light);
-}
-
-/* ─── CURRENT COURSE FEATURE ─── */
-.featured-course {
-  background: var(--ink);
-  color: var(--parchment);
-  padding: 80px 60px;
-}
-
+/* ─── FEATURED COURSE ─── */
+.featured-course { background: var(--ink); color: var(--parchment); padding: 80px 60px; }
 .featured-course .section-title { color: var(--parchment); }
 .featured-course .section-subtitle { color: var(--gold-light); }
 .featured-course .section-header { border-bottom-color: rgba(247,242,232,0.1); }
-
-.featured-inner {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.featured-img {
-  position: relative;
-}
-
+.featured-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; }
+.featured-img { position: relative; background: #1a1610; }
 .featured-img img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+  width: 100%; aspect-ratio: 3/4; object-fit: cover;
   filter: sepia(20%) contrast(1.1);
+  opacity: 0; transition: opacity 0.5s ease;
 }
-
+.featured-img img.loaded { opacity: 1; }
 .featured-img-caption {
   font-family: 'Cormorant SC', serif;
   font-size: 0.6rem;
@@ -479,7 +314,6 @@ nav {
   margin-top: 10px;
   text-align: center;
 }
-
 .featured-content h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
@@ -487,296 +321,101 @@ nav {
   line-height: 1.1;
   margin-bottom: 8px;
 }
-
 .featured-content h2 em { font-style: italic; color: var(--gold-light); }
-
-.featured-content .byline {
-  font-style: italic;
-  color: rgba(247,242,232,0.5);
-  font-size: 1rem;
-  margin-bottom: 32px;
-}
-
-.featured-content p {
-  color: rgba(247,242,232,0.7);
-  line-height: 1.85;
-  margin-bottom: 18px;
-  font-size: 0.95rem;
-}
-
-.syllabus-accordion {
-  margin-top: 40px;
-  border-top: 1px solid rgba(247,242,232,0.1);
-}
-
-.accordion-item {
-  border-bottom: 1px solid rgba(247,242,232,0.1);
-}
-
+.featured-content .byline { font-style: italic; color: rgba(247,242,232,0.5); font-size: 1rem; margin-bottom: 32px; }
+.featured-content p { color: rgba(247,242,232,0.7); line-height: 1.85; margin-bottom: 18px; font-size: 0.95rem; }
+.syllabus-accordion { margin-top: 40px; border-top: 1px solid rgba(247,242,232,0.1); }
+.accordion-item { border-bottom: 1px solid rgba(247,242,232,0.1); }
 .accordion-trigger {
-  width: 100%;
-  background: none;
-  border: none;
+  width: 100%; background: none; border: none;
   color: var(--parchment);
   padding: 18px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; justify-content: space-between; align-items: center;
   cursor: pointer;
   font-family: 'Cormorant SC', serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.22em;
+  font-size: 0.8rem; letter-spacing: 0.22em;
   text-align: left;
   transition: color 0.2s;
 }
-
 .accordion-trigger:hover { color: var(--gold-light); }
-
-.accordion-icon {
-  font-size: 1.2rem;
-  font-weight: 300;
-  transition: transform 0.3s;
-  color: var(--gold-light);
-  line-height: 1;
-}
-
+.accordion-icon { font-size: 1.2rem; font-weight: 300; transition: transform 0.3s; color: var(--gold-light); line-height: 1; }
 .accordion-trigger.open .accordion-icon { transform: rotate(45deg); }
-
-.accordion-content {
-  display: none;
-  padding: 0 0 24px;
-  color: rgba(247,242,232,0.65);
-  font-size: 0.9rem;
-  line-height: 1.85;
-}
-
+.accordion-content { display: none; padding: 0 0 24px; color: rgba(247,242,232,0.65); font-size: 0.9rem; line-height: 1.85; }
 .accordion-content.open { display: block; }
+.accordion-content ul { list-style: none; padding: 0; }
+.accordion-content li { padding: 6px 0 6px 20px; position: relative; }
+.accordion-content li::before { content: '—'; position: absolute; left: 0; color: var(--gold-light); opacity: 0.6; }
+.accordion-content strong { color: rgba(247,242,232,0.9); }
 
-.accordion-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.accordion-content li {
-  padding: 6px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.accordion-content li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold-light);
-  opacity: 0.6;
-}
-
-.accordion-content strong {
-  color: rgba(247,242,232,0.9);
-}
-
-/* ─── ENROLL SECTION ─── */
-.enroll-section {
-  padding: 80px 60px;
-  background: var(--parchment-dark);
-  text-align: center;
-}
-
-.enroll-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 300;
-  margin-bottom: 16px;
-}
-
-.enroll-section .sub {
-  font-size: 1rem;
-  color: var(--muted);
-  max-width: 560px;
-  margin: 0 auto 48px;
-  line-height: 1.8;
-}
-
-.payment-methods {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
+/* ─── ENROLL ─── */
+.enroll-section { padding: 80px 60px; background: var(--parchment-dark); text-align: center; }
+.enroll-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; margin-bottom: 16px; }
+.enroll-section .sub { font-size: 1rem; color: var(--muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.8; }
+.payment-methods { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
 .payment-pill {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  border: 1px solid var(--divider);
-  padding: 12px 28px;
-  background: var(--parchment);
-  color: var(--ink-light);
+  font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.2em;
+  border: 1px solid var(--divider); padding: 12px 28px;
+  background: var(--parchment); color: var(--ink-light);
 }
+.enroll-contact { font-size: 0.95rem; color: var(--muted); }
+.enroll-contact a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid currentColor; }
 
-.enroll-contact {
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.enroll-contact a {
-  color: var(--crimson);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-/* ─── ABOUT / INSTRUCTOR ─── */
-.about-section {
-  padding: 80px 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
+/* ─── ABOUT ─── */
+.about-section { padding: 80px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .about-img-placeholder {
   background: var(--ink);
   aspect-ratio: 4/5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   color: rgba(247,242,232,0.2);
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  text-align: center;
-  padding: 40px;
+  font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em;
+  text-align: center; padding: 40px;
   border: 1px solid rgba(247,242,232,0.08);
 }
+.about-img-wrap { aspect-ratio: 4/5; overflow: hidden; }
+.about-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s; }
+.about-img-wrap img.loaded { opacity: 1; }
+.about-content .eyebrow { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 16px; }
+.about-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.15; margin-bottom: 24px; }
+.about-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.9; margin-bottom: 18px; }
 
-.about-content .eyebrow {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  color: var(--gold);
-  margin-bottom: 16px;
-}
-
-.about-content h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300;
-  line-height: 1.15;
-  margin-bottom: 24px;
-}
-
-.about-content p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.9;
-  margin-bottom: 18px;
-}
-
-/* ─── TESTIMONIAL / QUOTE ─── */
-.quote-section {
-  background: var(--crimson);
-  padding: 80px 60px;
-  text-align: center;
-}
-
+/* ─── QUOTE ─── */
+.quote-section { background: var(--crimson); padding: 80px 60px; text-align: center; }
 .quote-text {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  font-weight: 300;
-  font-style: italic;
-  color: #f5e6d0;
-  max-width: 800px;
-  margin: 0 auto 24px;
-  line-height: 1.5;
+  font-weight: 300; font-style: italic;
+  color: #f5e6d0; max-width: 800px;
+  margin: 0 auto 24px; line-height: 1.5;
 }
-
-.quote-attr {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: rgba(245,230,208,0.55);
-}
+.quote-attr { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(245,230,208,0.55); }
 
 /* ─── FOOTER ─── */
 footer {
-  background: var(--ink);
-  color: rgba(247,242,232,0.6);
+  background: var(--ink); color: rgba(247,242,232,0.6);
   padding: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
   border-top: 3px solid var(--crimson);
 }
-
-.footer-brand .logo {
-  font-family: 'Cormorant SC', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--parchment);
-  letter-spacing: 0.12em;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.footer-brand .tagline {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  color: var(--gold-light);
-  opacity: 0.8;
-}
-
-.footer-brand p {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  margin-top: 16px;
-}
-
-.footer-col h4 {
-  font-family: 'Cormorant SC', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: var(--gold-light);
-  margin-bottom: 16px;
-}
-
+.footer-brand .logo { font-family: 'Cormorant SC', serif; font-size: 1.1rem; font-weight: 600; color: var(--parchment); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+.footer-brand .tagline { font-family: 'Cormorant SC', serif; font-size: 0.6rem; letter-spacing: 0.3em; color: var(--gold-light); opacity: 0.8; }
+.footer-brand p { font-size: 0.85rem; line-height: 1.7; margin-top: 16px; }
+.footer-col h4 { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--gold-light); margin-bottom: 16px; }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 8px; }
-.footer-col a {
-  color: rgba(247,242,232,0.55);
-  text-decoration: none;
-  font-size: 0.88rem;
-  transition: color 0.2s;
-}
+.footer-col a { color: rgba(247,242,232,0.55); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
 .footer-col a:hover { color: var(--gold-light); }
-
 .footer-bottom {
-  background: var(--ink);
-  border-top: 1px solid rgba(247,242,232,0.08);
-  padding: 20px 60px;
-  text-align: center;
-  font-size: 0.75rem;
-  color: rgba(247,242,232,0.25);
-  font-family: 'Cormorant SC', serif;
-  letter-spacing: 0.2em;
+  background: var(--ink); border-top: 1px solid rgba(247,242,232,0.08);
+  padding: 20px 60px; text-align: center;
+  font-size: 0.75rem; color: rgba(247,242,232,0.25);
+  font-family: 'Cormorant SC', serif; letter-spacing: 0.2em;
 }
 
 /* ─── ANIMATIONS ─── */
-.fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: fadeUp 0.9s cubic-bezier(0.4,0,0.2,1) forwards;
-}
-.d1 { animation-delay: 0.1s; }
-.d2 { animation-delay: 0.25s; }
-.d3 { animation-delay: 0.4s; }
-.d4 { animation-delay: 0.55s; }
-.d5 { animation-delay: 0.7s; }
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
+.fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.9s cubic-bezier(0.4,0,0.2,1) forwards; }
+.d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.25s; } .d3 { animation-delay: 0.4s; }
+.d4 { animation-delay: 0.55s; } .d5 { animation-delay: 0.7s; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
@@ -802,7 +441,7 @@ footer {
 <body>
 
 <!-- ANNOUNCEMENT BAR -->
-<div class="announcement">
+<div class="announcement" id="announcement-bar">
   Now Enrolling: Homer's <em>Iliad</em> — Q2 2026 &nbsp;·&nbsp; <a href="#enroll">Reserve your place</a>
 </div>
 
@@ -824,19 +463,17 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow fade-up d1">Online Literature · Classics · Epic Poetry</p>
-    <h1 class="hero-title fade-up d2">
-      The Great<br>
-      <em>Epic Poets</em><br>
-      Taught Well.
+    <p class="hero-eyebrow fade-up d1" id="hero-eyebrow">Online Literature · Classics · Epic Poetry</p>
+    <h1 class="hero-title fade-up d2" id="hero-title">
+      The Great<br><em>Epic Poets</em><br>Taught Well.
     </h1>
-    <p class="hero-subtitle fade-up d3">
+    <p class="hero-subtitle fade-up d3" id="hero-subtitle">
       Immersive online courses in Homer, Virgil, Dante, and Milton — 
       guided by an instructor who believes these poems can change your life.
     </p>
     <div class="hero-cta-group fade-up d4">
-      <a href="#courses" class="btn-primary">View Courses</a>
-      <a href="#iliad" class="btn-secondary">Current Course</a>
+      <a id="hero-btn-primary" href="#courses" class="btn-primary">View Courses</a>
+      <a id="hero-btn-secondary" href="#iliad" class="btn-secondary">Current Course</a>
     </div>
   </div>
   <div class="hero-right">
@@ -866,65 +503,52 @@ footer {
 
 <!-- INTRO -->
 <section class="intro">
-  <h2 class="intro-heading">
+  <h2 class="intro-heading" id="intro-heading">
     Four poets. Four poems.<br>
     <em>One year of enlightenment.</em>
   </h2>
-  <p>
-    The four great epic poems of Western literature — the <em>Iliad</em>, the <em>Aeneid</em>, 
-    the <em>Divine Comedy</em>, and <em>Paradise Lost</em> — are not relics. They are living works 
-    that speak directly to how we love, grieve, choose, and seek meaning.
-  </p>
-  <p>
-    Each quarter, one course. Each course, one poem. Small groups, weekly live sessions, 
-    pre-recorded lectures, and an instructor who has spent years learning how to make 
-    these texts come alive for modern readers.
-  </p>
+  <div id="intro-paras">
+    <p>
+      The four great epic poems of Western literature — the <em>Iliad</em>, the <em>Aeneid</em>, 
+      the <em>Divine Comedy</em>, and <em>Paradise Lost</em> — are not relics. They are living works 
+      that speak directly to how we love, grieve, choose, and seek meaning.
+    </p>
+    <p>
+      Each quarter, one course. Each course, one poem. Small groups, weekly live sessions, 
+      pre-recorded lectures, and an instructor who has spent years learning how to make 
+      these texts come alive for modern readers.
+    </p>
+  </div>
 </section>
 
-<!-- COURSES OVERVIEW -->
+<!-- COURSES GRID -->
 <section class="section" id="courses">
   <div class="section-header">
     <h2 class="section-title">The Four Courses</h2>
     <span class="section-subtitle">2026 Year-Round Program</span>
   </div>
 
-  <div class="courses-grid">
+  <div class="courses-grid" id="courses-grid">
 
     <!-- ILIAD -->
-    <div class="course-card upcoming">
+    <div class="course-card">
       <div class="course-img">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Achilles_and_Patroclus.jpg/600px-Achilles_and_Patroclus.jpg" alt="Achilles and Patroclus — ancient Greek vase" loading="lazy">
       </div>
       <div class="course-body">
         <div>
           <div class="course-meta">
-            <span class="course-tag upcoming">Enrolling Now</span>
+            <span class="course-tag enrolling">Enrolling Now</span>
             <span class="course-quarter">Q2 · 2026</span>
           </div>
           <h3 class="course-title">Homer's <em>Iliad</em></h3>
           <p class="course-author">Translated by E.V. Rieu</p>
-          <p class="course-desc">
-            Rage, glory, grief, and the costs of war. The oldest epic in the Western tradition 
-            is also among its most psychologically rich. We read it not as ancient history 
-            but as a mirror.
-          </p>
-            <div class="course-detail-item">
-              <span class="detail-label">Price</span>
-              <span class="detail-value">$250</span>
-            </div>
-            <div class="course-detail-item">
-              <span class="detail-label">Duration</span>
-              <span class="detail-value">3 Months</span>
-            </div>
-            <div class="course-detail-item">
-              <span class="detail-label">Format</span>
-              <span class="detail-value">Weekly Live + Async</span>
-            </div>
-            <div class="course-detail-item">
-              <span class="detail-label">Sessions</span>
-              <span class="detail-value">13 Classes</span>
-            </div>
+          <p class="course-desc">Rage, glory, grief, and the costs of war. The oldest epic in the Western tradition is also among its most psychologically rich. We read it not as ancient history but as a mirror.</p>
+          <div class="course-details">
+            <div class="course-detail-item"><span class="detail-label">Price</span><span class="detail-value">$250</span></div>
+            <div class="course-detail-item"><span class="detail-label">Duration</span><span class="detail-value">3 Months</span></div>
+            <div class="course-detail-item"><span class="detail-label">Format</span><span class="detail-value">Weekly Live + Async</span></div>
+            <div class="course-detail-item"><span class="detail-label">Sessions</span><span class="detail-value">13 Classes</span></div>
           </div>
         </div>
         <a href="#iliad" class="btn-primary">View Syllabus & Enroll</a>
@@ -934,7 +558,7 @@ footer {
     <!-- DIVINE COMEDY -->
     <div class="course-card">
       <div class="course-img">
-        <img src="https://https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gustave_Dore_Inferno34.jpg/600px-Gustave_Dore_Inferno34.jpg" alt="Gustave Doré — Dante's Inferno, Charon" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gustave_Dore_Inferno34.jpg/600px-Gustave_Dore_Inferno34.jpg" alt="Gustave Doré — Dante's Inferno" loading="lazy">
       </div>
       <div class="course-body">
         <div>
@@ -944,20 +568,10 @@ footer {
           </div>
           <h3 class="course-title">Dante's <em>Divine Comedy</em></h3>
           <p class="course-author">Inferno · Purgatorio · Paradiso</p>
-          <p class="course-desc">
-            A journey through Hell, Purgatory, and Heaven that is really a journey 
-            through the full range of human experience. Dante's masterwork — 
-            fully built and offered.
-          </p>
+          <p class="course-desc">A journey through Hell, Purgatory, and Heaven that is really a journey through the full range of human experience. Dante's masterwork — fully built and offered.</p>
           <div class="course-details">
-            <div class="course-detail-item">
-              <span class="detail-label">Status</span>
-              <span class="detail-value">Course Built</span>
-            </div>
-            <div class="course-detail-item">
-              <span class="detail-label">Format</span>
-              <span class="detail-value">Weekly Live + Async</span>
-            </div>
+            <div class="course-detail-item"><span class="detail-label">Status</span><span class="detail-value">Course Built</span></div>
+            <div class="course-detail-item"><span class="detail-label">Format</span><span class="detail-value">Weekly Live + Async</span></div>
           </div>
         </div>
         <a href="#enroll" class="btn-secondary">Inquire About This Course</a>
@@ -967,7 +581,7 @@ footer {
     <!-- AENEID -->
     <div class="course-card future">
       <div class="course-img">
-        <img src="https://https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg/600px-Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg" alt="Aeneas and Dido — Guérin" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg/600px-Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg" alt="Virgil Reading the Aeneid — Jean-Baptiste Wicar" loading="lazy">
       </div>
       <div class="course-body">
         <div>
@@ -977,25 +591,19 @@ footer {
           </div>
           <h3 class="course-title">Virgil's <em>Aeneid</em></h3>
           <p class="course-author">Translated by Robert Fagles</p>
-          <p class="course-desc">
-            Rome's founding epic and one of the greatest meditations on duty, fate, 
-            and the price of empire. A poem that never stops asking hard questions.
-          </p>
+          <p class="course-desc">Rome's founding epic and one of the greatest meditations on duty, fate, and the price of empire. A poem that never stops asking hard questions.</p>
           <div class="course-details">
-            <div class="course-detail-item">
-              <span class="detail-label">Status</span>
-              <span class="detail-value">In Development</span>
-            </div>
+            <div class="course-detail-item"><span class="detail-label">Status</span><span class="detail-value">In Development</span></div>
           </div>
         </div>
-        <span class="btn-secondary" style="display:inline-block; opacity:0.5; pointer-events:none;">Coming Q3 2026</span>
+        <span class="btn-secondary" style="opacity:0.5;pointer-events:none;">Coming Q3 2026</span>
       </div>
     </div>
 
     <!-- PARADISE LOST -->
     <div class="course-card future">
       <div class="course-img">
-        <img src="https://https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/John_Martin_-_Pandemonium_-_1841.jpg/600px-John_Martin_-_Pandemonium_-_1841.jpg" alt="John Martin — Pandemonium, Paradise Lost" loading="lazy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/John_Martin_-_Pandemonium_-_1841.jpg/600px-John_Martin_-_Pandemonium_-_1841.jpg" alt="John Martin — Pandemonium, Paradise Lost" loading="lazy">
       </div>
       <div class="course-body">
         <div>
@@ -1005,18 +613,12 @@ footer {
           </div>
           <h3 class="course-title">Milton's <em>Paradise Lost</em></h3>
           <p class="course-author">The Complete Poem</p>
-          <p class="course-desc">
-            The most ambitious poem in the English language — Satan, free will, 
-            the Fall, and what it means to be human. Milton closes out the year in the grandest possible way.
-          </p>
+          <p class="course-desc">The most ambitious poem in the English language — Satan, free will, the Fall, and what it means to be human. Milton closes out the year in the grandest possible way.</p>
           <div class="course-details">
-            <div class="course-detail-item">
-              <span class="detail-label">Status</span>
-              <span class="detail-value">In Development</span>
-            </div>
+            <div class="course-detail-item"><span class="detail-label">Status</span><span class="detail-value">In Development</span></div>
           </div>
         </div>
-        <span class="btn-secondary" style="display:inline-block; opacity:0.5; pointer-events:none;">Coming Q4 2026</span>
+        <span class="btn-secondary" style="opacity:0.5;pointer-events:none;">Coming Q4 2026</span>
       </div>
     </div>
 
@@ -1026,37 +628,31 @@ footer {
 <!-- FEATURED COURSE: THE ILIAD -->
 <section class="featured-course" id="iliad">
   <div class="section-header">
-    <h2 class="section-title">Now Enrolling</h2>
-    <span class="section-subtitle">Q2 · 2026 Course</span>
+    <h2 class="section-title" id="featured-section-heading">Now Enrolling</h2>
+    <span class="section-subtitle" id="featured-section-subtitle">Q2 · 2026 Course</span>
   </div>
 
   <div class="featured-inner">
-
     <div class="featured-img">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Achilles_and_Patroclus.jpg/600px-Achilles_and_Patroclus.jpg" alt="Achilles and Patroclus — Greek vase painting">
-      <p class="featured-img-caption">Achilles tending Patroclus · Attic red-figure kylix · c. 500 BCE · Altes Museum, Berlin</p>
+      <img id="featured-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Achilles_and_Patroclus.jpg/600px-Achilles_and_Patroclus.jpg"
+        alt="Achilles and Patroclus — Greek vase painting">
+      <p class="featured-img-caption" id="featured-img-caption">Achilles tending Patroclus · Attic red-figure kylix · c. 500 BCE · Altes Museum, Berlin</p>
     </div>
 
     <div class="featured-content">
-      <div class="course-meta" style="margin-bottom: 12px;">
-        <span class="course-tag upcoming">Enrolling Now</span>
+      <div class="course-meta" style="margin-bottom:12px;">
+        <span class="course-tag enrolling">Enrolling Now</span>
       </div>
-      <h2>Homer's <em>Iliad</em></h2>
-      <p class="byline">Translated by E.V. Rieu · Instructor: Nick Rosado</p>
+      <h2 id="featured-title">Homer's <em>Iliad</em></h2>
+      <p class="byline" id="featured-byline">Translated by E.V. Rieu · Instructor: Nick Rosado</p>
 
-      <p>
-        The <em>Iliad</em> is not primarily a poem about war. It is a poem about what war costs — 
-        in lives, in grief, in the choices that cannot be unmade. Homer's great insight is that 
-        his heroes know this, and choose glory anyway. We will sit with that choice for three months.
-      </p>
+      <div id="featured-paras">
+        <p>The <em>Iliad</em> is not primarily a poem about war. It is a poem about what war costs — in lives, in grief, in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with that choice for three months.</p>
+        <p>Each week: a pre-recorded lecture to prepare you for the reading, a live one-hour session to discuss it together, and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.</p>
+      </div>
 
-      <p>
-        Each week: a pre-recorded lecture to prepare you for the reading, a live one-hour 
-        session to discuss it together, and the kind of close attention to the text that most 
-        readers never get. All sessions are recorded. Asynchronous enrollment is available.
-      </p>
-
-      <div class="syllabus-accordion">
+      <div class="syllabus-accordion" id="syllabus-accordion">
 
         <div class="accordion-item">
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
@@ -1111,7 +707,7 @@ footer {
               <li><strong>2.</strong> Instructor's one to two thematic focus points from the lecture</li>
               <li><strong>3.</strong> All students' line selections and discussion</li>
             </ul>
-            <p style="margin-top: 12px;">After class, students have open access to the instructor for questions.</p>
+            <p style="margin-top:12px;">After class, students have open access to the instructor for questions.</p>
           </div>
         </div>
 
@@ -1144,39 +740,34 @@ footer {
 
       </div><!-- end accordion -->
 
-      <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="#enroll" class="btn-primary">Enroll in This Course</a>
-        <a href="#enroll" class="btn-secondary" style="border-color: rgba(247,242,232,0.25); color: rgba(247,242,232,0.7);">Contact Nick</a>
+      <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;">
+        <a id="featured-enroll-btn" href="#enroll" class="btn-primary">Enroll in This Course</a>
+        <a id="featured-contact-btn" href="#enroll" class="btn-secondary" style="border-color:rgba(247,242,232,0.25);color:rgba(247,242,232,0.7);">Contact Nick</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- QUOTE / PULL -->
+<!-- PULL QUOTE -->
 <section class="quote-section">
-  <p class="quote-text">
-    "Sing, goddess, the anger of Achilles — and the grief it brought upon the Greeks."
-  </p>
-  <p class="quote-attr">Homer · Iliad · Book I · Opening Line</p>
+  <p class="quote-text" id="quote-text">"Sing, goddess, the anger of Achilles — and the grief it brought upon the Greeks."</p>
+  <p class="quote-attr" id="quote-attr">Homer · Iliad · Book I · Opening Line</p>
 </section>
 
 <!-- ENROLL -->
 <section class="enroll-section" id="enroll">
-  <h2>Ready to Enroll?</h2>
-  <p class="sub">
+  <h2 id="enroll-heading">Ready to Enroll?</h2>
+  <p class="sub" id="enroll-sub">
     Each course is <strong>$250</strong>. To reserve your place in the current Iliad course — 
     or to be notified when the next course opens — reach out directly. 
     All enrollment is handled personally by Nick.
   </p>
-
-  <div class="payment-methods">
+  <div class="payment-methods" id="payment-methods">
     <div class="payment-pill">PayPal</div>
     <div class="payment-pill">Venmo</div>
     <div class="payment-pill">Zelle</div>
   </div>
-
-  <p class="enroll-contact">
+  <p class="enroll-contact" id="enroll-contact">
     To enroll or ask questions, email <a href="mailto:Unshelledcoast@gmail.com">Unshelledcoast@gmail.com</a>
     <br>or reach out via the payment method of your choice once enrolled.
   </p>
@@ -1184,27 +775,21 @@ footer {
 
 <!-- ABOUT -->
 <section class="about-section" id="about">
-  <div class="about-img-placeholder">
-    Photo of Nick Rosado<br>
-    <span style="font-size: 0.55rem; display: block; margin-top: 8px; opacity: 0.5;">(Coming soon)</span>
+  <div id="about-img-container">
+    <div class="about-img-placeholder">
+      Photo of Nick Rosado<br>
+      <span style="font-size:0.55rem;display:block;margin-top:8px;opacity:0.5;">(Coming soon)</span>
+    </div>
   </div>
   <div class="about-content">
-    <p class="eyebrow">Your Instructor</p>
-    <h2>Nick Rosado</h2>
-    <p>
-      I teach literature for the same reason Homer sang — because these stories matter, 
-      and because most of us were never given the tools to really enter them.
-    </p>
-    <p>
-      My courses are built around a simple conviction: the great epic poems are not difficult 
-      because they are obscure, but because they are deep. Given the right context, the right 
-      questions, and the right companions for the journey, anyone can read them — and be changed by them.
-    </p>
-    <p>
-      The <em>Divine Comedy</em> course is fully built and available. The <em>Iliad</em> course 
-      launches Q2 2026. The <em>Aeneid</em> and <em>Paradise Lost</em> follow through the year.
-    </p>
-    <a href="#enroll" class="btn-primary" style="margin-top: 8px;">Get in Touch</a>
+    <p class="eyebrow" id="about-eyebrow">Your Instructor</p>
+    <h2 id="about-name">Nick Rosado</h2>
+    <div id="about-paras">
+      <p>I teach literature for the same reason Homer sang — because these stories matter, and because most of us were never given the tools to really enter them.</p>
+      <p>My courses are built around a simple conviction: the great epic poems are not difficult because they are obscure, but because they are deep. Given the right context, the right questions, and the right companions for the journey, anyone can read them — and be changed by them.</p>
+      <p>The <em>Divine Comedy</em> course is fully built and available. The <em>Iliad</em> course launches Q2 2026. The <em>Aeneid</em> and <em>Paradise Lost</em> follow through the year.</p>
+    </div>
+    <a href="#enroll" class="btn-primary" style="margin-top:8px;" id="about-btn">Get in Touch</a>
   </div>
 </section>
 
@@ -1213,10 +798,7 @@ footer {
   <div class="footer-brand">
     <span class="logo">Enlightenment Educator</span>
     <span class="tagline">Nick Rosado · EnlightenmentEducator.com</span>
-    <p>
-      Online literature courses for adults, focused on the four great epic poets 
-      of the Western tradition: Homer, Virgil, Dante, and Milton.
-    </p>
+    <p>Online literature courses for adults, focused on the four great epic poets of the Western tradition: Homer, Virgil, Dante, and Milton.</p>
   </div>
   <div class="footer-col">
     <h4>Courses</h4>
@@ -1236,39 +818,204 @@ footer {
     </ul>
   </div>
 </footer>
+<div class="footer-bottom">© 2026 Enlightenment Educator · Nick Rosado · All Rights Reserved</div>
 
-<div class="footer-bottom">
-  © 2026 Enlightenment Educator · Nick Rosado · All Rights Reserved
-</div>
-
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
-// Fade images in when they load
-document.querySelectorAll('img').forEach(img => {
-  if (img.complete) {
-    img.classList.add('loaded');
-  } else {
-    img.addEventListener('load', () => img.classList.add('loaded'));
-  }
-});
+// ─────────────────────────────────────────────────────────────────────────────
+// CMS OVERRIDE LAYER
+// All content above is baked in and works with no server.
+// When deployed on Netlify, this script fetches the _data JSON files and
+// updates the page with any edits made through the CMS admin panel.
+// If a fetch fails (e.g. local file open), it silently keeps the baked-in content.
+// ─────────────────────────────────────────────────────────────────────────────
 
+async function tryFetch(path) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) {
+    return null; // silently keep baked-in content
+  }
+}
+
+function mdToHtml(text) {
+  text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  const lines = text.split('\n');
+  let html = '', inList = false;
+  for (let line of lines) {
+    const t = line.trim();
+    if (t.startsWith('- ') || t.startsWith('* ')) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      html += `<li>${t.slice(2)}</li>`;
+    } else {
+      if (inList) { html += '</ul>'; inList = false; }
+      if (t) html += `<p>${t}</p>`;
+    }
+  }
+  if (inList) html += '</ul>';
+  return html;
+}
+
+async function applyCMSOverrides() {
+
+  // Announcement
+  const ann = await tryFetch('/_data/announcement.json');
+  if (ann) {
+    document.getElementById('announcement-bar').innerHTML =
+      `${ann.text} &nbsp;·&nbsp; <a href="${ann.link_target}">${ann.link_label}</a>`;
+  }
+
+  // Hero
+  const hero = await tryFetch('/_data/hero.json');
+  if (hero) {
+    document.getElementById('hero-eyebrow').textContent = hero.eyebrow;
+    document.getElementById('hero-title').innerHTML =
+      `${hero.title_line1}<br><em>${hero.title_line2}</em><br>${hero.title_line3}`;
+    document.getElementById('hero-subtitle').textContent = hero.subtitle;
+    const p = document.getElementById('hero-btn-primary');
+    p.textContent = hero.btn_primary_label; p.href = hero.btn_primary_link;
+    const s = document.getElementById('hero-btn-secondary');
+    s.textContent = hero.btn_secondary_label; s.href = hero.btn_secondary_link;
+  }
+
+  // Intro
+  const intro = await tryFetch('/_data/intro.json');
+  if (intro) {
+    document.getElementById('intro-heading').innerHTML =
+      `${intro.heading1}<br><em>${intro.heading2}</em>`;
+    document.getElementById('intro-paras').innerHTML =
+      `<p>${intro.para1}</p><p>${intro.para2}</p>`;
+  }
+
+  // Courses grid
+  const courseFiles = ['iliad', 'divine-comedy', 'aeneid', 'paradise-lost'];
+  const courses = (await Promise.all(
+    courseFiles.map(f => tryFetch(`/_data/courses/${f}.json`))
+  )).filter(Boolean);
+
+  if (courses.length > 0) {
+    const grid = document.getElementById('courses-grid');
+    grid.innerHTML = '';
+    courses.sort((a, b) => (a.order || 99) - (b.order || 99)).forEach(c => {
+      const isFuture = c.disabled || c.status === 'coming-soon';
+      const details = [
+        c.price         ? `<div class="course-detail-item"><span class="detail-label">Price</span><span class="detail-value">${c.price}</span></div>` : '',
+        c.duration      ? `<div class="course-detail-item"><span class="detail-label">Duration</span><span class="detail-value">${c.duration}</span></div>` : '',
+        c.format        ? `<div class="course-detail-item"><span class="detail-label">Format</span><span class="detail-value">${c.format}</span></div>` : '',
+        c.sessions      ? `<div class="course-detail-item"><span class="detail-label">Sessions</span><span class="detail-value">${c.sessions}</span></div>` : '',
+        c.status_detail ? `<div class="course-detail-item"><span class="detail-label">Status</span><span class="detail-value">${c.status_detail}</span></div>` : '',
+      ].join('');
+      const btn = isFuture
+        ? `<span class="btn-secondary" style="opacity:0.5;pointer-events:none;">${c.cta_label}</span>`
+        : `<a href="${c.cta_link}" class="${c.status === 'enrolling' ? 'btn-primary' : 'btn-secondary'}">${c.cta_label}</a>`;
+      grid.innerHTML += `
+        <div class="course-card${isFuture ? ' future' : ''}">
+          <div class="course-img">${c.image ? `<img src="${c.image}" alt="${c.image_alt || ''}" loading="lazy">` : ''}</div>
+          <div class="course-body">
+            <div>
+              <div class="course-meta">
+                <span class="course-tag ${c.status}">${c.status_label}</span>
+                <span class="course-quarter">${c.quarter}</span>
+              </div>
+              <h3 class="course-title">${c.title}</h3>
+              <p class="course-author">${c.author}</p>
+              <p class="course-desc">${c.desc}</p>
+              ${details ? `<div class="course-details">${details}</div>` : ''}
+            </div>
+            ${btn}
+          </div>
+        </div>`;
+    });
+  }
+
+  // Featured
+  const feat = await tryFetch('/_data/featured.json');
+  if (feat) {
+    document.getElementById('featured-section-heading').textContent = feat.section_heading;
+    document.getElementById('featured-section-subtitle').textContent = feat.section_subtitle;
+    document.getElementById('featured-title').innerHTML = feat.title.replace(/Iliad/, '<em>Iliad</em>');
+    document.getElementById('featured-byline').textContent = feat.byline;
+    if (feat.image) { const img = document.getElementById('featured-img'); img.src = feat.image; }
+    document.getElementById('featured-img-caption').textContent = feat.image_caption;
+    document.getElementById('featured-paras').innerHTML = `<p>${feat.para1}</p><p>${feat.para2}</p>`;
+    document.getElementById('featured-enroll-btn').textContent = feat.enroll_label;
+    document.getElementById('featured-contact-btn').textContent = feat.contact_label;
+    if (feat.syllabus && feat.syllabus.length) {
+      document.getElementById('syllabus-accordion').innerHTML = feat.syllabus.map(item => `
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            ${item.title}<span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">${mdToHtml(item.content)}</div>
+        </div>`).join('');
+    }
+  }
+
+  // Quote
+  const quote = await tryFetch('/_data/quote.json');
+  if (quote) {
+    document.getElementById('quote-text').textContent = `"${quote.text}"`;
+    document.getElementById('quote-attr').textContent = quote.attr;
+  }
+
+  // Enroll
+  const enroll = await tryFetch('/_data/enroll.json');
+  if (enroll) {
+    document.getElementById('enroll-heading').textContent = enroll.heading;
+    document.getElementById('enroll-sub').innerHTML = enroll.sub;
+    document.getElementById('payment-methods').innerHTML =
+      (enroll.payment_methods || []).map(m => `<div class="payment-pill">${m}</div>`).join('');
+    document.getElementById('enroll-contact').innerHTML =
+      `To enroll or ask questions, email <a href="mailto:${enroll.email}">${enroll.email}</a><br>or reach out via the payment method of your choice once enrolled.`;
+  }
+
+  // About
+  const about = await tryFetch('/_data/about.json');
+  if (about) {
+    document.getElementById('about-eyebrow').textContent = about.eyebrow;
+    document.getElementById('about-name').textContent = about.name;
+    document.getElementById('about-paras').innerHTML =
+      [about.para1, about.para2, about.para3].filter(Boolean).map(p => `<p>${p}</p>`).join('');
+    document.getElementById('about-btn').textContent = about.btn_label;
+    if (about.photo) {
+      document.getElementById('about-img-container').innerHTML =
+        `<div class="about-img-wrap"><img src="${about.photo}" alt="${about.name}" loading="lazy"></div>`;
+    }
+  }
+
+  // Re-watch all images after any CMS updates
+  watchImages();
+}
+
+// ── Image fade-in ──────────────────────────────────────────────────────────
+function watchImages() {
+  document.querySelectorAll('img').forEach(img => {
+    if (img.complete) img.classList.add('loaded');
+    else img.addEventListener('load', () => img.classList.add('loaded'));
+  });
+}
+
+// ── Accordion ──────────────────────────────────────────────────────────────
 function toggleAccordion(trigger) {
   const content = trigger.nextElementSibling;
   const isOpen = content.classList.contains('open');
-  // Close all
   document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
   document.querySelectorAll('.accordion-trigger').forEach(t => t.classList.remove('open'));
-  // Open this one if it was closed
-  if (!isOpen) {
-    content.classList.add('open');
-    trigger.classList.add('open');
-  }
+  if (!isOpen) { content.classList.add('open'); trigger.classList.add('open'); }
 }
+
+// ── Boot ───────────────────────────────────────────────────────────────────
+watchImages();
+applyCMSOverrides(); // tries to fetch JSON; silently does nothing if offline
+
+// ── Netlify Identity ───────────────────────────────────────────────────────
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
+      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
     }
   });
 }
