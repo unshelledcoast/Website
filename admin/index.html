@@ -170,7 +170,7 @@
       h("div", { className: "payment-methods" },
         (d.payment_methods || []).map(function(m) { return h("div", { className: "payment-pill" }, m); })
       ),
-      h("p", { className: "enroll-contact" }, "To enroll or ask questions, email ", h("a", { href: "mailto:" + d.email }, d.email))
+      h("p", { className: "enroll-contact" }, d.contact_prefix + " ", h("a", { href: "mailto:" + d.email }, d.email), h("br", {}), d.contact_sub)
     );
   });
 
