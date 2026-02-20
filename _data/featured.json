@@ -1,15 +1,6 @@
 {
-  "section_heading": "Now Enrolling",
-  "section_subtitle": "Q2 · 2026 Course",
-  "title": "Homer's Iliad",
-  "byline": "Translated by E.V. Rieu · Instructor: Nick Rosado",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Achilles_and_Patroclus.jpg/600px-Achilles_and_Patroclus.jpg",
-  "image_alt": "Achilles and Patroclus — Greek vase painting",
   "image_caption": "Achilles tending Patroclus · Attic red-figure kylix · c. 500 BCE · Altes Museum, Berlin",
-  "para1": "The <em>Iliad</em> is not primarily a poem about war. It is a poem about what war costs — in lives, in grief, in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with that choice for three months.",
-  "para2": "Each week: a pre-recorded lecture to prepare you for the reading, a live one-hour session to discuss it together, and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
-  "enroll_label": "Enroll in This Course",
-  "contact_label": "Contact Nick",
+  "image_alt": "Achilles and Patroclus — Greek vase painting",
   "syllabus": [
     {
       "title": "Format & Expectations",
@@ -35,5 +26,14 @@
       "title": "Classes 2–13: Book-by-Book",
       "content": "Each class covers two Books of the *Iliad* (Books 1–24 across 12 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
     }
-  ]
+  ],
+  "section_heading": "Now Enrolling",
+  "byline": "Translated by E.V. Rieu · Instructor: Nick Rosado",
+  "para1": "The <em>Iliad</em> is not primarily a poem about war. It is a poem about what war costs — in lives, in grief, in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with that choice for three months.",
+  "section_subtitle": "Q2 · 2026 Course",
+  "para2": "Each week: a pre-recorded lecture to prepare you for the reading, a live one-hour session to discuss it together, and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
+  "contact_label": "Contact Nick",
+  "title": "Homer's Iliad",
+  "image": "/images/uploads/9780141394657.jpeg",
+  "enroll_label": "Enroll in This Course"
 }
