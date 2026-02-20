@@ -1,0 +1,15 @@
+{
+  "title": "Milton's Paradise Lost",
+  "author": "The Complete Poem",
+  "quarter": "Q4 · 2026",
+  "status": "coming-soon",
+  "status_label": "Coming Q4",
+  "desc": "The most ambitious poem in the English language — Satan, free will, the Fall, and what it means to be human. Milton closes out the year in the grandest possible way.",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/John_Martin_-_Pandemonium_-_1841.jpg/600px-John_Martin_-_Pandemonium_-_1841.jpg",
+  "image_alt": "John Martin — Pandemonium, Paradise Lost",
+  "status_detail": "In Development",
+  "cta_label": "Coming Q4 2026",
+  "cta_link": "#enroll",
+  "disabled": true,
+  "order": 4
+}
