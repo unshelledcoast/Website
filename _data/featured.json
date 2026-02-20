@@ -1,0 +1,38 @@
+{
+  "section_heading": "Now Enrolling",
+  "section_subtitle": "Q2 · 2026 Course",
+  "title": "Homer's Iliad",
+  "byline": "Translated by E.V. Rieu · Instructor: Nick Rosado",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Achilles_and_Patroclus.jpg/600px-Achilles_and_Patroclus.jpg",
+  "image_caption": "Achilles tending Patroclus · Attic red-figure kylix · c. 500 BCE · Altes Museum, Berlin",
+  "para1": "The <em>Iliad</em> is not primarily a poem about war. It is a poem about what war costs — in lives, in grief, in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with that choice for three months.",
+  "para2": "Each week: a pre-recorded lecture to prepare you for the reading, a live one-hour session to discuss it together, and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
+  "syllabus": [
+    {
+      "title": "Format & Expectations",
+      "content": "- 13 weekly live sessions, one hour each\n- Pre-recorded lectures for every Book, split into pre-reading and post-reading sections\n- Required text: **Iliad**, translated by E.V. Rieu\n- ~3 hours of total weekly commitment (lecture + reading + session)\n- All sessions recorded and shared via private link with passcode\n- Full asynchronous option available for those who cannot attend live"
+    },
+    {
+      "title": "How the Lectures Work",
+      "content": "Each pre-recorded lecture has two parts. Before you read, you listen to the introduction — essential context, background, and what to look for. After you read, you return for the integrations section, which draws on outside research and connects the Book to broader themes.\n\n**Recommended order:** Introduction → Read the Book → Integrations. This sequence transforms the reading experience."
+    },
+    {
+      "title": "Recurring Assignments",
+      "content": "- **Weekly line selection:** Each student chooses one line or short passage — one they love, hate, or have a question about — and shares it during class with a brief explanation.\n- **Plot summary:** Two students per week (chosen the prior week on a volunteer basis) each write a seven-sentence summary of one assigned Book. These are shared at the start of each Book's discussion period."
+    },
+    {
+      "title": "Class Structure",
+      "content": "Each Book gets the same three-part structure during class:\n\n- **1.** Student's short plot summary\n- **2.** Instructor's one to two thematic focus points from the lecture\n- **3.** All students' line selections and discussion\n\nAfter class, students have open access to the instructor for questions."
+    },
+    {
+      "title": "Class 1: Orientation & Trojan War Context",
+      "content": "**Pre-Class Viewing:**\n- Video: *The Trojan War Cycle* (6 min)\n- Video: *Greek Gods Explained in 12 Minutes*\n- Optional: *Epic Cycle — The Lost Tales of the Trojan War* (12 min)\n- Optional film: *Troy* (2003)\n\n**During Class:** Introduction to the epic poetry tradition, Homer's biography and historical context, the Trojan War cycle, key philosophical concepts in the *Iliad*, and course logistics."
+    },
+    {
+      "title": "Classes 2–13: Book-by-Book",
+      "content": "Each class covers two Books of the *Iliad* (Books 1–24 across 12 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
+    }
+  ],
+  "enroll_label": "Enroll in This Course",
+  "contact_label": "Contact Nick"
+}
