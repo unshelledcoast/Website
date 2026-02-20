@@ -65,7 +65,7 @@ collections:
             field: { label: "Method", name: "method", widget: "string" }
           - { label: "Contact Email", name: "email", widget: "string" }
           - { label: "Contact Sub-text", name: "contact_sub", widget: "text" }
-      - { label: "Footer Tagline", name: "footer_tagline", widget: "text" }
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "text" }
 
       - name: "about"
         label: "About Section"
