@@ -1,0 +1,13 @@
+{
+  "name": "enlightenment-educator",
+  "version": "1.0.0",
+  "description": "Enlightenment Educator — Nick Rosado",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve --watch"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "heading": "Ready to Enroll?",
   "sub": "Each course is <strong>$250</strong>. To reserve your place in the current Iliad course — or to be notified when the next course opens — reach out directly. All enrollment is handled personally by Nick.",
-  "email": "Unshelledcoast@gmail.com",
-  "payment_methods": ["PayPal", "Venmo", "Zelle"]
+  "payment_methods": ["PayPal", "Venmo", "Zelle"],
+  "email": "Unshelledcoast@gmail.com"
 }

@@ -1,16 +1,17 @@
 {
-  "title": "Dante's Divine Comedy",
+  "order": 2,
+  "slug": "divine-comedy",
+  "title": "Dante's <em>Divine Comedy</em>",
   "author": "Inferno · Purgatorio · Paradiso",
-  "quarter": "Q1 · 2026",
   "status": "available",
   "status_label": "Available",
-  "desc": "A journey through Hell, Purgatory, and Heaven that is really a journey through the full range of human experience. Dante's masterwork — fully built and offered.",
+  "quarter": "Q1 · 2026",
+  "disabled": false,
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gustave_Dore_Inferno34.jpg/600px-Gustave_Dore_Inferno34.jpg",
   "image_alt": "Gustave Doré — Dante's Inferno",
+  "desc": "A journey through Hell, Purgatory, and Heaven that is really a journey through the full range of human experience. Dante's masterwork — fully built and offered.",
   "status_detail": "Course Built",
   "format": "Weekly Live + Async",
   "cta_label": "Inquire About This Course",
-  "cta_link": "#enroll",
-  "disabled": false,
-  "order": 2
+  "cta_link": "#enroll"
 }

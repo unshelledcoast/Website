@@ -2,54 +2,212 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Enable live preview via Eleventy dev server
+local_backend: true
 
 collections:
+
+  # ── SITE-WIDE SETTINGS ────────────────────────────────────────────────────
   - name: "settings"
     label: "Site Settings"
     files:
 
-      - name: "homepage"
-        label: "Homepage"
-        file: "_data/homepage.json"
-        format: json
+      - name: "announcement"
+        label: "Announcement Bar"
+        file: "_data/announcement.json"
         fields:
-          - {label: "Announcement Bar Text", name: "announcement", widget: "string"}
-          - {label: "Hero Headline Line 1", name: "hero_line1", widget: "string"}
-          - {label: "Hero Headline Line 2 (italic)", name: "hero_line2", widget: "string"}
-          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
-          - {label: "Intro Heading", name: "intro_heading", widget: "string"}
-          - {label: "Intro Paragraph 1", name: "intro_p1", widget: "text"}
-          - {label: "Intro Paragraph 2", name: "intro_p2", widget: "text"}
+          - { label: "Announcement Text (HTML ok)", name: "text", widget: "string" }
+          - { label: "Link Target (e.g. #enroll)", name: "link_target", widget: "string" }
+          - { label: "Link Label", name: "link_label", widget: "string" }
 
-      - name: "iliad_course"
-        label: "Iliad Course"
-        file: "_data/iliad.json"
-        format: json
+      - name: "hero"
+        label: "Hero Section"
+        file: "_data/hero.json"
         fields:
-          - {label: "Course Title", name: "title", widget: "string"}
-          - {label: "Price", name: "price", widget: "string"}
-          - {label: "Duration", name: "duration", widget: "string"}
-          - {label: "Short Description", name: "short_desc", widget: "text"}
-          - {label: "Long Description", name: "long_desc", widget: "text"}
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "title_line1", widget: "string" }
+          - { label: "Title Line 2 (italic/crimson)", name: "title_line2", widget: "string" }
+          - { label: "Title Line 3", name: "title_line3", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: "Primary Button Label", name: "btn_primary_label", widget: "string" }
+          - { label: "Primary Button Link", name: "btn_primary_link", widget: "string" }
+          - { label: "Secondary Button Label", name: "btn_secondary_label", widget: "string" }
+          - { label: "Secondary Button Link", name: "btn_secondary_link", widget: "string" }
+
+      - name: "intro"
+        label: "Intro Section"
+        file: "_data/intro.json"
+        fields:
+          - { label: "Heading Line 1", name: "heading1", widget: "string" }
+          - { label: "Heading Line 2 (italic/crimson)", name: "heading2", widget: "string" }
+          - { label: "Paragraph 1 (HTML ok)", name: "para1", widget: "text" }
+          - { label: "Paragraph 2 (HTML ok)", name: "para2", widget: "text" }
+
+      - name: "quote"
+        label: "Pull Quote"
+        file: "_data/quote.json"
+        fields:
+          - { label: "Quote Text", name: "text", widget: "text" }
+          - { label: "Attribution", name: "attr", widget: "string" }
 
       - name: "enroll"
-        label: "Enrollment Section"
+        label: "Enroll Section"
         file: "_data/enroll.json"
-        format: json
         fields:
-          - {label: "Heading", name: "heading", widget: "string"}
-          - {label: "Description", name: "subtitle", widget: "text"}
-          - {label: "Contact Email", name: "email", widget: "string"}
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Sub-text (HTML ok)", name: "sub", widget: "text" }
+          - label: "Payment Methods"
+            name: "payment_methods"
+            widget: "list"
+            field: { label: "Method", name: "method", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
 
       - name: "about"
-        label: "About / Instructor"
+        label: "About Section"
         file: "_data/about.json"
-        format: json
         fields:
-          - {label: "Instructor Name", name: "name", widget: "string"}
-          - {label: "Paragraph 1", name: "p1", widget: "text"}
-          - {label: "Paragraph 2", name: "p2", widget: "text"}
-          - {label: "Paragraph 3", name: "p3", widget: "text"}
-          - {label: "Photo", name: "photo", widget: "image", required: false}
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Paragraph 1", name: "para1", widget: "text" }
+          - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - { label: "Paragraph 3 (HTML ok)", name: "para3", widget: "text" }
+          - { label: "Button Label", name: "btn_label", widget: "string" }
+          - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  # ── FEATURED COURSE ────────────────────────────────────────────────────────
+  - name: "featured"
+    label: "Featured Course (Dark Section)"
+    files:
+      - name: "featured"
+        label: "Featured Course"
+        file: "_data/featured.json"
+        fields:
+          - { label: "Section Heading", name: "section_heading", widget: "string" }
+          - { label: "Section Subtitle", name: "section_subtitle", widget: "string" }
+          - { label: "Course Title", name: "title", widget: "string" }
+          - { label: "Byline", name: "byline", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - { label: "Image Caption", name: "image_caption", widget: "string" }
+          - { label: "Paragraph 1 (HTML ok)", name: "para1", widget: "text" }
+          - { label: "Paragraph 2 (HTML ok)", name: "para2", widget: "text" }
+          - { label: "Enroll Button Label", name: "enroll_label", widget: "string" }
+          - { label: "Contact Button Label", name: "contact_label", widget: "string" }
+          - label: "Syllabus Accordion"
+            name: "syllabus"
+            widget: "list"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Content (Markdown: - bullets, **bold**, *italic*)", name: "content", widget: "text" }
+
+  # ── COURSES ────────────────────────────────────────────────────────────────
+  - name: "courses"
+    label: "Courses Grid"
+    files:
+
+      - name: "iliad"
+        label: "Homer's Iliad"
+        file: "_data/courses/iliad.json"
+        fields:
+          - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
+          - { label: "Title (HTML ok)", name: "title", widget: "string" }
+          - { label: "Author / Translator", name: "author", widget: "string" }
+          - label: "Status"
+            name: "status"
+            widget: "select"
+            options:
+              - { label: "Enrolling Now", value: "enrolling" }
+              - { label: "Available", value: "available" }
+              - { label: "Coming Soon", value: "coming-soon" }
+          - { label: "Status Label", name: "status_label", widget: "string" }
+          - { label: "Quarter (e.g. Q2 · 2026)", name: "quarter", widget: "string" }
+          - { label: "Disabled (greyed out)", name: "disabled", widget: "boolean", default: false }
+          - { label: "Cover Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Price (e.g. $250)", name: "price", widget: "string", required: false }
+          - { label: "Duration (e.g. 3 Months)", name: "duration", widget: "string", required: false }
+          - { label: "Format", name: "format", widget: "string", required: false }
+          - { label: "Sessions (e.g. 13 Classes)", name: "sessions", widget: "string", required: false }
+          - { label: "Status Detail (e.g. Course Built)", name: "status_detail", widget: "string", required: false }
+          - { label: "CTA Button Label", name: "cta_label", widget: "string" }
+          - { label: "CTA Button Link", name: "cta_link", widget: "string" }
+
+      - name: "divine-comedy"
+        label: "Dante's Divine Comedy"
+        file: "_data/courses/divine-comedy.json"
+        fields:
+          - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
+          - { label: "Title (HTML ok)", name: "title", widget: "string" }
+          - { label: "Author / Translator", name: "author", widget: "string" }
+          - label: "Status"
+            name: "status"
+            widget: "select"
+            options:
+              - { label: "Enrolling Now", value: "enrolling" }
+              - { label: "Available", value: "available" }
+              - { label: "Coming Soon", value: "coming-soon" }
+          - { label: "Status Label", name: "status_label", widget: "string" }
+          - { label: "Quarter (e.g. Q1 · 2026)", name: "quarter", widget: "string" }
+          - { label: "Disabled (greyed out)", name: "disabled", widget: "boolean", default: false }
+          - { label: "Cover Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Price", name: "price", widget: "string", required: false }
+          - { label: "Duration", name: "duration", widget: "string", required: false }
+          - { label: "Format", name: "format", widget: "string", required: false }
+          - { label: "Sessions", name: "sessions", widget: "string", required: false }
+          - { label: "Status Detail", name: "status_detail", widget: "string", required: false }
+          - { label: "CTA Button Label", name: "cta_label", widget: "string" }
+          - { label: "CTA Button Link", name: "cta_link", widget: "string" }
+
+      - name: "aeneid"
+        label: "Virgil's Aeneid"
+        file: "_data/courses/aeneid.json"
+        fields:
+          - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
+          - { label: "Title (HTML ok)", name: "title", widget: "string" }
+          - { label: "Author / Translator", name: "author", widget: "string" }
+          - label: "Status"
+            name: "status"
+            widget: "select"
+            options:
+              - { label: "Enrolling Now", value: "enrolling" }
+              - { label: "Available", value: "available" }
+              - { label: "Coming Soon", value: "coming-soon" }
+          - { label: "Status Label", name: "status_label", widget: "string" }
+          - { label: "Quarter", name: "quarter", widget: "string" }
+          - { label: "Disabled (greyed out)", name: "disabled", widget: "boolean", default: true }
+          - { label: "Cover Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Status Detail", name: "status_detail", widget: "string", required: false }
+          - { label: "CTA Button Label", name: "cta_label", widget: "string" }
+          - { label: "CTA Button Link", name: "cta_link", widget: "string" }
+
+      - name: "paradise-lost"
+        label: "Milton's Paradise Lost"
+        file: "_data/courses/paradise-lost.json"
+        fields:
+          - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
+          - { label: "Title (HTML ok)", name: "title", widget: "string" }
+          - { label: "Author / Translator", name: "author", widget: "string" }
+          - label: "Status"
+            name: "status"
+            widget: "select"
+            options:
+              - { label: "Enrolling Now", value: "enrolling" }
+              - { label: "Available", value: "available" }
+              - { label: "Coming Soon", value: "coming-soon" }
+          - { label: "Status Label", name: "status_label", widget: "string" }
+          - { label: "Quarter", name: "quarter", widget: "string" }
+          - { label: "Disabled (greyed out)", name: "disabled", widget: "boolean", default: true }
+          - { label: "Cover Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Status Detail", name: "status_detail", widget: "string", required: false }
+          - { label: "CTA Button Label", name: "cta_label", widget: "string" }
+          - { label: "CTA Button Link", name: "cta_link", widget: "string" }
