@@ -624,7 +624,7 @@ footer {
   </div>
   <p class="enroll-contact">
     To enroll or ask questions, email <a href="mailto:{{ enroll.email }}">{{ enroll.email }}</a>
-    <br>or reach out via the payment method of your choice once enrolled.
+    <br>{{ enroll.contact_sub }}
   </p>
 </section>
 
@@ -657,7 +657,7 @@ footer {
   <div class="footer-brand">
     <span class="logo">Enlightenment Educator</span>
     <span class="tagline">Nick Rosado · EnlightenmentEducator.com</span>
-    <p>Online literature courses for adults, focused on the four great epic poets of the Western tradition: Homer, Virgil, Dante, and Milton.</p>
+    <p>{{ enroll.footer_tagline }}</p>
   </div>
   <div class="footer-col">
     <h4>Courses</h4>
