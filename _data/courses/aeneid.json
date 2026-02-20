@@ -1,0 +1,15 @@
+{
+  "title": "Virgil's Aeneid",
+  "author": "Translated by Robert Fagles",
+  "quarter": "Q3 · 2026",
+  "status": "coming-soon",
+  "status_label": "Coming Q3",
+  "desc": "Rome's founding epic and one of the greatest meditations on duty, fate, and the price of empire. A poem that never stops asking hard questions.",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg/600px-Jean-Baptiste_Wicar_-_Virgil_Reading_the_Aeneid.jpg",
+  "image_alt": "Virgil Reading the Aeneid — Jean-Baptiste Wicar",
+  "status_detail": "In Development",
+  "cta_label": "Coming Q3 2026",
+  "cta_link": "#enroll",
+  "disabled": true,
+  "order": 3
+}
