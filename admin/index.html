@@ -9,9 +9,270 @@
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Live preview registration
-    // Decap CMS will hot-reload from the Eleventy dev server at port 8080
-    CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+  const FONTS = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap";
+  const CSS = `
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --parchment: #f7f2e8; --parchment-dark: #ede5d0; --ink: #1a1610; --ink-light: #3d3426; --gold: #8b6914; --gold-light: #c4a44a; --crimson: #6b1e1e; --muted: #7a6e5f; --divider: rgba(26,22,16,0.15); }
+    body { background: var(--parchment); color: var(--ink); font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.7; padding: 0; }
+    .announcement { background: var(--crimson); color: #f5e6d0; text-align: center; padding: 10px 20px; font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.2em; }
+    .announcement a { color: #f5c98a; text-decoration: none; border-bottom: 1px solid currentColor; }
+    .intro { max-width: 800px; margin: 0 auto; padding: 60px 40px; text-align: center; }
+    .intro-heading { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 28px; }
+    .intro-heading em { font-style: italic; color: var(--crimson); }
+    .intro p { font-size: 1.05rem; color: var(--muted); line-height: 1.9; margin-bottom: 20px; }
+    .quote-section { background: var(--crimson); padding: 60px; text-align: center; }
+    .quote-text { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; font-style: italic; color: #f5e6d0; max-width: 800px; margin: 0 auto 24px; line-height: 1.5; }
+    .quote-attr { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(245,230,208,0.55); }
+    .enroll-section { padding: 60px; background: var(--parchment-dark); text-align: center; }
+    .enroll-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; margin-bottom: 16px; }
+    .enroll-section .sub { font-size: 1rem; color: var(--muted); max-width: 560px; margin: 0 auto 40px; line-height: 1.8; }
+    .payment-methods { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+    .payment-pill { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.2em; border: 1px solid var(--divider); padding: 12px 28px; background: var(--parchment); color: var(--ink-light); }
+    .enroll-contact { font-size: 0.95rem; color: var(--muted); }
+    .enroll-contact a { color: var(--crimson); text-decoration: none; border-bottom: 1px solid currentColor; }
+    .about-section { padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-img-placeholder { background: var(--ink); aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; color: rgba(247,242,232,0.2); font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; text-align: center; padding: 40px; }
+    .about-img-wrap { aspect-ratio: 4/5; overflow: hidden; }
+    .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .about-content .eyebrow { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 16px; }
+    .about-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 24px; }
+    .about-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.9; margin-bottom: 18px; }
+    .btn-primary { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.22em; background: var(--ink); color: var(--parchment); border: none; padding: 14px 32px; text-decoration: none; display: inline-block; margin-top: 8px; }
+    .hero { min-height: 70vh; display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-left { padding: 60px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--divider); }
+    .hero-eyebrow { font-family: 'Cormorant SC', serif; font-size: 0.75rem; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 24px; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; line-height: 1.08; margin-bottom: 32px; }
+    .hero-title em { font-style: italic; color: var(--crimson); }
+    .hero-subtitle { font-size: 1.05rem; color: var(--muted); max-width: 420px; margin-bottom: 40px; line-height: 1.8; }
+    .hero-right { background: var(--ink); display: flex; align-items: center; justify-content: center; color: rgba(247,242,232,0.2); font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; }
+    .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-secondary { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.22em; background: transparent; color: var(--ink); border: 1px solid var(--divider); padding: 13px 32px; text-decoration: none; display: inline-block; }
+    .featured-course { background: var(--ink); color: var(--parchment); padding: 60px; }
+    .featured-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; margin-top: 40px; }
+    .featured-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: sepia(20%) contrast(1.1); }
+    .featured-img-caption { font-family: 'Cormorant SC', serif; font-size: 0.6rem; letter-spacing: 0.2em; color: rgba(247,242,232,0.4); margin-top: 10px; text-align: center; }
+    .featured-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; line-height: 1.1; margin-bottom: 8px; }
+    .featured-content h2 em { font-style: italic; color: var(--gold-light); }
+    .featured-content .byline { font-style: italic; color: rgba(247,242,232,0.5); font-size: 1rem; margin-bottom: 32px; }
+    .featured-content p { color: rgba(247,242,232,0.7); line-height: 1.85; margin-bottom: 18px; font-size: 0.95rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--parchment); }
+    .section-subtitle { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--gold-light); }
+    .section-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(247,242,232,0.1); padding-bottom: 20px; }
+    .course-tag { font-family: 'Cormorant SC', serif; font-size: 0.65rem; letter-spacing: 0.25em; padding: 4px 12px; border: 1px solid; display: inline-block; margin-bottom: 12px; }
+    .course-tag.enrolling { border-color: var(--crimson); color: var(--crimson); background: var(--ink); }
+    .syllabus-accordion { margin-top: 32px; border-top: 1px solid rgba(247,242,232,0.1); }
+    .accordion-item { border-bottom: 1px solid rgba(247,242,232,0.1); padding: 16px 0; }
+    .accordion-title { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.22em; color: var(--parchment); margin-bottom: 8px; }
+    .accordion-body { color: rgba(247,242,232,0.65); font-size: 0.9rem; line-height: 1.85; }
+    .accordion-body ul { list-style: none; padding: 0; }
+    .accordion-body li { padding: 4px 0 4px 20px; position: relative; }
+    .accordion-body li::before { content: "—"; position: absolute; left: 0; color: var(--gold-light); opacity: 0.6; }
+    .accordion-body strong { color: rgba(247,242,232,0.9); }
+    .preview-ctas { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-dark-primary { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.22em; background: var(--parchment); color: var(--ink); padding: 14px 32px; text-decoration: none; display: inline-block; }
+    .btn-dark-secondary { font-family: 'Cormorant SC', serif; font-size: 0.8rem; letter-spacing: 0.22em; background: transparent; color: rgba(247,242,232,0.7); border: 1px solid rgba(247,242,232,0.25); padding: 13px 32px; display: inline-block; }
+    .section { padding: 60px; }
+    .courses-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--divider); }
+    .course-card { background: var(--parchment); display: grid; grid-template-columns: 220px 1fr; min-height: 280px; }
+    .course-card.future { opacity: 0.55; }
+    .course-img { overflow: hidden; position: relative; background: #1a1610; }
+    .course-img img { width: 100%; height: 100%; object-fit: cover; filter: sepia(25%) contrast(1.05); }
+    .course-body { padding: 32px 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .course-meta { display: flex; gap: 12px; margin-bottom: 12px; align-items: center; }
+    .course-tag.available { border-color: var(--gold); color: var(--gold); }
+    .course-tag.coming-soon { border-color: var(--muted); color: var(--muted); }
+    .course-quarter { font-family: 'Cormorant SC', serif; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--muted); }
+    .course-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 6px; }
+    .course-author { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: var(--muted); margin-bottom: 12px; }
+    .course-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+    .course-details { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+    .course-detail-item { display: flex; flex-direction: column; gap: 2px; }
+    .detail-label { font-family: 'Cormorant SC', serif; font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); }
+    .detail-value { font-size: 0.85rem; color: var(--ink-light); }
+    .btn-grid-primary { font-family: 'Cormorant SC', serif; font-size: 0.75rem; letter-spacing: 0.2em; background: var(--ink); color: var(--parchment); padding: 12px 24px; text-decoration: none; display: inline-block; }
+    .btn-grid-secondary { font-family: 'Cormorant SC', serif; font-size: 0.75rem; letter-spacing: 0.2em; background: transparent; color: var(--ink); border: 1px solid var(--divider); padding: 11px 24px; display: inline-block; }
+    .courses-section-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--divider); padding-bottom: 20px; margin-bottom: 48px; }
+    .courses-section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; }
+    .courses-section-subtitle { font-family: 'Cormorant SC', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--gold); }
+  `;
+
+  function mdToHtml(text) {
+    if (!text) return "";
+    text = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    text = text.replace(/\*(.+?)\*/g, "<em>$1</em>");
+    const lines = text.split("\n");
+    let html = "", inList = false;
+    for (let line of lines) {
+      const t = line.trim();
+      if (t.startsWith("- ") || t.startsWith("* ")) {
+        if (!inList) { html += "<ul>"; inList = true; }
+        html += "<li>" + t.slice(2) + "</li>";
+      } else {
+        if (inList) { html += "</ul>"; inList = false; }
+        if (t) html += "<p>" + t + "</p>";
+      }
+    }
+    if (inList) html += "</ul>";
+    return html;
+  }
+
+  CMS.registerPreviewStyle(FONTS);
+  CMS.registerPreviewStyle(CSS, { raw: true });
+
+  CMS.registerPreviewTemplate("announcement", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    return h("div", {},
+      h("div", { className: "announcement" },
+        h("span", { dangerouslySetInnerHTML: { __html: d.text + " &nbsp;·&nbsp; " } }),
+        h("a", { href: d.link_target }, d.link_label)
+      )
+    );
+  });
+
+  CMS.registerPreviewTemplate("hero", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    return h("section", { className: "hero" },
+      h("div", { className: "hero-left" },
+        h("p", { className: "hero-eyebrow" }, d.eyebrow),
+        h("h1", { className: "hero-title" }, d.title_line1, h("br", {}), h("em", {}, d.title_line2), h("br", {}), d.title_line3),
+        h("p", { className: "hero-subtitle" }, d.subtitle),
+        h("div", { className: "hero-cta-group" },
+          h("a", { href: d.btn_primary_link, className: "btn-primary" }, d.btn_primary_label),
+          h("a", { href: d.btn_secondary_link, className: "btn-secondary" }, d.btn_secondary_label)
+        )
+      ),
+      h("div", { className: "hero-right" }, "[ Hero portrait grid ]")
+    );
+  });
+
+  CMS.registerPreviewTemplate("intro", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    return h("section", { className: "intro" },
+      h("h2", { className: "intro-heading" }, d.heading1, h("br", {}), h("em", {}, d.heading2)),
+      h("p", { dangerouslySetInnerHTML: { __html: d.para1 } }),
+      h("p", { dangerouslySetInnerHTML: { __html: d.para2 } })
+    );
+  });
+
+  CMS.registerPreviewTemplate("quote", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    return h("section", { className: "quote-section" },
+      h("p", { className: "quote-text" }, '"' + d.text + '"'),
+      h("p", { className: "quote-attr" }, d.attr)
+    );
+  });
+
+  CMS.registerPreviewTemplate("enroll", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    return h("section", { className: "enroll-section" },
+      h("h2", {}, d.heading),
+      h("p", { className: "sub", dangerouslySetInnerHTML: { __html: d.sub } }),
+      h("div", { className: "payment-methods" },
+        (d.payment_methods || []).map(function(m) { return h("div", { className: "payment-pill" }, m); })
+      ),
+      h("p", { className: "enroll-contact" }, "To enroll or ask questions, email ", h("a", { href: "mailto:" + d.email }, d.email))
+    );
+  });
+
+  CMS.registerPreviewTemplate("about", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    var photoSrc = d.photo ? props.getAsset(d.photo).toString() : null;
+    return h("section", { className: "about-section" },
+      photoSrc
+        ? h("div", { className: "about-img-wrap" }, h("img", { src: photoSrc, alt: d.name }))
+        : h("div", { className: "about-img-placeholder" }, "Photo of " + d.name),
+      h("div", { className: "about-content" },
+        h("p", { className: "eyebrow" }, d.eyebrow),
+        h("h2", {}, d.name),
+        d.para1 ? h("p", { dangerouslySetInnerHTML: { __html: d.para1 } }) : null,
+        d.para2 ? h("p", { dangerouslySetInnerHTML: { __html: d.para2 } }) : null,
+        d.para3 ? h("p", { dangerouslySetInnerHTML: { __html: d.para3 } }) : null,
+        h("a", { href: "#enroll", className: "btn-primary" }, d.btn_label)
+      )
+    );
+  });
+
+  CMS.registerPreviewTemplate("featured", function(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    var imgSrc = d.image ? props.getAsset(d.image).toString() : null;
+    var titleHtml = (d.title || "").replace("Iliad", "<em>Iliad</em>");
+    return h("section", { className: "featured-course" },
+      h("div", { className: "section-header" },
+        h("h2", { className: "section-title" }, d.section_heading),
+        h("span", { className: "section-subtitle" }, d.section_subtitle)
+      ),
+      h("div", { className: "featured-inner" },
+        h("div", { className: "featured-img" },
+          imgSrc ? h("img", { src: imgSrc, alt: d.image_alt }) : null,
+          h("p", { className: "featured-img-caption" }, d.image_caption)
+        ),
+        h("div", { className: "featured-content" },
+          h("span", { className: "course-tag enrolling" }, "Enrolling Now"),
+          h("h2", { dangerouslySetInnerHTML: { __html: titleHtml } }),
+          h("p", { className: "byline" }, d.byline),
+          h("p", { dangerouslySetInnerHTML: { __html: d.para1 } }),
+          h("p", { dangerouslySetInnerHTML: { __html: d.para2 } }),
+          h("div", { className: "syllabus-accordion" },
+            (d.syllabus || []).map(function(item) {
+              return h("div", { className: "accordion-item" },
+                h("div", { className: "accordion-title" }, item.title),
+                h("div", { className: "accordion-body", dangerouslySetInnerHTML: { __html: mdToHtml(item.content) } })
+              );
+            })
+          ),
+          h("div", { className: "preview-ctas" },
+            h("a", { href: "#", className: "btn-dark-primary" }, d.enroll_label),
+            h("a", { href: "#", className: "btn-dark-secondary" }, d.contact_label)
+          )
+        )
+      )
+    );
+  });
+
+  function CourseCardPreview(props) {
+    var d = props.entry.getIn(["data"]).toJS();
+    var isFuture = d.disabled || d.status === "coming-soon";
+    var imgSrc = d.image ? props.getAsset(d.image).toString() : null;
+    return h("section", { className: "section" },
+      h("div", { className: "courses-section-header" },
+        h("h2", { className: "courses-section-title" }, "Course Card Preview"),
+        h("span", { className: "courses-section-subtitle" }, d.quarter)
+      ),
+      h("div", { className: "courses-grid" },
+        h("div", { className: "course-card" + (isFuture ? " future" : "") },
+          h("div", { className: "course-img" }, imgSrc ? h("img", { src: imgSrc, alt: d.image_alt }) : null),
+          h("div", { className: "course-body" },
+            h("div", {},
+              h("div", { className: "course-meta" },
+                h("span", { className: "course-tag " + d.status }, d.status_label),
+                h("span", { className: "course-quarter" }, d.quarter)
+              ),
+              h("h3", { className: "course-title", dangerouslySetInnerHTML: { __html: d.title } }),
+              h("p", { className: "course-author" }, d.author),
+              h("p", { className: "course-desc" }, d.desc),
+              h("div", { className: "course-details" },
+                d.price ? h("div", { className: "course-detail-item" }, h("span", { className: "detail-label" }, "Price"), h("span", { className: "detail-value" }, d.price)) : null,
+                d.duration ? h("div", { className: "course-detail-item" }, h("span", { className: "detail-label" }, "Duration"), h("span", { className: "detail-value" }, d.duration)) : null,
+                d.format ? h("div", { className: "course-detail-item" }, h("span", { className: "detail-label" }, "Format"), h("span", { className: "detail-value" }, d.format)) : null,
+                d.sessions ? h("div", { className: "course-detail-item" }, h("span", { className: "detail-label" }, "Sessions"), h("span", { className: "detail-value" }, d.sessions)) : null,
+                d.status_detail ? h("div", { className: "course-detail-item" }, h("span", { className: "detail-label" }, "Status"), h("span", { className: "detail-value" }, d.status_detail)) : null
+              )
+            ),
+            isFuture
+              ? h("span", { className: "btn-grid-secondary", style: { opacity: 0.5 } }, d.cta_label)
+              : d.status === "enrolling"
+                ? h("a", { href: d.cta_link, className: "btn-grid-primary" }, d.cta_label)
+                : h("a", { href: d.cta_link, className: "btn-grid-secondary" }, d.cta_label)
+          )
+        )
+      )
+    );
+  }
+
+  CMS.registerPreviewTemplate("iliad", CourseCardPreview);
+  CMS.registerPreviewTemplate("divine-comedy", CourseCardPreview);
+  CMS.registerPreviewTemplate("aeneid", CourseCardPreview);
+  CMS.registerPreviewTemplate("paradise-lost", CourseCardPreview);
   </script>
 </body>
 </html>
