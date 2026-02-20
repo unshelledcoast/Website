@@ -10,17 +10,4 @@
   "contact_sub": "or reach out via the payment method of your choice once enrolled.",
 "footer_tagline": "Online literature courses for adults, focused on the four great epic poets of the Western tradition: Homer, Virgil, Dante, and Milton."
 ```
-
----
-
-**2. `index.njk`** — two changes:
-
-Search for `reach out via the payment method` and replace that whole line with:
-```
-{{ enroll.contact_sub }}
-```
-
-Search for `Online literature courses for adults` and replace that whole sentence with:
-```
-{{ enroll.footer_tagline }}
 }
