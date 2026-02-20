@@ -623,7 +623,7 @@ footer {
     {% endfor %}
   </div>
   <p class="enroll-contact">
-    To enroll or ask questions, email <a href="mailto:{{ enroll.email }}">{{ enroll.email }}</a>
+    {{ enroll.contact_prefix }} <a href="mailto:{{ enroll.email }}">{{ enroll.email }}</a>
     <br>{{ enroll.contact_sub }}
   </p>
 </section>
