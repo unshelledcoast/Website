@@ -1,0 +1,19 @@
+{
+  "logo": "/EE_symbol_gold_transparent.png",
+  "copyright": "© 2026 Nick Rosado · Enlightenment Educator · All Rights Reserved",
+  "photo_credits": "Photo credits go here.",
+  "links": [
+    {
+      "label": "Courses",
+      "url": "#courses"
+    },
+    {
+      "label": "About",
+      "url": "#about"
+    },
+    {
+      "label": "Enroll",
+      "url": "#enroll"
+    }
+  ]
+}
