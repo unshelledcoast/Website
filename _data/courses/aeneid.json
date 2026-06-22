@@ -1,22 +1,49 @@
 {
-  "badge": "TEST TEST",
-  "image_alt": "Aeneid artwork",
-  "meta": [
+  "slug": "aeneid",
+
+  "status": "coming-soon",
+  "badge": "COMING Q3",
+  "badge_class": "badge-dk",
+
+  "poet": "VIRGIL",
+  "title": "The Aeneid",
+
+  "card_description": "A course on piety, empire, duty, and the cost of founding a civilization.",
+
+  "featured_subtitle": "An online course on duty, civilization, sacrifice, and empire.",
+
+  "featured_description": "Virgil’s *Aeneid* is not merely Rome’s founding epic. It is a poem about duty, loss, civilization, and the moral cost of building a world that can outlast one man’s life.",
+
+  "image": "/Aeneid Book 4.jpg",
+  "image_alt": "Virgil monument",
+
+  "art_caption": "VIRGIL'S AENEID",
+
+  "price": "$250",
+  "schedule": "Q3 2026",
+
+  "payment_methods": [
+    "PayPal",
+    "Venmo",
+    "Zelle"
+  ],
+
+  "details": [
     {
-      "label": "Season",
-      "value": "Upcoming"
+      "label": "FORMAT",
+      "value": "Live Online"
     },
     {
-      "label": "Format",
-      "value": "Live Online"
+      "label": "LENGTH",
+      "value": "13 Classes"
+    },
+    {
+      "label": "PRICE",
+      "value": "$250"
+    },
+    {
+      "label": "STATUS",
+      "value": "Coming Q3"
     }
-  ],
-  "link_url": "#enroll",
-  "poet": "VIRGIL",
-  "order": 2,
-  "link_label": "Details Soon",
-  "title": "The Aeneid",
-  "image": "/Aeneid Book 4.jpg",
-  "badge_class": "badge-dk",
-  "description": "A course on piety, empire, duty, and the cost of founding a civilization."
+  ]
 }
