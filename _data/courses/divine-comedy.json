@@ -1,16 +1,49 @@
 {
-  "order": 3,
-  "badge": "COMING SOON",
-  "badge_class": "badge-red",
+  "slug": "divine-comedy",
+
+  "status": "built",
+  "badge": "COURSE BUILT",
+  "badge_class": "badge-blue",
+
   "poet": "DANTE",
   "title": "The Divine Comedy",
-  "description": "A course on moral vision, spiritual ascent, justice, love, and beatitude.",
+
+  "card_description": "A course on sin, judgment, love, and the ascent of the soul.",
+
+  "featured_subtitle": "An online course on Hell, Purgatory, Paradise, and the moral order of the soul.",
+
+  "featured_description": "Dante’s *Divine Comedy* is not merely a medieval vision of the afterlife. It is a journey through moral consequence, purification, love, and the soul’s ascent toward the highest things.",
+
   "image": "/Divine Comedy.jpg",
-  "image_alt": "Divine Comedy artwork",
-  "meta": [
-    { "label": "Season", "value": "Upcoming" },
-    { "label": "Format", "value": "Live Online" }
+  "image_alt": "Dante and Beatrice statue",
+
+  "art_caption": "DANTE'S DIVINE COMEDY",
+
+  "price": "$250",
+  "schedule": "Course Built",
+
+  "payment_methods": [
+    "PayPal",
+    "Venmo",
+    "Zelle"
   ],
-  "link_label": "Details Soon",
-  "link_url": "#enroll"
+
+  "details": [
+    {
+      "label": "FORMAT",
+      "value": "Live Online"
+    },
+    {
+      "label": "LENGTH",
+      "value": "13 Classes"
+    },
+    {
+      "label": "PRICE",
+      "value": "$250"
+    },
+    {
+      "label": "STATUS",
+      "value": "Course Built"
+    }
+  ]
 }
