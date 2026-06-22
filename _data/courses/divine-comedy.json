@@ -1,18 +1,16 @@
 {
-  "cta_label": "Inquire About This Course",
-  "image_alt": "Statue in Villa Melzi (Bellagio)",
-  "status_label": "Available",
-  "cta_link": "#enroll",
-  "author": "Inferno · Purgatorio · (Paradiso) - Translated by John C. Ciardi",
-  "slug": "divine-comedy",
-  "quarter": "Q1",
-  "order": 2,
-  "desc": "A journey through Hell and ending in Purgatory. A course for readers who seek a true grasp of Dante before they are ready to traverse its entire expanse. Dante's first two canticles — fully built and taught.",
-  "status": "available",
-  "duration": "2 and a half months",
-  "format": "Weekly Live + Async",
-  "title": "Dante's <em>Divine Comedy</em>",
-  "image": " /Divine_Comedy.jpg",
-  "disabled": true,
-  "status_detail": "Course Built"
+  "order": 3,
+  "badge": "COMING SOON",
+  "badge_class": "badge-red",
+  "poet": "DANTE",
+  "title": "The Divine Comedy",
+  "description": "A course on moral vision, spiritual ascent, justice, love, and beatitude.",
+  "image": "/Divine Comedy.jpg",
+  "image_alt": "Divine Comedy artwork",
+  "meta": [
+    { "label": "Season", "value": "Upcoming" },
+    { "label": "Format", "value": "Live Online" }
+  ],
+  "link_label": "Details Soon",
+  "link_url": "#enroll"
 }

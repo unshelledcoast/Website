@@ -1,11 +1,17 @@
 {
-  "btn_secondary_label": "Current Course",
-  "btn_secondary_link": "#iliad",
-  "eyebrow": "Online Literature · Classics · Epic Poetry",
-  "btn_primary_label": "View Courses",
-  "title_line1": "The Great",
-  "title_line2": "Epic Poets.",
-  "subtitle": "High fidelity online courses in Homer, Virgil, Dante and Milton — guided by an instructor who believes these poems are everyone's inheritance.",
-  "title_line3": "Taught well.",
-  "btn_primary_link": "#courses"
+  "eyebrow": "HOMER · VIRGIL · DANTE · MILTON",
+  "heading_prefix": "Great books taught with",
+  "heading_emphasis": "seriousness",
+  "heading_suffix": "and reverence.",
+  "subtitle": "I’m Nick Rosado. I teach the classic epics as living works of art: dramatic, demanding, and spiritually serious.",
+  "primary_label": "VIEW COURSES",
+  "primary_link": "#courses",
+  "secondary_label": "ABOUT NICK",
+  "secondary_link": "#about",
+  "authors": [
+    { "label": "HOMER", "image": "/homer.jpg", "alt": "Homer" },
+    { "label": "DANTE", "image": "/dante.jpg", "alt": "Dante" },
+    { "label": "VIRGIL", "image": "/virgil.png", "alt": "Virgil" },
+    { "label": "MILTON", "image": "/milton.jpg", "alt": "Milton" }
+  ]
 }

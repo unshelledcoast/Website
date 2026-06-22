@@ -1,13 +1,19 @@
 {
-  "heading": "Ready to Enroll?",
-  "sub": "Each course is <strong>$250</strong>. To reserve your place in the upcoming Iliad course — or to be notified when the next course opens — reach out directly. All enrollment is handled personally by Nick.",
-  "payment_methods": [
-    "PayPal",
-    "Venmo",
-    "Zelle"
-  ],
-  "email": "Unshelledcoast@gmail.com",
-  "contact_sub": "and indicate your preferred payment method.",
-  "contact_prefix": "To enroll (or ask questions) email",
-  "footer_tagline": "Achilles Photo: Dietmar Rabich / Wikimedia Commons / “Korfu (GR), Gastouri, Achilleion -- 2018 -- 1323” / CC BY-SA 4.0 ~ \n\nAeneid Pillar Photo: © User:Colin / Wikimedia Commons / CC BY-SA 4.0"
+  "tag": "ENROLLMENT",
+  "heading_prefix": "Ready to study the classics",
+  "heading_emphasis": "seriously?",
+  "body": "Enrollment details, payment information, and course availability can be updated here through the CMS as each course rotates throughout the year.",
+  "price": "$250",
+  "price_note": "PER COURSE · LIVE ONLINE",
+  "payment_methods": ["VENMO", "ZELLE", "PAYPAL"],
+  "right_heading": "Questions before enrolling?",
+  "right_body_1": "Write to Nick directly about the current course, schedule, format, or whether the class is a good fit.",
+  "right_body_2": "Email: <a href=\"mailto:unshelledcoast@gmail.com\">unshelledcoast@gmail.com</a>",
+  "footer_brand": "ENLIGHTENMENT EDUCATOR",
+  "footer_links": [
+    { "label": "COURSES", "url": "#courses" },
+    { "label": "ABOUT", "url": "#about" },
+    { "label": "ENROLL", "url": "#enroll" },
+    { "label": "YOUTUBE", "url": "/youtube/" }
+  ]
 }

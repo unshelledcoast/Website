@@ -1,9 +1,13 @@
 {
-  "eyebrow": "Your Instructor",
-  "name": "Nick Rosado",
-  "para1": "The theme of my life is hero worship. I teach literature for the same reason Homer sang — because these stories matter, and the ancient flames of the heroes within are worthy of spending a lifetime fanning.",
-  "para2": "My courses are built around a simple conviction: the great epic poems are not difficult because they are obscure, but because they are deep. Given the right context, the right hierarchical structure, and the right companions for the journey, anyone can read them — and be deeply moved by them.",
-  "para3": "The <em>Divine Comedy</em> course is fully built. The <em>Iliad</em> course, for Q2 2026, is imminent. The <em>Aeneid</em> and <em>Paradise Lost</em> follow through the year.",
-  "btn_label": "Get in Touch",
-  "photo": "/nick.jpg"
+  "eyebrow": "ABOUT THE TEACHER",
+  "seal": "/EE_symbol_gold_transparent.png",
+  "photo": "/nick.jpg",
+  "photo_alt": "Nick Rosado",
+  "heading_prefix": "A course in the classics should feel like an",
+  "heading_emphasis": "initiation",
+  "body_1": "Nick Rosado teaches literature with a focus on moral seriousness, dramatic structure, and the spiritual power of great art.",
+  "body_2": "These courses are built for students who want more than summaries: close reading, context, argument, and sustained attention to the highest works of the Western canon.",
+  "pull_quote": "The goal is not merely to understand the classics, but to learn how to experience their greatness.",
+  "button_label": "GET IN TOUCH",
+  "button_link": "#enroll"
 }

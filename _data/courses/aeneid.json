@@ -1,16 +1,16 @@
 {
-  "cta_label": "Coming Q3 2026",
-  "image_alt": "Statue on column, Mount Stuart House © User:Colin / Wikimedia Commons / CC BY-SA 4.0",
-  "status_label": "Coming Q3",
-  "cta_link": "#",
-  "author": "Translated by Robert Fagles",
-  "slug": "aeneid",
-  "quarter": "Q3 · 2026",
-  "order": 3,
-  "desc": "Rome's founding epic and one of the greatest meditations on duty, love and the price of empire - captured through its hero, Aeneas - a hero who pursued greatness, and paid for it.",
-  "status": "coming-soon",
-  "title": "Virgil's <em>Aeneid</em>",
-  "image": "/Aeneid_Book_4.jpg",
-  "disabled": true,
-  "status_detail": "In Development"
+  "order": 2,
+  "badge": "COMING SOON",
+  "badge_class": "badge-dk",
+  "poet": "VIRGIL",
+  "title": "The Aeneid",
+  "description": "A course on piety, empire, duty, and the cost of founding a civilization.",
+  "image": "/Aeneid Book 4.jpg",
+  "image_alt": "Aeneid artwork",
+  "meta": [
+    { "label": "Season", "value": "Upcoming" },
+    { "label": "Format", "value": "Live Online" }
+  ],
+  "link_label": "Details Soon",
+  "link_url": "#enroll"
 }

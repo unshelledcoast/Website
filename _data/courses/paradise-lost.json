@@ -1,16 +1,16 @@
 {
-  "cta_label": "Coming Q4 2026",
-  "image_alt": "Eve - statue by Auguste Rodin",
-  "status_label": "Coming Q4",
-  "cta_link": "#",
-  "author": "The Complete Poem",
-  "slug": "paradise-lost",
-  "quarter": "Q4 · 2026",
   "order": 4,
-  "desc": "The most ambitious poem in the English language — Satan, free will, the Fall and what it means to be human. We close the year with Milton and the Enlightenment itself.",
-  "status": "coming-soon",
-  "title": "Milton's <em>Paradise Lost</em>",
+  "badge": "COMING SOON",
+  "badge_class": "badge-blue",
+  "poet": "MILTON",
+  "title": "Paradise Lost",
+  "description": "A course on rebellion, temptation, free will, heroism, and the loss of paradise.",
   "image": "/Eve.jpg",
-  "disabled": true,
-  "status_detail": "In Development"
+  "image_alt": "Paradise Lost artwork",
+  "meta": [
+    { "label": "Season", "value": "Upcoming" },
+    { "label": "Format", "value": "Live Online" }
+  ],
+  "link_label": "Details Soon",
+  "link_url": "#enroll"
 }

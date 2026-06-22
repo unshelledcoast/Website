@@ -1,19 +1,16 @@
 {
-  "cta_label": "View Syllabus & Enroll",
-  "image_alt": "Photo: Dietmar Rabich, Wikimedia Commons, CC BY-SA 4.0",
-  "status_label": "Enrolling Now",
-  "cta_link": "#iliad",
-  "price": "$250",
-  "author": "Translated by E.V. Rieu",
-  "slug": "iliad",
-  "quarter": "Q2 · 2026",
   "order": 1,
-  "desc": "Injustice, glory, grief and the price of life. The oldest epic in the Western tradition follows the great-souled life of Achilles, son of Peleus. We read his story not as ancient history, but as the first western tragedy.",
-  "status": "enrolling",
-  "duration": "2 and a half months ",
-  "format": "Weekly Live + Async",
-  "title": "Homer's <em>Iliad</em>",
+  "badge": "ENROLLING NOW",
+  "badge_class": "badge-red",
+  "poet": "HOMER",
+  "title": "The Iliad",
+  "description": "A course on wrath, honor, mortality, and the heroic vision of life.",
   "image": "/Achilles.jpg",
-  "disabled": false,
-  "sessions": "11 Classes"
+  "image_alt": "Achilles artwork",
+  "meta": [
+    { "label": "Format", "value": "Live Online" },
+    { "label": "Length", "value": "13 Classes" }
+  ],
+  "link_label": "Learn More",
+  "link_url": "#featured"
 }
