@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "cta_label": "NOW ENROLLING",
+    "cta_link": "#featured"
+  },
+
+  "hero": {
+    "eyebrow": "2026 YEAR-ROUND PROGRAM",
+    "heading_line_1": "Four poets.",
+    "heading_line_2": "Four poems.",
+    "heading_line_3": "One year."
+  },
+
+  "course_grid": {
+    "course_1": "iliad",
+    "course_2": "aeneid",
+    "course_3": "divine-comedy",
+    "course_4": "paradise-lost"
+  },
+
+  "featured_course": {
+    "active_course": "iliad"
+  }
+}
