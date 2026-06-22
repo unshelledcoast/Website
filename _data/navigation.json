@@ -1,0 +1,24 @@
+{
+  "brand": "Enlightenment Educator",
+  "logo": "/EE_symbol_gold_transparent.png",
+  "links": [
+    {
+      "label": "About Nick",
+      "url": "#about"
+    },
+    {
+      "label": "Courses",
+      "url": "#courses"
+    },
+    {
+      "label": "Now Enrolling",
+      "url": "#featured"
+    },
+    {
+      "label": "Enroll",
+      "url": "#enroll"
+    }
+  ],
+  "cta_label": "Now Enrolling",
+  "cta_url": "#featured"
+}
