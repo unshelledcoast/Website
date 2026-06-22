@@ -1387,6 +1387,39 @@ nav {
   }
 }
 
+
+
+/* Accordion visibility + dropdown affordance */
+@media (min-width: 901px) {
+  .accord-kicker {
+    color: var(--gold2) !important;
+    opacity: 1 !important;
+  }
+
+  .accord-icon {
+    color: var(--gold2) !important;
+    font-size: 1.65rem !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    transform: rotate(0deg) !important;
+  }
+
+  .accord.open .accord-icon {
+    transform: rotate(180deg) !important;
+  }
+
+  .accord-btn {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    transition: background .2s ease, color .2s ease !important;
+  }
+
+  .accord-btn:hover {
+    background: rgba(196,146,32,.08) !important;
+    color: var(--warm) !important;
+  }
+}
+
 </style>
 
 <meta name="description" content="Live and asynchronous courses on Homer, Virgil, Dante, and Milton with Nick Rosado.">
@@ -1549,7 +1582,7 @@ nav {
     </div>
     <div class="accords">
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Overview</span><span class="accord-title">Format & Expectations</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Overview</span><span class="accord-title">Format & Expectations</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner"><ul>
           <li>11 weekly live sessions, one hour each</li>
           <li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li>
@@ -1560,26 +1593,26 @@ nav {
         </ul></div></div>
       </div>
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Method</span><span class="accord-title">How the Lectures Work</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Method</span><span class="accord-title">How the Lectures Work</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner">Each pre-recorded lecture has two parts. Before you read, you listen to the introduction — essential context, background and what to look for. After you read, you return for the integrations section, which draws on copious poetic research and connects the Book to broader themes.<br><br>Recommended order: Introduction → Read the Book → Integrations.</div></div>
       </div>
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Weekly Work</span><span class="accord-title">Recurring Assignments</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Weekly Work</span><span class="accord-title">Recurring Assignments</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner"><ul>
           <li><strong style="color:var(--warm)">Weekly line selection:</strong> Each student chooses one line or short passage — one they love, hate or have a question about — and shares it during class with a brief explanation.</li>
           <li><strong style="color:var(--warm)">Plot summary:</strong> Two or three students per week each write a ~seven-sentence summary for one assigned Book, shared at the start of discussion.</li>
         </ul></div></div>
       </div>
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Live Sessions</span><span class="accord-title">Class Structure</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Live Sessions</span><span class="accord-title">Class Structure</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner">Each Book gets the same three-part structure: (1) Student's short plot summary, (2) Instructor's one to two thematic focus points from the lecture, (3) All students' line selections and open discussion. After class, students have open access to the instructor for further questions.</div></div>
       </div>
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part I</span><span class="accord-title">Class 1: Orientation & Trojan War Context</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part I</span><span class="accord-title">Class 1: Orientation & Trojan War Context</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner"><strong style="color:var(--warm)">Pre-Class Viewing:</strong> <em>The Trojan War Cycle</em> (6 min) · <em>Greek Gods Explained in 12 Minutes</em> · Optional: <em>Epic Cycle — The Lost Tales</em> (12 min) · Optional film: <em>Troy</em> (2003)<br><br><strong style="color:var(--warm)">During Class:</strong> Introduction to the epic poetry tradition, Homer's biography and historical context, the Trojan War cycle and key philosophical concepts in the <em>Iliad</em>.</div></div>
       </div>
       <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part II</span><span class="accord-title">Classes 2–11: Book-by-Book</span></span><span class="accord-icon">+</span></button>
+        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part II</span><span class="accord-title">Classes 2–11: Book-by-Book</span></span><span class="accord-icon">⌄</span></button>
         <div class="accord-body"><div class="accord-body-inner">Each subsequent class covers two (sometimes three) Books of the <em>Iliad</em> (Books 1–24 across 11 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion.</div></div>
       </div>
     </div>
