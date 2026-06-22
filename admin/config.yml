@@ -60,7 +60,6 @@ collections:
         label: "Featured Course + Quote Banner"
         file: "_data/featured.json"
         fields:
-          - { label: "Course Key", name: "course_key", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
           - { label: "Section Tag", name: "tag", widget: "string" }
           - { label: "Artwork Image", name: "art_image", widget: "image" }
           - { label: "Artwork Alt Text", name: "art_alt", widget: "string" }
