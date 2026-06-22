@@ -1,0 +1,15 @@
+{
+  "tag": "Get In Touch",
+  "heading": "Email Nick Directly",
+  "body_1": "To enroll or ask questions, email directly and indicate your preferred payment method.",
+  "body_2": "Include your name and any questions about the course.",
+  "price": "$250",
+  "price_note": "Per Course · Live Online",
+  "payment_methods": [
+    "PayPal",
+    "Venmo",
+    "Zelle"
+  ],
+  "button_label": "Email to Enroll",
+  "button_url": "mailto:unshelledcoast@gmail.com"
+}
