@@ -1420,6 +1420,61 @@ nav {
   }
 }
 
+
+
+/* Final mobile/nav/course/accordion fixes */
+@media (max-width: 760px) {
+  nav {
+    overflow: hidden !important;
+  }
+  .nav-logo {
+    max-width: calc(100vw - 185px) !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    font-size: .76rem !important;
+    letter-spacing: .13em !important;
+  }
+  .nav-mark {
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 auto !important;
+  }
+  .nav-cta a {
+    white-space: nowrap !important;
+    display: inline-block !important;
+    font-size: .58rem !important;
+    letter-spacing: .12em !important;
+    padding: 11px 10px !important;
+    line-height: 1 !important;
+  }
+  .courses-header {
+    margin-bottom: 34px !important;
+  }
+  .courses-hed {
+    margin-bottom: 26px !important;
+  }
+  .courses-header .sec-tag {
+    margin-top: 0 !important;
+    line-height: 1.55 !important;
+    max-width: 82vw !important;
+  }
+}
+
+/* Make all accordion dropdown cues visibly gold */
+.accord-kicker,
+.accord-icon {
+  color: var(--gold2) !important;
+  opacity: 1 !important;
+}
+.accord-icon {
+  font-size: 1.55rem !important;
+  font-weight: 300 !important;
+}
+.accord-btn:hover {
+  background: rgba(196,146,32,.08) !important;
+}
+
 </style>
 
 <meta name="description" content="Live and asynchronous courses on Homer, Virgil, Dante, and Milton with Nick Rosado.">
@@ -1509,22 +1564,6 @@ nav {
     </div>
     <div class="card">
       <div class="card-img-wrap">
-        <img src="/Divine Comedy.jpg" alt="Dante — Divine Comedy">
-        <span class="badge badge-blue">Course Built</span>
-      </div>
-      <div class="card-body">
-        <div class="card-poet">Dante</div>
-        <div class="card-title">The Divine Comedy</div>
-        <p class="card-desc">A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante.</p>
-        <div class="card-meta">
-          <span><strong>Available Now</strong> · $250 · 11 classes</span>
-          <span><strong>Translation</strong> · John C. Ciardi</span>
-        </div>
-        <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Inquire</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-wrap">
         <img src="/Aeneid Book 4.jpg" alt="Virgil — Aeneid">
         <span class="badge badge-dk">Coming Q3</span>
       </div>
@@ -1537,6 +1576,22 @@ nav {
           <span><strong>Translation</strong> · Robert Fagles</span>
         </div>
         <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Get Notified</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="/Divine Comedy.jpg" alt="Dante — Divine Comedy">
+        <span class="badge badge-blue">Course Built</span>
+      </div>
+      <div class="card-body">
+        <div class="card-poet">Dante</div>
+        <div class="card-title">The Divine Comedy</div>
+        <p class="card-desc">A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante.</p>
+        <div class="card-meta">
+          <span><strong>Available Now</strong> · $250 · 11 classes</span>
+          <span><strong>Translation</strong> · John C. Ciardi</span>
+        </div>
+        <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Inquire</a>
       </div>
     </div>
     <div class="card">
