@@ -7,34 +7,157 @@ public_folder: "/images/uploads"
 local_backend: true
 
 collections:
-  - name: "settings"
-    label: "Homepage Content"
+  - name: "homepage"
+    label: "Homepage"
     files:
-      - name: "site"
-        label: "Site / Social"
-        file: "_data/site.json"
+      - name: "homepage"
+        label: "Homepage Controller"
+        file: "_data/homepage.json"
         fields:
-          - { label: "Browser/Social Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Social Image", name: "social_image", widget: "image" }
-          - { label: "Brand Name", name: "brand", widget: "string" }
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - { label: "Top CTA Label", name: "cta_label", widget: "string" }
+              - { label: "Top CTA Link", name: "cta_link", widget: "string" }
 
-      - name: "hero"
-        label: "Hero Section"
-        file: "_data/hero.json"
-        fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-          - { label: "Heading Prefix", name: "heading_prefix", widget: "string" }
-          - { label: "Heading Emphasis", name: "heading_emphasis", widget: "string" }
-          - { label: "Heading Suffix", name: "heading_suffix", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "text" }
-          - { label: "Primary Button Label", name: "primary_label", widget: "string" }
-          - { label: "Primary Button Link", name: "primary_link", widget: "string" }
-          - { label: "Secondary Button Label", name: "secondary_label", widget: "string" }
-          - { label: "Secondary Button Link", name: "secondary_link", widget: "string" }
-          - label: "Author Image Grid"
-            name: "authors"
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
+              - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
+              - { label: "Heading Line 3", name: "heading_line_3", widget: "string" }
+
+          - label: "Course Grid Order"
+            name: "course_grid"
+            widget: "object"
+            fields:
+              - { label: "Course 1", name: "course_1", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+              - { label: "Course 2", name: "course_2", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+              - { label: "Course 3", name: "course_3", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+              - { label: "Course 4", name: "course_4", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+
+          - label: "Featured Course"
+            name: "featured_course"
+            widget: "object"
+            fields:
+              - { label: "Active Course", name: "active_course", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+
+  - name: "courses"
+    label: "Courses"
+    files:
+      - name: "iliad"
+        label: "Homer's Iliad"
+        file: "_data/courses/iliad.json"
+        fields: &course_fields
+          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Status", name: "status", widget: "string" }
+          - { label: "Badge Text", name: "badge", widget: "string" }
+          - { label: "Badge Class", name: "badge_class", widget: "select", options: ["badge-red", "badge-blue", "badge-dk"] }
+          - { label: "Poet", name: "poet", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Card Description", name: "card_description", widget: "text" }
+          - { label: "Featured Subtitle", name: "featured_subtitle", widget: "text" }
+          - { label: "Featured Description", name: "featured_description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt", name: "image_alt", widget: "string" }
+          - { label: "Artwork Caption", name: "art_caption", widget: "string" }
+          - { label: "Price", name: "price", widget: "string" }
+          - { label: "Schedule", name: "schedule", widget: "string" }
+
+          - label: "Payment Methods"
+            name: "payment_methods"
             widget: "list"
+            field: { label: "Method", name: "method", widget: "string" }
+
+          - label: "Details"
+            name: "details"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+
+      - name: "aeneid"
+        label: "Virgil's Aeneid"
+        file: "_data/courses/aeneid.json"
+        fields: *course_fields
+
+      - name: "divine-comedy"
+        label: "Dante's Divine Comedy"
+        file: "_data/courses/divine-comedy.json"
+        fields: *course_fields
+
+      - name: "paradise-lost"
+        label: "Milton's Paradise Lost"
+        file: "_data/courses/paradise-lost.json"
+        fields: *course_fields
+
+  - name: "theme"
+    label: "Theme"
+    files:
+      - name: "theme"
+        label: "Global Colors"
+        file: "_data/theme.json"
+        fields:
+          - { label: "Cream", name: "cream", widget: "string" }
+          - { label: "Warm", name: "warm", widget: "string" }
+          - { label: "Ink", name: "ink", widget: "string" }
+          - { label: "Char", name: "char", widget: "string" }
+          - { label: "Gold", name: "gold", widget: "string" }
+          - { label: "Gold 2", name: "gold2", widget: "string" }
+          - { label: "Red", name: "red", widget: "string" }
+          - { label: "Red 2", name: "red2", widget: "string" }
+          - { label: "Muted", name: "mute", widget: "string" }
+          - { label: "Rule", name: "rule", widget: "string" }
+
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "_data/navigation.json"
+        fields:
+          - { label: "Brand", name: "brand", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      - name: "footer"
+        label: "Footer"
+        file: "_data/footer.json"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Copyright", name: "copyright", widget: "string" }
+          - { label: "Photo Credits", name: "photo_credits", widget: "text" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      - name: "enrollment"
+        label: "Enrollment"
+        file: "_data/enrollment.json"
+        fields:
+          - { label: "Tag", name: "tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body 1", name: "body_1", widget: "text" }
+          - { label: "Body 2", name: "body_2", widget: "text" }
+          - { label: "Price", name: "price", widget: "string" }
+          - { label: "Price Note", name: "price_note", widget: "string" }
+          - label: "Payment Methods"
+            name: "payment_methods"
+            widget: "list"
+            field: { label: "Method", name: "method", widget: "string" }
+          - { label: "Button Label", name: "button_label", widget: "string" }
+          - { label: "Button URL", name: "button_url", widget: "string" }            widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
