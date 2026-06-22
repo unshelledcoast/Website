@@ -1,16 +1,49 @@
 {
-  "order": 1,
-  "badge": "ENROLLING NOW",
+  "slug": "iliad",
+
+  "status": "enrolling",
+  "badge": "NOW ENROLLING",
   "badge_class": "badge-red",
+
   "poet": "HOMER",
   "title": "The Iliad",
-  "description": "A course on wrath, honor, mortality, and the heroic vision of life.",
+
+  "card_description": "A course on wrath, honor, mortality, and the heroic vision of life.",
+
+  "featured_subtitle": "An online course on wrath, honor, mortality, and greatness.",
+
+  "featured_description": "Homer’s *Iliad* is not merely the story of Achilles’ anger. It is a poem about what men live for, what they are willing to die for, and what kind of greatness can survive the knowledge of mortality.",
+
   "image": "/Achilles.jpg",
   "image_alt": "Achilles artwork",
-  "meta": [
-    { "label": "Format", "value": "Live Online" },
-    { "label": "Length", "value": "13 Classes" }
+
+  "art_caption": "HOMER'S ILIAD",
+
+  "price": "$250",
+  "schedule": "Q2 2026",
+
+  "payment_methods": [
+    "PayPal",
+    "Venmo",
+    "Zelle"
   ],
-  "link_label": "Learn More",
-  "link_url": "#featured"
+
+  "details": [
+    {
+      "label": "FORMAT",
+      "value": "Live Online"
+    },
+    {
+      "label": "LENGTH",
+      "value": "13 Classes"
+    },
+    {
+      "label": "PRICE",
+      "value": "$250"
+    },
+    {
+      "label": "STATUS",
+      "value": "Enrolling Now"
+    }
+  ]
 }
