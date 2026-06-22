@@ -1475,6 +1475,45 @@ nav {
   background: rgba(196,146,32,.08) !important;
 }
 
+
+
+/* Final top-bar mobile title fix */
+@media (max-width: 760px) {
+  nav {
+    padding: 0 14px !important;
+    gap: 10px !important;
+  }
+
+  .nav-logo {
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    gap: 8px !important;
+    font-size: .66rem !important;
+    letter-spacing: .095em !important;
+    flex: 1 1 auto !important;
+  }
+
+  .nav-mark {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+  }
+
+  .nav-cta {
+    flex: 0 0 auto !important;
+  }
+
+  .nav-cta a {
+    white-space: nowrap !important;
+    font-size: .54rem !important;
+    letter-spacing: .095em !important;
+    padding: 10px 9px !important;
+  }
+}
+
 </style>
 
 <meta name="description" content="Live and asynchronous courses on Homer, Virgil, Dante, and Milton with Nick Rosado.">
