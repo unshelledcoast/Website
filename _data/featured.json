@@ -1,36 +1,64 @@
 {
-  "course_key": "iliad",
-  "tag": "FEATURED COURSE",
-  "art_image": "/Achilles.jpg",
-  "art_alt": "Achilles artwork for the Iliad course",
-  "art_caption": "HOMER’S ILIAD",
-  "title_prefix": "Homer’s",
-  "title_emphasis": "Iliad",
-  "subtitle": "An online course on wrath, honor, mortality, and greatness.",
-  "book_note": "Now enrolling for the next live cohort.",
-  "description": "Homer’s *Iliad* is not merely the story of Achilles’ anger. It is a poem about what men live for, what they are willing to die for, and what kind of greatness can survive the knowledge of mortality.",
   "details": [
-    { "label": "FORMAT", "value": "Live Online" },
-    { "label": "LENGTH", "value": "13 Classes" },
-    { "label": "PRICE", "value": "$250" },
-    { "label": "STATUS", "value": "Enrolling Now" }
+    {
+      "label": "FORMAT",
+      "value": "Live Online"
+    },
+    {
+      "label": "LENGTH",
+      "value": "13 Classes"
+    },
+    {
+      "label": "PRICE",
+      "value": "$250"
+    },
+    {
+      "label": "STATUS",
+      "value": "Enrolling Now"
+    }
   ],
-  "primary_label": "ENROLL NOW",
-  "primary_link": "#enroll",
-  "secondary_label": "ASK A QUESTION",
-  "secondary_link": "mailto:unshelledcoast@gmail.com",
+  "title_emphasis": "Iliad",
   "syllabus": [
-    { "kicker": "PART I", "title": "The World of Homer", "content": "What kind of culture produced the Iliad, and what did heroism mean before philosophy could define it?" },
-    { "kicker": "PART II", "title": "Achilles and the Moral Crisis", "content": "Why Achilles withdraws, what he discovers, and why his greatness cannot be reduced to rage." },
-    { "kicker": "PART III", "title": "Hektor, Troy, and Mortal Love", "content": "The poem’s vision of family, city, duty, and the tragic nobility of Hektor." },
-    { "kicker": "PART IV", "title": "The Ending of the Iliad", "content": "Priam, Achilles, pity, reverence, and the final meaning of the poem." }
+    {
+      "kicker": "PART I",
+      "title": "The World of Homer",
+      "content": "What kind of culture produced the Iliad, and what did heroism mean before philosophy could define it?"
+    },
+    {
+      "kicker": "PART II",
+      "title": "Achilles and the Moral Crisis",
+      "content": "Why Achilles withdraws, what he discovers, and why his greatness cannot be reduced to rage."
+    },
+    {
+      "kicker": "PART III",
+      "title": "Hektor, Troy, and Mortal Love",
+      "content": "The poem’s vision of family, city, duty, and the tragic nobility of Hektor."
+    },
+    {
+      "kicker": "PART IV",
+      "title": "The Ending of the Iliad",
+      "content": "Priam, Achilles, pity, reverence, and the final meaning of the poem."
+    }
   ],
+  "secondary_link": "mailto:unshelledcoast@gmail.com",
+  "book_note": "Now enrolling for the next live cohort.",
+  "secondary_label": "ASK A QUESTION",
+  "art_caption": "HOMER’S ILIAD",
+  "art_alt": "Achilles artwork for the Iliad course",
   "quote_text": "The classics endure because they dramatize truths about life, morality, and the human spirit that remain inexhaustible.",
-  "quote_attribution": "ENLIGHTENMENT EDUCATOR",
   "colors": {
     "accent": "#651318",
     "accent_dark": "#2b0b0d",
     "accent_soft": "rgba(101,19,24,.28)",
     "highlight": "#e4b440"
-  }
+  },
+  "primary_link": "#enroll",
+  "primary_label": "ENROLL NOW",
+  "subtitle": "An online course on wrath, honor, mortality, and greatness.",
+  "title_prefix": "Homer’s",
+  "tag": "FEATURED COURSE",
+  "course_key": "aeneid",
+  "quote_attribution": "ENLIGHTENMENT EDUCATOR",
+  "description": "Homer’s *Iliad* is not merely the story of Achilles’ anger. It is a poem about what men live for, what they are willing to die for, and what kind of greatness can survive the knowledge of mortality.",
+  "art_image": "/Achilles.jpg"
 }
