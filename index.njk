@@ -1531,232 +1531,229 @@ nav {
 </head>
 <body>
 
-<!-- NAV -->
+{% set featuredKey = featured.course_key or featured.active_course or featured_course.active_course %}
+{% set activeCourse = courses[featuredKey] %}
+
+{% if featuredKey == "iliad" %}
+  {% set courseClass = "course-homer" %}
+{% elif featuredKey == "aeneid" %}
+  {% set courseClass = "course-virgil" %}
+{% elif featuredKey == "divine-comedy" %}
+  {% set courseClass = "course-dante" %}
+{% elif featuredKey == "paradise-lost" %}
+  {% set courseClass = "course-milton" %}
+{% else %}
+  {% set courseClass = "course-homer" %}
+{% endif %}
+
 <nav>
-  <a href="#" class="nav-logo"><img src="/EE_symbol_gold_transparent.png" alt="" class="nav-mark">Enlightenment Educator</a>
+  <a href="/" class="nav-logo">
+    <img src="{{ navigation.logo }}" alt="{{ navigation.brand }}" class="nav-mark">
+    {{ navigation.brand }}
+  </a>
+
   <ul class="nav-links">
-    <li><a href="#about">About Nick</a></li>
-    <li><a href="#courses">Courses</a></li>
-    <li><a href="#iliad">Now Enrolling</a></li>
-    <li><a href="#enroll">Enroll</a></li>
+    {% for item in navigation.links %}
+      <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% endfor %}
   </ul>
-  <div class="nav-cta"><a href="mailto:Unshelledcoast@gmail.com">Now Enrolling →</a></div>
+
+  <div class="nav-cta">
+    <a href="{{ navigation.cta_url }}">{{ navigation.cta_label }}</a>
+  </div>
 </nav>
 
-<!-- S1: HERO -->
 <section class="hero">
   <div class="hero-l">
-    <div class="hero-eyebrow">Enlightenment Educator</div>
-    <h1 class="hero-hed">Nick Rosado<br>teaches the <em>great<br>epic poets.</em></h1>
-    <p class="hero-sub">Homer, Virgil, Dante, and Milton — four poets, four poems, one year. Small-group online courses built with the depth and attention these works deserve.</p>
+    <div class="hero-eyebrow">{{ hero.eyebrow }}</div>
+    <h1 class="hero-hed">
+      {{ hero.heading_prefix }} <em>{{ hero.heading_emphasis }}</em><br>
+      {{ hero.heading_suffix }}
+    </h1>
+    <p class="hero-sub">{{ hero.subtitle }}</p>
+
     <div class="hero-btns">
-      <a href="mailto:Unshelledcoast@gmail.com" class="btn-dark">Enroll in The Iliad</a>
-      <a href="#courses" class="btn-outline">View All Courses</a>
+      <a href="{{ hero.primary_link }}" class="btn-dark">{{ hero.primary_label }}</a>
+      <a href="{{ hero.secondary_link }}" class="btn-outline">{{ hero.secondary_label }}</a>
     </div>
   </div>
+
   <div class="hero-r">
-    <div class="poet-cell"><img src="/homer.jpg" alt="Homer"><div class="poet-label">Homer</div></div>
-    <div class="poet-cell"><img src="/dante.jpg" alt="Dante"><div class="poet-label">Dante</div></div>
-    <div class="poet-cell"><img src="/virgil.png" alt="Virgil"><div class="poet-label">Virgil</div></div>
-    <div class="poet-cell"><img src="/milton.jpg" alt="Milton"><div class="poet-label">Milton</div></div>
+    {% for author in hero.authors %}
+      <div class="poet-cell">
+        <img src="{{ author.image }}" alt="{{ author.alt }}">
+        <div class="poet-label">{{ author.label }}</div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
-<!-- S2: ABOUT -->
 <section class="about" id="about">
   <div class="about-l">
-    <img src="/EE_symbol_gold_transparent.png" alt="" class="about-seal">
-    <div class="sec-tag">Your Instructor</div>
-    <h2 class="about-hed">Taught by someone<br>who <em>loves</em> this.</h2>
-    <p class="about-body">The great epic poems are not difficult because they are obscure — they are deep. Given the right context, the right structure, and the right companions for the journey, anyone can read them and be profoundly moved.</p>
-    <blockquote class="about-pull">"I teach literature for the same reason Homer sang — because these stories matter, and the ancient flames of the heroes within are worthy of spending a lifetime fanning."</blockquote>
-    <p class="about-body">Each course combines pre-recorded lectures, weekly live sessions, and the kind of close attention to the text that most readers never get. Nick handles all enrollment personally.</p>
-    <a href="#enroll" class="btn-get">Get in Touch</a>
+    <img src="{{ about.seal }}" alt="Enlightenment Educator symbol" class="about-seal">
+    <div class="sec-tag">{{ about.eyebrow }}</div>
+    <h2 class="about-hed">
+      {{ about.heading_prefix }} <em>{{ about.heading_emphasis }}</em>
+    </h2>
+    <p class="about-body">{{ about.body_1 }}</p>
+    <p class="about-body">{{ about.body_2 }}</p>
+    <div class="about-pull">{{ about.pull_quote }}</div>
+    <a href="{{ about.button_link }}" class="btn-get">{{ about.button_label }}</a>
   </div>
+
   <div class="about-r">
-    <img src="/nick.jpg" alt="Nick Rosado">
+    <img src="{{ about.photo }}" alt="{{ about.photo_alt }}">
   </div>
 </section>
 
-<!-- S3: COURSES -->
 <section class="courses" id="courses">
   <div class="courses-header">
-    <h2 class="courses-hed">Four poets. Four poems.<br><em>One year.</em></h2>
-    <div class="sec-tag" style="margin-bottom:0;">2026 Year-Round Program</div>
+    <h2 class="courses-hed">
+      {{ course_grid.heading_line_1 }}<br>
+      <em>{{ course_grid.heading_line_2 }}</em>
+    </h2>
+    <div class="sec-tag">{{ course_grid.eyebrow }}</div>
   </div>
+
   <div class="courses-grid">
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="/Achilles.jpg" alt="Achilles — Homer's Iliad">
-        <span class="badge badge-red">Now Enrolling</span>
-      </div>
-      <div class="card-body">
-        <div class="card-poet">Homer</div>
-        <div class="card-title">The Iliad</div>
-        <p class="card-desc">Injustice, glory, grief and the price of life. The oldest epic in the Western tradition — read not as ancient history, but as the first western tragedy.</p>
-        <div class="card-meta">
-          <span><strong>Q2 2026</strong> · $250 · 11 classes</span>
-          <span><strong>Translation</strong> · E.V. Rieu</span>
+    {% set courseKeys = [
+      homepage.course_grid.course_1,
+      homepage.course_grid.course_2,
+      homepage.course_grid.course_3,
+      homepage.course_grid.course_4
+    ] %}
+
+    {% for key in courseKeys %}
+      {% set course = courses[key] %}
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="{{ course.image }}" alt="{{ course.image_alt }}">
+          <span class="badge {{ course.badge_class }}">{{ course.badge }}</span>
         </div>
-        <a href="#iliad" class="card-link">Enroll Now</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="/Aeneid Book 4.jpg" alt="Virgil — Aeneid">
-        <span class="badge badge-dk">Coming Q3</span>
-      </div>
-      <div class="card-body">
-        <div class="card-poet">Virgil</div>
-        <div class="card-title">The Aeneid</div>
-        <p class="card-desc">Rome's founding epic — a meditation on duty, love and the price of empire through Aeneas, a hero who pursued greatness and paid for it.</p>
-        <div class="card-meta">
-          <span><strong>Q3 2026</strong> · In Development</span>
-          <span><strong>Translation</strong> · Robert Fagles</span>
+
+        <div class="card-body">
+          <div class="card-poet">{{ course.poet }}</div>
+          <div class="card-title">{{ course.title }}</div>
+          <p class="card-desc">{{ course.card_description }}</p>
+
+          <div class="card-meta">
+            {% for detail in course.details %}
+              <span><strong>{{ detail.label }}</strong> · {{ detail.value }}</span>
+            {% endfor %}
+          </div>
+
+          {% if course.status == "enrolling" %}
+            <a href="#enroll" class="card-link">Enroll Now</a>
+          {% elif course.status == "built" %}
+            <a href="#enroll" class="card-link">Inquire</a>
+          {% else %}
+            <a href="#enroll" class="card-link">Get Notified</a>
+          {% endif %}
         </div>
-        <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Get Notified</a>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="/Divine Comedy.jpg" alt="Dante — Divine Comedy">
-        <span class="badge badge-blue">Course Built</span>
-      </div>
-      <div class="card-body">
-        <div class="card-poet">Dante</div>
-        <div class="card-title">The Divine Comedy</div>
-        <p class="card-desc">A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante.</p>
-        <div class="card-meta">
-          <span><strong>Available Now</strong> · $250 · 11 classes</span>
-          <span><strong>Translation</strong> · John C. Ciardi</span>
-        </div>
-        <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Inquire</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="/Eve.jpg" alt="Milton — Paradise Lost">
-        <span class="badge badge-dk">Coming Q4</span>
-      </div>
-      <div class="card-body">
-        <div class="card-poet">Milton</div>
-        <div class="card-title">Paradise Lost</div>
-        <p class="card-desc">The most ambitious poem in the English language. Satan, free will, the Fall and what it means to be human. We close the year with Milton.</p>
-        <div class="card-meta">
-          <span><strong>Q4 2026</strong> · In Development</span>
-        </div>
-        <a href="mailto:Unshelledcoast@gmail.com" class="card-link">Get Notified</a>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
-<!-- S4: ILIAD SPOTLIGHT -->
-<section class="iliad-spot course-homer" id="iliad">
-  
-<div class="iliad-book featured-art-panel">
-  <img src="/homer.jpg" alt="Homer portrait" class="featured-art-img">
-  <div class="featured-art-caption">Homer · Iliad</div>
-</div>
+<section class="iliad-spot {{ courseClass }}" id="featured">
+  <div class="iliad-book featured-art-panel">
+    <img src="{{ featured.art_image }}" alt="{{ featured.art_alt }}" class="featured-art-img">
+    <div class="featured-art-caption">{{ featured.art_caption }}</div>
+  </div>
 
   <div class="iliad-content">
-    <div class="iliad-tag">Now Enrolling · Q2 2026</div>
-    <h2 class="iliad-hed">Homer's<br><em>Iliad</em></h2>
-    <div class="iliad-sub">Translated by E.V. Rieu · Instructor: Nick Rosado</div>
-    <p class="iliad-desc">The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.</p>
+    <div class="iliad-tag">{{ featured.tag }}</div>
+
+    <h2 class="iliad-hed">
+      {{ featured.title_prefix }}<br><em>{{ featured.title_emphasis }}</em>
+    </h2>
+
+    <div class="iliad-sub">{{ featured.subtitle }}</div>
+    <div class="featured-book-note">{{ featured.book_note }}</div>
+
+    <p class="iliad-desc">{{ featured.description | safe }}</p>
+
     <div class="iliad-grid">
-      <div class="iliad-det"><span class="lbl">Duration</span><span class="val">2½ months</span></div>
-      <div class="iliad-det"><span class="lbl">Format</span><span class="val">Weekly Live + Async</span></div>
-      <div class="iliad-det"><span class="lbl">Sessions</span><span class="val">11 Classes</span></div>
-      <div class="iliad-det"><span class="lbl">Price</span><span class="val">$250</span></div>
+      {% for detail in featured.details %}
+        <div class="iliad-det">
+          <span class="lbl">{{ detail.label }}</span>
+          <span class="val">{{ detail.value }}</span>
+        </div>
+      {% endfor %}
     </div>
+
     <div class="iliad-btns">
-      <a href="mailto:Unshelledcoast@gmail.com" class="btn-gold">Enroll in This Course</a>
-      <a href="mailto:Unshelledcoast@gmail.com" class="btn-ghost">Contact Nick</a>
+      <a href="{{ featured.primary_link }}" class="btn-gold">{{ featured.primary_label }}</a>
+      <a href="{{ featured.secondary_link }}" class="btn-ghost">{{ featured.secondary_label }}</a>
     </div>
+
     <div class="accords">
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Overview</span><span class="accord-title">Format & Expectations</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner"><ul>
-          <li>11 weekly live sessions, one hour each</li>
-          <li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li>
-          <li>Required text: <em>Iliad</em>, translated by E.V. Rieu</li>
-          <li>~2–3 hours of total weekly commitment (lecture + reading + session)</li>
-          <li>All sessions recorded and shared via private link with passcode</li>
-          <li>Full asynchronous option available</li>
-        </ul></div></div>
-      </div>
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Course Method</span><span class="accord-title">How the Lectures Work</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner">Each pre-recorded lecture has two parts. Before you read, you listen to the introduction — essential context, background and what to look for. After you read, you return for the integrations section, which draws on copious poetic research and connects the Book to broader themes.<br><br>Recommended order: Introduction → Read the Book → Integrations.</div></div>
-      </div>
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Weekly Work</span><span class="accord-title">Recurring Assignments</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner"><ul>
-          <li><strong style="color:var(--warm)">Weekly line selection:</strong> Each student chooses one line or short passage — one they love, hate or have a question about — and shares it during class with a brief explanation.</li>
-          <li><strong style="color:var(--warm)">Plot summary:</strong> Two or three students per week each write a ~seven-sentence summary for one assigned Book, shared at the start of discussion.</li>
-        </ul></div></div>
-      </div>
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Live Sessions</span><span class="accord-title">Class Structure</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner">Each Book gets the same three-part structure: (1) Student's short plot summary, (2) Instructor's one to two thematic focus points from the lecture, (3) All students' line selections and open discussion. After class, students have open access to the instructor for further questions.</div></div>
-      </div>
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part I</span><span class="accord-title">Class 1: Orientation & Trojan War Context</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner"><strong style="color:var(--warm)">Pre-Class Viewing:</strong> <em>The Trojan War Cycle</em> (6 min) · <em>Greek Gods Explained in 12 Minutes</em> · Optional: <em>Epic Cycle — The Lost Tales</em> (12 min) · Optional film: <em>Troy</em> (2003)<br><br><strong style="color:var(--warm)">During Class:</strong> Introduction to the epic poetry tradition, Homer's biography and historical context, the Trojan War cycle and key philosophical concepts in the <em>Iliad</em>.</div></div>
-      </div>
-      <div class="accord">
-        <button class="accord-btn" onclick="tog(this)"><span class="accord-label"><span class="accord-kicker">Part II</span><span class="accord-title">Classes 2–11: Book-by-Book</span></span><span class="accord-icon">⌄</span></button>
-        <div class="accord-body"><div class="accord-body-inner">Each subsequent class covers two (sometimes three) Books of the <em>Iliad</em> (Books 1–24 across 11 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion.</div></div>
-      </div>
+      {% for item in featured.syllabus %}
+        <div class="accord">
+          <button class="accord-btn" onclick="tog(this)">
+            <span class="accord-label">
+              <span class="accord-kicker">{{ item.kicker }}</span>
+              <span class="accord-title">{{ item.title }}</span>
+            </span>
+            <span class="accord-icon">⌄</span>
+          </button>
+          <div class="accord-body">
+            <div class="accord-body-inner">{{ item.content | safe }}</div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- S5: QUOTE -->
-<div class="quote-band course-homer">
-  <p class="quote-t">"Sing, goddess, the anger of Achilles —<br>and the grief it brought upon the Greeks."</p>
-  <div class="quote-a">Homer · Iliad · Book I · Opening Line</div>
+<div class="quote-band {{ courseClass }}">
+  <p class="quote-t">"{{ quote.text }}"</p>
+  <div class="quote-a">{{ quote.attr }}</div>
 </div>
 
-<!-- S6: ENROLL -->
 <section class="enroll" id="enroll">
   <div class="enroll-l">
-    <div class="enroll-tag">Ready to Enroll?</div>
-    <h2 class="enroll-hed">Reserve your<br>place in<br><em>The Iliad</em></h2>
-    <p class="enroll-body">Each course is $250. All enrollment is handled personally by Nick. To reserve your place — or to be notified when the next course opens — reach out directly.</p>
-    <div class="enroll-price">$250</div>
-    <span class="enroll-note">Per Course · Iliad Q2 2026</span>
+    <div class="enroll-tag">{{ enrollment.tag }}</div>
+    <h2 class="enroll-hed">{{ enrollment.heading }}</h2>
+    <p class="enroll-body">{{ enrollment.body_1 }}</p>
+    <p class="enroll-body">{{ enrollment.body_2 }}</p>
+
+    <div class="enroll-price">{{ enrollment.price }}</div>
+    <span class="enroll-note">{{ enrollment.price_note }}</span>
+
     <div class="pay-row">
-      <span class="ppill">PayPal</span><span class="ppill">Venmo</span><span class="ppill">Zelle</span>
+      {% for method in enrollment.payment_methods %}
+        <span class="ppill">{{ method }}</span>
+      {% endfor %}
     </div>
   </div>
+
   <div class="enroll-r">
-    <img src="/EE_symbol_gold_transparent.png" alt="Enlightenment Educator symbol" class="enroll-seal">
-    <div class="enroll-tag">Get in Touch</div>
-    <h3 class="enroll-r-hed">Email Nick directly</h3>
-    <p class="enroll-r-body">To enroll or ask questions, email <a href="mailto:Unshelledcoast@gmail.com">Unshelledcoast@gmail.com</a> and indicate your preferred payment method.</p>
-    <p class="enroll-r-body">Include your name, any questions about the course, and whether you prefer live or asynchronous enrollment.</p>
+    <img src="{{ footer.logo }}" alt="Enlightenment Educator symbol" class="enroll-seal">
+    <div class="enroll-tag">{{ enrollment.tag }}</div>
+    <h3 class="enroll-r-hed">{{ enrollment.heading }}</h3>
+    <p class="enroll-r-body">{{ enrollment.body_1 }}</p>
+    <p class="enroll-r-body">{{ enrollment.body_2 }}</p>
+
     <div style="margin-top:40px;">
-      <a href="mailto:Unshelledcoast@gmail.com" class="btn-gold">Email to Enroll →</a>
+      <a href="{{ enrollment.button_url }}" class="btn-gold">{{ enrollment.button_label }} →</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <img src="/EE_symbol_gold_transparent.png" alt="Enlightenment Educator symbol" class="footer-mark">
-  <div class="foot-brand">© 2026 Nick Rosado · Enlightenment Educator · All Rights Reserved</div>
-  <div class="photo-credits">
-  Photo credits: Achilles statue photo by Dietmar Rabich / Wikimedia Commons / “Korfu (GR), Gastouri, Achilleion -- 2018 -- 1323” / CC BY-SA 4.0. Aeneid pillar photo by User:Colin / Wikimedia Commons / CC BY-SA 4.0.
-</div>
+  <img src="{{ footer.logo }}" alt="Enlightenment Educator symbol" class="footer-mark">
+
+  <div>
+    <div class="foot-brand">{{ footer.copyright }}</div>
+    <div class="photo-credits">{{ footer.photo_credits | safe }}</div>
+  </div>
+
   <ul class="foot-links">
-    <li><a href="#about">About Nick</a></li>
-    <li><a href="#courses">Courses</a></li>
-    <li><a href="#iliad">Now Enrolling</a></li>
-    <li><a href="#enroll">Enroll</a></li>
+    {% for item in footer.links %}
+      <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% endfor %}
   </ul>
-  <div class="foot-brand">Online Literature · Classics · Epic Poetry</div>
 </footer>
 
 <script>
@@ -1767,5 +1764,6 @@ function tog(btn) {
   if (!wasOpen) item.classList.add("open");
 }
 </script>
+
 </body>
 </html>
