@@ -1319,13 +1319,54 @@ nav {
 
 /* Desktop tightening patch */
 @media (min-width: 901px) {
-  .iliad-spot { min-height: 0 !important; }
-  .featured-art-panel, .featured-art-img { min-height: 600px !important; }
-  .iliad-content { padding: 32px 78px 40px !important; column-gap: 68px !important; }
-  .iliad-desc { line-height: 1.72 !important; margin: 0 0 18px !important; }
-  .iliad-grid { margin: 28px 0 24px !important; }
-  .iliad-btns { margin-bottom: 30px !important; }
-  .enroll-seal { width: 150px !important; height: 150px !important; object-fit: contain !important; display: block !important; margin-bottom: 36px !important; }
+  .iliad-spot {
+    min-height: 0 !important;
+    grid-template-columns: 360px minmax(0, 1fr) !important;
+  }
+
+  .featured-art-panel,
+  .featured-art-img {
+    min-height: 560px !important;
+  }
+
+  .iliad-content {
+    padding: 24px 78px 36px !important;
+    column-gap: 68px !important;
+    align-content: start !important;
+  }
+
+  .iliad-tag {
+    margin-bottom: 14px !important;
+  }
+
+  .iliad-hed {
+    margin-bottom: 14px !important;
+  }
+
+  .iliad-sub {
+    margin-bottom: 10px !important;
+  }
+
+  .iliad-desc {
+    line-height: 1.65 !important;
+    margin: 0 0 12px !important;
+  }
+
+  .iliad-grid {
+    margin: 18px 0 18px !important;
+  }
+
+  .iliad-btns {
+    margin-bottom: 22px !important;
+  }
+
+  .enroll-seal {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin-bottom: 36px !important;
+  }
 }
 </style>
 
