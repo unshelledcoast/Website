@@ -62,9 +62,9 @@ title: "Nick Rosado · Enlightenment Educator"
     {% set courseList = [courses["iliad"], courses["divine-comedy"], courses["aeneid"], courses["paradise-lost"]] %}
 {% for c in courseList %}
     <article class="card">
-      <div class="card-img-wrap"><img src="{{ course.image }}" alt="{{ course.image_alt }}"><span class="badge {{ course.badge_class }}">{{ course.badge }}</span></div>
-      <div class="card-body"><div class="card-poet">{{ course.poet }}</div><h3 class="card-title">{{ course.title }}</h3><p class="card-desc">{{ course.description }}</p><div class="card-meta">{% for item in course.meta %}<span><strong>{{ item.label }}:</strong> {{ item.value }}</span>{% endfor %}</div><a class="card-link" href="{{ course.link_url }}">{{ course.link_label }}</a></div>
-    </article>
+  <div class="card-img-wrap"><img src="{{ c.image }}" alt="{{ c.image_alt }}"><span class="badge {{ c.badge_class }}">{{ c.badge }}</span></div>
+  <div class="card-body"><div class="card-poet">{{ c.poet }}</div><h3 class="card-title">{{ c.title }}</h3><p class="card-desc">{{ c.description }}</p><div class="card-meta">{% for item in c.meta %}<span><strong>{{ item.label }}:</strong> {{ item.value }}</span>{% endfor %}</div><a class="card-link" href="{{ c.link_url }}">{{ c.link_label }}</a></div>
+</article>
     {% endfor %}
   </div>
 </section>
