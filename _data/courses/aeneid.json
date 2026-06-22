@@ -1,16 +1,22 @@
 {
-  "order": 2,
-  "badge": "COMING SOON",
-  "badge_class": "badge-dk",
-  "poet": "VIRGIL",
-  "title": "The Aeneid",
-  "description": "A course on piety, empire, duty, and the cost of founding a civilization.",
-  "image": "/Aeneid Book 4.jpg",
+  "badge": "COMING Q3",
   "image_alt": "Aeneid artwork",
   "meta": [
-    { "label": "Season", "value": "Upcoming" },
-    { "label": "Format", "value": "Live Online" }
+    {
+      "label": "Season",
+      "value": "Upcoming"
+    },
+    {
+      "label": "Format",
+      "value": "Live Online"
+    }
   ],
+  "link_url": "#enroll",
+  "poet": "VIRGIL",
+  "order": 2,
   "link_label": "Details Soon",
-  "link_url": "#enroll"
+  "title": "The Aeneid",
+  "image": "/Aeneid Book 4.jpg",
+  "badge_class": "badge-dk",
+  "description": "A course on piety, empire, duty, and the cost of founding a civilization."
 }
