@@ -76,7 +76,7 @@ title: "Nick Rosado · Enlightenment Educator"
     <h2 class="featured-hed">{{ featured.title_prefix }} <em>{{ featured.title_emphasis }}</em></h2>
     <div class="featured-sub">{{ featured.subtitle }}</div>
     <div class="book-note">{{ featured.book_note }}</div>
-    <div class="featured-desc">{{ featured.description | markdownish | safe }}</div>
+    <div class="featured-desc">{{ featured.description | safe }}</div>
     <div class="detail-grid">{% for item in featured.details %}<div class="det"><span class="lbl">{{ item.label }}</span><span class="val">{{ item.value }}</span></div>{% endfor %}</div>
     <div class="btns"><a class="btn-gold" href="{{ featured.primary_link }}">{{ featured.primary_label }}</a><a class="btn-ghost" href="{{ featured.secondary_link }}">{{ featured.secondary_label }}</a></div>
     <div class="accords">{% for item in featured.syllabus %}<div class="accord"><div class="accord-label"><span class="accord-kicker">{{ item.kicker }}</span><span class="accord-title">{{ item.title }}</span></div><div class="accord-body">{{ item.content }}</div></div>{% endfor %}</div>
