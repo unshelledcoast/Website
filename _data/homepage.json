@@ -106,7 +106,7 @@
     "subtitle": "Translated by Robert Fitzgerald · Instructor: Nick Rosado",
     "tag": "Now Enrolling · Q4 2026",
     "description": "The <em>Aeneid</em> is not a poem primarily about the Roman empire. It is a poem fundamentally about greatness and what it requires — captured in grief, triumph, and in the choices that cannot be unmade.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
-    "art_image": "/homer.jpg"
+    "art_image": "/virgil.jpg"
   },
   "navigation": {
     "brand": "Enlightenment Educator",
@@ -215,7 +215,7 @@
       {
         "label": "Virgil",
         "image": "/virgil.jpg",
-        "alt": "Virgil artwork" }
+        "alt": "Virgil artwork"
       },
       {
         "label": "Milton",
