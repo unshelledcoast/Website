@@ -204,7 +204,7 @@
     "portraits": [
       {
         "label": "Homer",
-        "image": "/homer.jpg",
+        "image": "/virgil.jpg",
         "alt": "Homer portrait"
       },
       {
@@ -214,8 +214,8 @@
       },
       {
         "label": "Virgil",
-        "image": "/Aeneid Book 4.jpg",
-        "alt": "Aeneid artwork"
+        "image": "/virgil.jpg",
+        "alt": "Virgil artwork" }
       },
       {
         "label": "Milton",
