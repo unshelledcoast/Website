@@ -54,7 +54,7 @@
       },
       {
         "label": "Sessions",
-        "value": "12 Classes"
+        "value": "10 Classes"
       },
       {
         "label": "Price",
@@ -66,7 +66,7 @@
       {
         "kicker": "Course Overview",
         "title": "Format & Expectations",
-        "content": "<ul><li>11 weekly live sessions, one hour each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Iliad</em>, translated by E.V. Rieu</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
+        "content": "<ul><li>10 weekly live sessions, one hour each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Aeneid</em>, translated by Robert Fitzgerald</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
       },
       {
         "kicker": "Course Method",
@@ -85,17 +85,17 @@
       },
       {
         "kicker": "Part I",
-        "title": "Class 1: Orientation & Trojan War Context",
-        "content": "<strong style=\"color:var(--warm)\">Pre-Class Viewing:</strong> <em>The Trojan War Cycle</em> (6 min) · <em>Greek Gods Explained in 12 Minutes</em> · Optional: <em>Epic Cycle — The Lost Tales</em> (12 min) · Optional film: <em>Troy</em> (2003)<br><br><strong style=\"color:var(--warm)\">During Class:</strong> Introduction to the epic poetry tradition, Homer's biography and historical context, the Trojan War cycle and key philosophical concepts in the <em>Iliad</em>."
+        "title": "Class 1: Orientation & Roman Context",
+        "content": "<br><br><strong style=\"color:var(--warm)\">During Class:</strong> Introduction to the epic poetry tradition, Virgil's biography and historical context, the Roman political context and key philosophical concepts in the <em>Aeneid</em>."
       },
       {
         "kicker": "Part II",
-        "title": "Classes 2–11: Book-by-Book",
-        "content": "Each subsequent class covers two (sometimes three) Books of the <em>Iliad</em> (Books 1–24 across 11 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
+        "title": "Classes 2–10: Book-by-Book",
+        "content": "Each subsequent class covers one (sometimes two) Books of the <em>Aeneid</em> (Books 1–12 across 9 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
       }
     ],
     "secondary_label": "Contact Nick",
-    "art_caption": "Homer · Iliad",
+    "art_caption": "Virgil · Aeneid ",
     "art_alt": "Homer portrait",
     "title_line_1": "Virgil's ",
     "title_line_2": "Aeneid ",
@@ -105,7 +105,7 @@
     "primary_label": "Enroll in This Course",
     "subtitle": "Translated by Robert Fitzgerald · Instructor: Nick Rosado",
     "tag": "Now Enrolling · Q4 2026",
-    "description": "The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
+    "description": "The <em>Aeneid</em> is not a poem primarily about the Roman empire. It is a poem fundamentally about greatness and what it requires — captured in grief, triumph, and in the choices that cannot be unmade.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
     "art_image": "/homer.jpg"
   },
   "navigation": {
