@@ -1,4 +1,25 @@
 {
+  "enrollment": {
+    "body": "Each course is $300. All enrollment is handled personally by Nick. To reserve your place — or to be notified when the next course opens — reach out directly.",
+    "button_url": "mailto:Unshelledcoast@gmail.com",
+    "left_tag": "Ready to Enroll?",
+    "heading_line_1": "Reserve your",
+    "heading_line_2": "place in",
+    "heading_line_3": "The Iliad",
+    "button_label": "Email to Enroll",
+    "price_note": "Per Course · Iliad Q2 2026",
+    "price": "$300",
+    "right_body_1": "To enroll or ask questions, email <a href=\"mailto:Unshelledcoast@gmail.com\">Unshelledcoast@gmail.com</a> and indicate your preferred payment method.",
+    "right_tag": "Get in Touch",
+    "right_body_2": "Include your name, any questions about the course, and whether you prefer live or asynchronous enrollment.",
+    "payment_methods": [
+      "PayPal",
+      "Venmo",
+      "Zelle"
+    ],
+    "right_symbol": "/EE_symbol_gold_transparent.png",
+    "right_heading": "Email Nick directly"
+  },
   "meta": {
     "title": "Nick Rosado · Enlightenment Educator",
     "description": "Live and asynchronous courses on Homer, Virgil, Dante, and Milton with Nick Rosado.",
@@ -7,128 +28,39 @@
     "og_image": "https://enlightenmenteducator.com/images/EE_social_card_1200x630.png",
     "site_url": "https://enlightenmenteducator.com/"
   },
-  "navigation": {
-    "brand": "Enlightenment Educator",
-    "logo": "/EE_symbol_gold_transparent.png",
-    "links": [
-      { "label": "About Nick", "url": "#about" },
-      { "label": "Courses", "url": "#courses" },
-      { "label": "Now Enrolling", "url": "#iliad" },
-      { "label": "Enroll", "url": "#enroll" }
-    ],
-    "cta_label": "Now Enrolling",
-    "cta_url": "#iliad"
-  },
-  "hero": {
-    "eyebrow": "Literature · Classics · Epic Poetry",
-    "heading_line_1": "Nick Rosado",
-    "heading_line_2": "teaches the",
-    "heading_line_3": "great epic poets.",
-    "subtitle": "Homer, Virgil, Dante, and Milton — four poets, four poems, one year. Small-group online courses built with the depth and attention these works deserve.",
-    "primary_label": "Enroll in The Iliad",
-    "primary_url": "#iliad",
-    "secondary_label": "View All Courses",
-    "secondary_url": "#courses",
-    "portraits": [
-      { "label": "Homer", "image": "/homer.jpg", "alt": "Homer portrait" },
-      { "label": "Dante", "image": "/dante.jpg", "alt": "Dante portrait" },
-      { "label": "Virgil", "image": "/Aeneid Book 4.jpg", "alt": "Aeneid artwork" },
-      { "label": "Milton", "image": "/milton.jpg", "alt": "Milton artwork" }
-    ]
-  },
   "about": {
-    "eyebrow": "Your Instructor",
-    "symbol": "/EE_symbol_gold_transparent.png",
+    "pull_quote": "I teach literature for the same reason Homer sang — because these stories matter, and the ancient flames of the heroes within are worthy of spending a lifetime fanning.",
+    "button_url": "mailto:Unshelledcoast@gmail.com",
     "heading_line_1": "Taught by",
     "heading_line_2": "someone",
+    "image_alt": "Nick Rosado",
     "heading_line_3": "who loves this.",
-    "body_1": "The great epic poems are not difficult because they are obscure — they are deep. Given the right context, the right structure, and the right companions for the journey, anyone can read them and be profoundly moved.",
-    "pull_quote": "I teach literature for the same reason Homer sang — because these stories matter, and the ancient flames of the heroes within are worthy of spending a lifetime fanning.",
-    "body_2": "Each course combines pre-recorded lectures, weekly live sessions, and the kind of close attention to the text that most readers never get. Nick handles all enrollment personally.",
     "button_label": "Get in Touch",
-    "button_url": "mailto:Unshelledcoast@gmail.com",
-    "image": "/Nick.jpg",
-    "image_alt": "Nick Rosado"
-  },
-  "courses": {
-    "eyebrow": "2026 Year-Round Program",
-    "heading_line_1": "Four poets. Four poems.",
-    "heading_line_2": "One year.",
-    "cards": [
-      {
-        "poet": "Homer",
-        "title": "The Iliad",
-        "image": "/Achilles.jpg",
-        "image_alt": "Achilles statue",
-        "badge": "Now Enrolling",
-        "badge_class": "badge-red",
-        "description": "Injustice, glory, grief and the price of life. The oldest epic in the Western tradition — read not as ancient history, but as the first western tragedy.",
-        "meta_1": "Q2 2026 · $250 · 11 classes",
-        "meta_2": "Translation · E.V. Rieu",
-        "link_label": "Enroll Now",
-        "link_url": "#iliad"
-      },
-      {
-        "poet": "Virgil",
-        "title": "The Aeneid",
-        "image": "/Aeneid_Book_4.jpg",
-        "image_alt": "Aeneid artwork",
-        "badge": "Coming Q3",
-        "badge_class": "badge-dk",
-        "description": "Rome's founding epic — a meditation on duty, love and the price of empire through Aeneas, a hero who pursued greatness and paid for it.",
-        "meta_1": "Q3 2026 · In Development",
-        "meta_2": "Translation · Robert Fagles",
-        "link_label": "Get Notified",
-        "link_url": "#enroll"
-      },
-      {
-        "poet": "Dante",
-        "title": "The Divine Comedy",
-        "image": "/Divine_Comedy.jpg",
-        "image_alt": "Dante artwork",
-        "badge": "Course Built",
-        "badge_class": "badge-blue",
-        "description": "A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante.",
-        "meta_1": "Available Now · $250 · 11 classes",
-        "meta_2": "Translation · John C. Ciardi",
-        "link_label": "Inquire",
-        "link_url": "#enroll"
-      },
-      {
-        "poet": "Milton",
-        "title": "Paradise Lost",
-        "image": "/Eve.jpg",
-        "image_alt": "Paradise Lost artwork",
-        "badge": "Coming Q4",
-        "badge_class": "badge-dk",
-        "description": "The most ambitious poem in the English language. Satan, free will, the Fall and what it means to be human. We close the year with Milton.",
-        "meta_1": "Q4 2026 · In Development",
-        "meta_2": "",
-        "link_label": "Get Notified",
-        "link_url": "#enroll"
-      }
-    ]
+    "eyebrow": "Your Instructor",
+    "body_1": "The great epic poems are not difficult because they are obscure — they are deep. Given the right context, the right structure, and the right companions for the journey, anyone can read them and be profoundly moved.",
+    "body_2": "Each course combines pre-recorded lectures, weekly live sessions, and the kind of close attention to the text that most readers never get. Nick handles all enrollment personally.",
+    "symbol": "/EE_symbol_gold_transparent.png",
+    "image": "/Nick.jpg"
   },
   "featured": {
-    "section_id": "iliad",
-    "course_class": "course-homer",
-    "art_image": "/homer.jpg",
-    "art_alt": "Homer portrait",
-    "art_caption": "Homer · Iliad",
-    "tag": "Now Enrolling · Q2 2026",
-    "title_line_1": "Homer's",
-    "title_line_2": "Iliad",
-    "subtitle": "Translated by E.V. Rieu · Instructor: Nick Rosado",
-    "description": "The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
     "details": [
-      { "label": "Duration", "value": "2½ months" },
-      { "label": "Format", "value": "Weekly Live + Async" },
-      { "label": "Sessions", "value": "11 Classes" },
-      { "label": "Price", "value": "$250" }
+      {
+        "label": "Duration",
+        "value": "2½ months"
+      },
+      {
+        "label": "Format",
+        "value": "Weekly Live + Async"
+      },
+      {
+        "label": "Sessions",
+        "value": "11 Classes"
+      },
+      {
+        "label": "Price",
+        "value": "$250"
+      }
     ],
-    "primary_label": "Enroll in This Course",
-    "primary_url": "mailto:Unshelledcoast@gmail.com",
-    "secondary_label": "Contact Nick",
     "secondary_url": "mailto:Unshelledcoast@gmail.com",
     "accordion": [
       {
@@ -161,41 +93,165 @@
         "title": "Classes 2–11: Book-by-Book",
         "content": "Each subsequent class covers two (sometimes three) Books of the <em>Iliad</em> (Books 1–24 across 11 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
       }
+    ],
+    "secondary_label": "Contact Nick",
+    "art_caption": "Homer · Iliad",
+    "art_alt": "Homer portrait",
+    "title_line_1": "Homer's",
+    "title_line_2": "Iliad",
+    "primary_url": "mailto:Unshelledcoast@gmail.com",
+    "course_class": "course-homer",
+    "section_id": "iliad",
+    "primary_label": "Enroll in This Course",
+    "subtitle": "Translated by E.V. Rieu · Instructor: Nick Rosado",
+    "tag": "Now Enrolling · Q2 2026",
+    "description": "The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
+    "art_image": "/homer.jpg"
+  },
+  "navigation": {
+    "brand": "Enlightenment Educator",
+    "logo": "/EE_symbol_gold_transparent.png",
+    "links": [
+      {
+        "label": "About Nick",
+        "url": "#about"
+      },
+      {
+        "label": "Courses",
+        "url": "#courses"
+      },
+      {
+        "label": "Now Enrolling",
+        "url": "#iliad"
+      },
+      {
+        "label": "Enroll",
+        "url": "#enroll"
+      }
+    ],
+    "cta_label": "Now Enrolling",
+    "cta_url": "#iliad"
+  },
+  "courses": {
+    "eyebrow": "2026 Year-Round Program",
+    "heading_line_1": "Four poets. Four poems.",
+    "heading_line_2": "One year.",
+    "cards": [
+      {
+        "badge": "Now Enrolling",
+        "image_alt": "Achilles statue",
+        "link_url": "#iliad",
+        "poet": "Homer",
+        "link_label": "Enroll Now",
+        "meta_1": "Q2 2026 · $250 · 11 classes",
+        "meta_2": "Translation · E.V. Rieu",
+        "title": "The Iliad",
+        "image": "/Achilles.jpg",
+        "badge_class": "badge-red",
+        "description": "Injustice, glory, grief and the price of life. The oldest epic in the Western tradition — read not as ancient history, but as the first western tragedy."
+      },
+      {
+        "badge": "Coming Q3",
+        "image_alt": "Aeneid artwork",
+        "link_url": "#enroll",
+        "poet": "Virgil",
+        "link_label": "Get Notified",
+        "meta_1": "Q3 2026 · In Development",
+        "meta_2": "Translation · Robert Fagles",
+        "title": "The Aeneid",
+        "image": "/Aeneid_Book_4.jpg",
+        "badge_class": "badge-dk",
+        "description": "Rome's founding epic — a meditation on duty, love and the price of empire through Aeneas, a hero who pursued greatness and paid for it."
+      },
+      {
+        "badge": "Course Built",
+        "image_alt": "Dante artwork",
+        "link_url": "#enroll",
+        "poet": "Dante",
+        "link_label": "Inquire",
+        "meta_1": "Available Now · $250 · 11 classes",
+        "meta_2": "Translation · John C. Ciardi",
+        "title": "The Divine Comedy",
+        "image": "/Divine_Comedy.jpg",
+        "badge_class": "badge-blue",
+        "description": "A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante."
+      },
+      {
+        "badge": "Coming Q4",
+        "image_alt": "Paradise Lost artwork",
+        "link_url": "#enroll",
+        "poet": "Milton",
+        "link_label": "Get Notified",
+        "meta_1": "Q4 2026 · In Development",
+        "meta_2": "",
+        "title": "Paradise Lost",
+        "image": "/Eve.jpg",
+        "badge_class": "badge-dk",
+        "description": "The most ambitious poem in the English language. Satan, free will, the Fall and what it means to be human. We close the year with Milton."
+      }
     ]
   },
-  "quote": {
-    "course_class": "course-homer",
-    "text_line_1": "Sing, goddess, the anger of Achilles —",
-    "text_line_2": "and the grief it brought upon the Greeks.",
-    "attribution": "Homer · Iliad · Book I · Opening Line"
-  },
-  "enrollment": {
-    "left_tag": "Ready to Enroll?",
-    "heading_line_1": "Reserve your",
-    "heading_line_2": "place in",
-    "heading_line_3": "The Iliad",
-    "body": "Each course is $250. All enrollment is handled personally by Nick. To reserve your place — or to be notified when the next course opens — reach out directly.",
-    "price": "$250",
-    "price_note": "Per Course · Iliad Q2 2026",
-    "payment_methods": ["PayPal", "Venmo", "Zelle"],
-    "right_symbol": "/EE_symbol_gold_transparent.png",
-    "right_tag": "Get in Touch",
-    "right_heading": "Email Nick directly",
-    "right_body_1": "To enroll or ask questions, email <a href=\"mailto:Unshelledcoast@gmail.com\">Unshelledcoast@gmail.com</a> and indicate your preferred payment method.",
-    "right_body_2": "Include your name, any questions about the course, and whether you prefer live or asynchronous enrollment.",
-    "button_label": "Email to Enroll",
-    "button_url": "mailto:Unshelledcoast@gmail.com"
+  "hero": {
+    "heading_line_1": "Nick Rosado",
+    "secondary_url": "#courses",
+    "heading_line_2": "teaches the",
+    "heading_line_3": "great epic poets.",
+    "secondary_label": "View All Courses",
+    "eyebrow": "Literature · Classics · Epic Poetry",
+    "primary_url": "#iliad",
+    "primary_label": "Enroll in The Iliad",
+    "subtitle": "Homer, Virgil, Dante, and Milton — four poets, four poems, one year. Small-group online courses built with the depth and attention these works deserve.",
+    "portraits": [
+      {
+        "label": "Homer",
+        "image": "/homer.jpg",
+        "alt": "Homer portrait"
+      },
+      {
+        "label": "Dante",
+        "image": "/dante.jpg",
+        "alt": "Dante portrait"
+      },
+      {
+        "label": "Virgil",
+        "image": "/Aeneid Book 4.jpg",
+        "alt": "Aeneid artwork"
+      },
+      {
+        "label": "Milton",
+        "image": "/milton.jpg",
+        "alt": "Milton artwork"
+      }
+    ]
   },
   "footer": {
     "symbol": "/EE_symbol_gold_transparent.png",
     "copyright": "© 2026 Nick Rosado · Enlightenment Educator · All Rights Reserved",
     "photo_credits": "Photo credits: Achilles statue photo by Dietmar Rabich / Wikimedia Commons / “Korfu (GR), Gastouri, Achilleion -- 2018 -- 1323” / CC BY-SA 4.0. Aeneid pillar photo by User:Colin / Wikimedia Commons / CC BY-SA 4.0.",
     "links": [
-      { "label": "About Nick", "url": "#about" },
-      { "label": "Courses", "url": "#courses" },
-      { "label": "Now Enrolling", "url": "#iliad" },
-      { "label": "Enroll", "url": "#enroll" }
+      {
+        "label": "About Nick",
+        "url": "#about"
+      },
+      {
+        "label": "Courses",
+        "url": "#courses"
+      },
+      {
+        "label": "Now Enrolling",
+        "url": "#iliad"
+      },
+      {
+        "label": "Enroll",
+        "url": "#enroll"
+      }
     ],
     "tagline": "Online Literature · Classics · Epic Poetry"
+  },
+  "quote": {
+    "course_class": "course-homer",
+    "text_line_1": "Sing, goddess, the anger of Achilles —",
+    "text_line_2": "and the grief it brought upon the Greeks.",
+    "attribution": "Homer · Iliad · Book I · Opening Line"
   }
 }
