@@ -58,7 +58,7 @@
       },
       {
         "label": "Price",
-        "value": "$250"
+        "value": "$300"
       }
     ],
     "secondary_url": "mailto:Unshelledcoast@gmail.com",
@@ -249,7 +249,7 @@
     "tagline": "Online Literature · Classics · Epic Poetry"
   },
   "quote": {
-    "course_class": "course-homer",
+    "course_class": "course-virgil",
     "text_line_1": "Sing, goddess, the anger of Achilles —",
     "text_line_2": "and the grief it brought upon the Greeks.",
     "attribution": "Homer · Iliad · Book I · Opening Line"
