@@ -11,15 +11,34 @@ collections:
     label: "Homepage"
     files:
       - name: "homepage"
-        label: "Homepage Controller"
+        label: "Homepage"
         file: "_data/homepage.json"
         fields:
+          - label: "Meta / SEO"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "OG Title", name: "og_title", widget: "string" }
+              - { label: "OG Description", name: "og_description", widget: "text" }
+              - { label: "OG Image", name: "og_image", widget: "string" }
+              - { label: "Site URL", name: "site_url", widget: "string" }
+
           - label: "Navigation"
             name: "navigation"
             widget: "object"
             fields:
-              - { label: "Top CTA Label", name: "cta_label", widget: "string" }
-              - { label: "Top CTA Link", name: "cta_link", widget: "string" }
+              - { label: "Brand", name: "brand", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "CTA Label", name: "cta_label", widget: "string" }
+              - { label: "CTA URL", name: "cta_url", widget: "string" }
 
           - label: "Hero"
             name: "hero"
@@ -29,68 +48,137 @@ collections:
               - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
               - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
               - { label: "Heading Line 3", name: "heading_line_3", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Primary Button Label", name: "primary_label", widget: "string" }
+              - { label: "Primary Button URL", name: "primary_url", widget: "string" }
+              - { label: "Secondary Button Label", name: "secondary_label", widget: "string" }
+              - { label: "Secondary Button URL", name: "secondary_url", widget: "string" }
+              - label: "Portraits"
+                name: "portraits"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
 
-          - label: "Course Grid Order"
-            name: "course_grid"
+          - label: "About"
+            name: "about"
             widget: "object"
             fields:
-              - { label: "Course 1", name: "course_1", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
-              - { label: "Course 2", name: "course_2", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
-              - { label: "Course 3", name: "course_3", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
-              - { label: "Course 4", name: "course_4", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Symbol", name: "symbol", widget: "image" }
+              - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
+              - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
+              - { label: "Heading Line 3", name: "heading_line_3", widget: "string" }
+              - { label: "Body 1", name: "body_1", widget: "text" }
+              - { label: "Pull Quote", name: "pull_quote", widget: "text" }
+              - { label: "Body 2", name: "body_2", widget: "text" }
+              - { label: "Button Label", name: "button_label", widget: "string" }
+              - { label: "Button URL", name: "button_url", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+
+          - label: "Course Cards"
+            name: "courses"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
+              - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Poet", name: "poet", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image Alt", name: "image_alt", widget: "string" }
+                  - { label: "Badge", name: "badge", widget: "string" }
+                  - { label: "Badge Class", name: "badge_class", widget: "select", options: ["badge-red", "badge-blue", "badge-dk"] }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Meta Line 1", name: "meta_1", widget: "string" }
+                  - { label: "Meta Line 2", name: "meta_2", widget: "string", required: false }
+                  - { label: "Link Label", name: "link_label", widget: "string" }
+                  - { label: "Link URL", name: "link_url", widget: "string" }
 
           - label: "Featured Course"
-            name: "featured_course"
+            name: "featured"
             widget: "object"
             fields:
-              - { label: "Active Course", name: "active_course", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
+              - { label: "Section ID", name: "section_id", widget: "string" }
+              - { label: "Course Class", name: "course_class", widget: "select", options: ["course-homer", "course-virgil", "course-dante", "course-milton"] }
+              - { label: "Artwork Image", name: "art_image", widget: "image" }
+              - { label: "Artwork Alt", name: "art_alt", widget: "string" }
+              - { label: "Artwork Caption", name: "art_caption", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title Line 1", name: "title_line_1", widget: "string" }
+              - { label: "Title Line 2", name: "title_line_2", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - { label: "Primary Button Label", name: "primary_label", widget: "string" }
+              - { label: "Primary Button URL", name: "primary_url", widget: "string" }
+              - { label: "Secondary Button Label", name: "secondary_label", widget: "string" }
+              - { label: "Secondary Button URL", name: "secondary_url", widget: "string" }
+              - label: "Accordion"
+                name: "accordion"
+                widget: "list"
+                fields:
+                  - { label: "Kicker", name: "kicker", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
 
-  - name: "courses"
-    label: "Courses"
-    files:
-      - name: "iliad"
-        label: "Homer's Iliad"
-        file: "_data/courses/iliad.json"
-        fields: &course_fields
-          - { label: "Slug", name: "slug", widget: "string" }
-          - { label: "Status", name: "status", widget: "string" }
-          - { label: "Badge Text", name: "badge", widget: "string" }
-          - { label: "Badge Class", name: "badge_class", widget: "select", options: ["badge-red", "badge-blue", "badge-dk"] }
-          - { label: "Poet", name: "poet", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Card Description", name: "card_description", widget: "text" }
-          - { label: "Featured Subtitle", name: "featured_subtitle", widget: "text" }
-          - { label: "Featured Description", name: "featured_description", widget: "text" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt", name: "image_alt", widget: "string" }
-          - { label: "Artwork Caption", name: "art_caption", widget: "string" }
-          - { label: "Price", name: "price", widget: "string" }
-          - { label: "Schedule", name: "schedule", widget: "string" }
-          - label: "Payment Methods"
-            name: "payment_methods"
-            widget: "list"
-            field: { label: "Method", name: "method", widget: "string" }
-          - label: "Details"
-            name: "details"
-            widget: "list"
+          - label: "Quote Banner"
+            name: "quote"
+            widget: "object"
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Course Class", name: "course_class", widget: "select", options: ["course-homer", "course-virgil", "course-dante", "course-milton"] }
+              - { label: "Text Line 1", name: "text_line_1", widget: "string" }
+              - { label: "Text Line 2", name: "text_line_2", widget: "string" }
+              - { label: "Attribution", name: "attribution", widget: "string" }
 
-      - name: "aeneid"
-        label: "Virgil's Aeneid"
-        file: "_data/courses/aeneid.json"
-        fields: *course_fields
+          - label: "Enrollment"
+            name: "enrollment"
+            widget: "object"
+            fields:
+              - { label: "Left Tag", name: "left_tag", widget: "string" }
+              - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
+              - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
+              - { label: "Heading Line 3", name: "heading_line_3", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Price Note", name: "price_note", widget: "string" }
+              - label: "Payment Methods"
+                name: "payment_methods"
+                widget: "list"
+                field: { label: "Method", name: "method", widget: "string" }
+              - { label: "Right Symbol", name: "right_symbol", widget: "image" }
+              - { label: "Right Tag", name: "right_tag", widget: "string" }
+              - { label: "Right Heading", name: "right_heading", widget: "string" }
+              - { label: "Right Body 1", name: "right_body_1", widget: "text" }
+              - { label: "Right Body 2", name: "right_body_2", widget: "text" }
+              - { label: "Button Label", name: "button_label", widget: "string" }
+              - { label: "Button URL", name: "button_url", widget: "string" }
 
-      - name: "divine-comedy"
-        label: "Dante's Divine Comedy"
-        file: "_data/courses/divine-comedy.json"
-        fields: *course_fields
-
-      - name: "paradise-lost"
-        label: "Milton's Paradise Lost"
-        file: "_data/courses/paradise-lost.json"
-        fields: *course_fields
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Symbol", name: "symbol", widget: "image" }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Photo Credits", name: "photo_credits", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
 
   - name: "theme"
     label: "Theme"
@@ -110,7 +198,7 @@ collections:
           - { label: "Muted", name: "mute", widget: "string" }
           - { label: "Rule", name: "rule", widget: "string" }
 
-  - name: "site_settings"
+  - name: "site"
     label: "Site Settings"
     files:
       - name: "site"
@@ -121,171 +209,3 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Social Image", name: "social_image", widget: "image" }
           - { label: "Brand", name: "brand", widget: "string" }
-
-      - name: "navigation"
-        label: "Navigation"
-        file: "_data/navigation.json"
-        fields:
-          - { label: "Brand", name: "brand", widget: "string" }
-          - { label: "Logo", name: "logo", widget: "image" }
-          - label: "Links"
-            name: "links"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-          - { label: "CTA Label", name: "cta_label", widget: "string" }
-          - { label: "CTA URL", name: "cta_url", widget: "string" }
-
-      - name: "footer"
-        label: "Footer"
-        file: "_data/footer.json"
-        fields:
-          - { label: "Logo", name: "logo", widget: "image" }
-          - { label: "Copyright", name: "copyright", widget: "string" }
-          - { label: "Photo Credits", name: "photo_credits", widget: "text" }
-          - label: "Links"
-            name: "links"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-
-      - name: "enrollment"
-        label: "Enrollment"
-        file: "_data/enrollment.json"
-        fields:
-          - { label: "Tag", name: "tag", widget: "string" }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Body 1", name: "body_1", widget: "text" }
-          - { label: "Body 2", name: "body_2", widget: "text" }
-          - { label: "Price", name: "price", widget: "string" }
-          - { label: "Price Note", name: "price_note", widget: "string" }
-          - label: "Payment Methods"
-            name: "payment_methods"
-            widget: "list"
-            field: { label: "Method", name: "method", widget: "string" }
-          - { label: "Button Label", name: "button_label", widget: "string" }
-          - { label: "Button URL", name: "button_url", widget: "string" }
-
-  - name: "homepage_sections"
-    label: "Homepage Sections"
-    files:
-      - name: "hero"
-        label: "Hero"
-        file: "_data/hero.json"
-        fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-          - { label: "Heading Prefix", name: "heading_prefix", widget: "string" }
-          - { label: "Heading Emphasis", name: "heading_emphasis", widget: "string" }
-          - { label: "Heading Suffix", name: "heading_suffix", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "text" }
-          - { label: "Primary Label", name: "primary_label", widget: "string" }
-          - { label: "Primary Link", name: "primary_link", widget: "string" }
-          - { label: "Secondary Label", name: "secondary_label", widget: "string" }
-          - { label: "Secondary Link", name: "secondary_link", widget: "string" }
-          - label: "Authors"
-            name: "authors"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
-
-      - name: "about"
-        label: "About Section"
-        file: "_data/about.json"
-        fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-          - { label: "Seal/Symbol", name: "seal", widget: "image" }
-          - { label: "Photo", name: "photo", widget: "image" }
-          - { label: "Photo Alt Text", name: "photo_alt", widget: "string" }
-          - { label: "Heading Prefix", name: "heading_prefix", widget: "string" }
-          - { label: "Heading Emphasis", name: "heading_emphasis", widget: "string" }
-          - { label: "Body Paragraph 1", name: "body_1", widget: "text" }
-          - { label: "Body Paragraph 2", name: "body_2", widget: "text" }
-          - { label: "Pull Quote", name: "pull_quote", widget: "text" }
-          - { label: "Button Label", name: "button_label", widget: "string" }
-          - { label: "Button Link", name: "button_link", widget: "string" }
-
-      - name: "course-grid"
-        label: "Course Grid Heading"
-        file: "_data/course-grid.json"
-        fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-          - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
-          - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
-
-      - name: "featured"
-        label: "Featured Course + Quote Banner"
-        file: "_data/featured.json"
-        fields:
-          - { label: "Course Key", name: "course_key", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
-          - { label: "Section Tag", name: "tag", widget: "string" }
-          - { label: "Artwork Image", name: "art_image", widget: "image" }
-          - { label: "Artwork Alt Text", name: "art_alt", widget: "string" }
-          - { label: "Artwork Caption", name: "art_caption", widget: "string" }
-          - { label: "Title Prefix", name: "title_prefix", widget: "string" }
-          - { label: "Title Emphasis", name: "title_emphasis", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Book Note", name: "book_note", widget: "text" }
-          - { label: "Description", name: "description", widget: "text" }
-          - label: "Details Row"
-            name: "details"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Value", name: "value", widget: "string" }
-          - { label: "Primary Button Label", name: "primary_label", widget: "string" }
-          - { label: "Primary Button Link", name: "primary_link", widget: "string" }
-          - { label: "Secondary Button Label", name: "secondary_label", widget: "string" }
-          - { label: "Secondary Button Link", name: "secondary_link", widget: "string" }
-          - label: "Syllabus Tabs"
-            name: "syllabus"
-            widget: "list"
-            fields:
-              - { label: "Kicker", name: "kicker", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Content", name: "content", widget: "text" }
-          - { label: "Quote Banner Text", name: "quote_text", widget: "text" }
-          - { label: "Quote Attribution", name: "quote_attribution", widget: "string" }
-          - label: "Course Colors"
-            name: "colors"
-            widget: "object"
-            fields:
-              - { label: "Accent", name: "accent", widget: "string" }
-              - { label: "Accent Dark", name: "accent_dark", widget: "string" }
-              - { label: "Accent Soft", name: "accent_soft", widget: "string" }
-              - { label: "Highlight", name: "highlight", widget: "string" }
-
-      - name: "quote"
-        label: "Quote Banner"
-        file: "_data/quote.json"
-        fields:
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "Attribution", name: "attr", widget: "string" }
-
-      - name: "enroll"
-        label: "Legacy Enrollment + Footer"
-        file: "_data/enroll.json"
-        fields:
-          - { label: "Tag", name: "tag", widget: "string" }
-          - { label: "Heading Prefix", name: "heading_prefix", widget: "string" }
-          - { label: "Heading Emphasis", name: "heading_emphasis", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
-          - { label: "Price", name: "price", widget: "string" }
-          - { label: "Price Note", name: "price_note", widget: "string" }
-          - label: "Payment Methods"
-            name: "payment_methods"
-            widget: "list"
-            field: { label: "Method", name: "method", widget: "string" }
-          - { label: "Right Heading", name: "right_heading", widget: "string" }
-          - { label: "Right Body 1", name: "right_body_1", widget: "text" }
-          - { label: "Right Body 2", name: "right_body_2", widget: "text" }
-          - { label: "Footer Brand", name: "footer_brand", widget: "string" }
-          - label: "Footer Links"
-            name: "footer_links"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
