@@ -1652,7 +1652,21 @@ nav {
 </section>
 
 <!-- S4: ILIAD SPOTLIGHT -->
-<section class="iliad-spot course-homer" id="iliad">
+{% set featuredKey = homepage.featured_course.active_course %}
+{% set course = courses[featuredKey] %}
+
+{% if featuredKey == "iliad" %}
+  {% set courseClass = "course-homer" %}
+{% elif featuredKey == "aeneid" %}
+  {% set courseClass = "course-virgil" %}
+{% elif featuredKey == "divine-comedy" %}
+  {% set courseClass = "course-dante" %}
+{% elif featuredKey == "paradise-lost" %}
+  {% set courseClass = "course-milton" %}
+{% endif %}
+
+<img src="{{ course.image }}" alt="{{ course.image_alt }}" class="featured-art-img">
+<div class="featured-art-caption">{{ course.art_caption }}</div>
   
 <div class="iliad-book featured-art-panel">
   <img src="/homer.jpg" alt="Homer portrait" class="featured-art-img">
@@ -1660,10 +1674,10 @@ nav {
 </div>
 
   <div class="iliad-content">
-    <div class="iliad-tag">Now Enrolling · Q2 2026</div>
-    <h2 class="iliad-hed">Homer's<br><em>Iliad</em></h2>
-    <div class="iliad-sub">Translated by E.V. Rieu · Instructor: Nick Rosado</div>
-    <p class="iliad-desc">The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.</p>
+  <div class="iliad-tag">{{ course.badge }} · {{ course.schedule }}</div>
+<h2 class="iliad-hed">{{ course.poet | title }}'s<br><em>{{ course.title | replace("The ", "") }}</em></h2>
+<div class="iliad-sub">{{ course.featured_subtitle }}</div>
+<p class="iliad-desc">{{ course.featured_description | replace("*", "<em>", 1) | replace("*", "</em>", 1) | safe }}</p>
     <div class="iliad-grid">
       <div class="iliad-det"><span class="lbl">Duration</span><span class="val">2½ months</span></div>
       <div class="iliad-det"><span class="lbl">Format</span><span class="val">Weekly Live + Async</span></div>
