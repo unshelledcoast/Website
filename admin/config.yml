@@ -157,7 +157,7 @@ collections:
             widget: "list"
             field: { label: "Method", name: "method", widget: "string" }
           - { label: "Button Label", name: "button_label", widget: "string" }
-          - { label: "Button URL", name: "button_url", widget: "string" }            widget: "list"
+          - { label: "Button URL", name: "button_url", widget: "string" }    
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
