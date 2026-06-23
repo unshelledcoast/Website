@@ -1,24 +1,51 @@
 {
   "navigation": {
-    "cta_label": "NOW ENROLLING",
-    "cta_link": "#featured"
+    "brand": "Enlightenment Educator",
+    "cta_label": "Now Enrolling",
+    "cta_url": "#enroll"
   },
 
   "hero": {
-    "eyebrow": "2026 YEAR-ROUND PROGRAM",
-    "heading_line_1": "Four poets.",
-    "heading_line_2": "Four poems.",
-    "heading_line_3": "One year."
+    "eyebrow": "Literature · Classics · Epic Poetry",
+    "heading_line_1": "Nick Rosado",
+    "heading_line_2": "teaches the",
+    "heading_line_3": "great epic poets.",
+    "subtitle": "Homer, Virgil, Dante, and Milton — four poets, four poems, one year. Small-group online courses built with the depth and attention these works deserve.",
+    "primary_label": "Enroll in The Iliad",
+    "primary_url": "#iliad",
+    "secondary_label": "View All Courses",
+    "secondary_url": "#courses"
   },
 
-  "course_grid": {
-    "course_1": "iliad",
-    "course_2": "aeneid",
-    "course_3": "divine-comedy",
-    "course_4": "paradise-lost"
+  "about": {
+    "eyebrow": "Your Instructor",
+    "heading_line_1": "Taught by",
+    "heading_line_2": "someone",
+    "heading_line_3": "who loves this.",
+    "button_label": "Get in Touch",
+    "button_url": "mailto:unshelledcoast@gmail.com"
   },
 
-  "featured_course": {
+  "courses": {
+    "heading_line_1": "Four poets. Four poems.",
+    "heading_line_2": "One year.",
+    "order": [
+      "iliad",
+      "aeneid",
+      "divine-comedy",
+      "paradise-lost"
+    ]
+  },
+
+  "featured": {
     "active_course": "iliad"
+  },
+
+  "enrollment": {
+    "heading_line_1": "Ready to Enroll?",
+    "heading_line_2": "Reserve your",
+    "heading_line_3": "place in The Iliad",
+    "button_label": "Email to Enroll",
+    "button_url": "mailto:unshelledcoast@gmail.com"
   }
 }
