@@ -33,7 +33,7 @@
       { "label": "Homer", "image": "/homer.jpg", "alt": "Homer portrait" },
       { "label": "Dante", "image": "/dante.jpg", "alt": "Dante portrait" },
       { "label": "Virgil", "image": "/Aeneid Book 4.jpg", "alt": "Aeneid artwork" },
-      { "label": "Milton", "image": "/Paradise Lost.jpg", "alt": "Paradise Lost artwork" }
+      { "label": "Milton", "image": "/milton.jpg", "alt": "Milton artwork" }
     ]
   },
   "about": {
@@ -97,7 +97,7 @@
       {
         "poet": "Milton",
         "title": "Paradise Lost",
-        "image": "/Paradise Lost.jpg",
+        "image": "/milton.jpg",
         "image_alt": "Paradise Lost artwork",
         "badge": "Coming Q4",
         "badge_class": "badge-dk",
