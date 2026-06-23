@@ -66,12 +66,10 @@ collections:
           - { label: "Artwork Caption", name: "art_caption", widget: "string" }
           - { label: "Price", name: "price", widget: "string" }
           - { label: "Schedule", name: "schedule", widget: "string" }
-
           - label: "Payment Methods"
             name: "payment_methods"
             widget: "list"
             field: { label: "Method", name: "method", widget: "string" }
-
           - label: "Details"
             name: "details"
             widget: "list"
@@ -115,6 +113,15 @@ collections:
   - name: "site_settings"
     label: "Site Settings"
     files:
+      - name: "site"
+        label: "Site Metadata"
+        file: "_data/site.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Social Image", name: "social_image", widget: "image" }
+          - { label: "Brand", name: "brand", widget: "string" }
+
       - name: "navigation"
         label: "Navigation"
         file: "_data/navigation.json"
@@ -127,6 +134,8 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+          - { label: "CTA Label", name: "cta_label", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
 
       - name: "footer"
         label: "Footer"
@@ -142,7 +151,7 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
 
-            - name: "enrollment"
+      - name: "enrollment"
         label: "Enrollment"
         file: "_data/enrollment.json"
         fields:
@@ -157,7 +166,27 @@ collections:
             widget: "list"
             field: { label: "Method", name: "method", widget: "string" }
           - { label: "Button Label", name: "button_label", widget: "string" }
-          - { label: "Button URL", name: "button_url", widget: "string" }    
+          - { label: "Button URL", name: "button_url", widget: "string" }
+
+  - name: "homepage_sections"
+    label: "Homepage Sections"
+    files:
+      - name: "hero"
+        label: "Hero"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading Prefix", name: "heading_prefix", widget: "string" }
+          - { label: "Heading Emphasis", name: "heading_emphasis", widget: "string" }
+          - { label: "Heading Suffix", name: "heading_suffix", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: "Primary Label", name: "primary_label", widget: "string" }
+          - { label: "Primary Link", name: "primary_link", widget: "string" }
+          - { label: "Secondary Label", name: "secondary_label", widget: "string" }
+          - { label: "Secondary Link", name: "secondary_link", widget: "string" }
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
@@ -179,10 +208,19 @@ collections:
           - { label: "Button Label", name: "button_label", widget: "string" }
           - { label: "Button Link", name: "button_link", widget: "string" }
 
+      - name: "course-grid"
+        label: "Course Grid Heading"
+        file: "_data/course-grid.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
+          - { label: "Heading Line 2", name: "heading_line_2", widget: "string" }
+
       - name: "featured"
         label: "Featured Course + Quote Banner"
         file: "_data/featured.json"
         fields:
+          - { label: "Course Key", name: "course_key", widget: "select", options: ["iliad", "aeneid", "divine-comedy", "paradise-lost"] }
           - { label: "Section Tag", name: "tag", widget: "string" }
           - { label: "Artwork Image", name: "art_image", widget: "image" }
           - { label: "Artwork Alt Text", name: "art_alt", widget: "string" }
@@ -191,7 +229,7 @@ collections:
           - { label: "Title Emphasis", name: "title_emphasis", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Book Note", name: "book_note", widget: "text" }
-          - { label: "Description (*italic* supported)", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "text" }
           - label: "Details Row"
             name: "details"
             widget: "list"
@@ -215,13 +253,20 @@ collections:
             name: "colors"
             widget: "object"
             fields:
-              - { label: "Accent", name: "accent", widget: "string", hint: "Iliad red, Aeneid green/gold, Divine Comedy crimson/cream, Paradise Lost blue/gold" }
+              - { label: "Accent", name: "accent", widget: "string" }
               - { label: "Accent Dark", name: "accent_dark", widget: "string" }
-              - { label: "Accent Soft", name: "accent_soft", widget: "string", hint: "Example: rgba(101,19,24,.28)" }
+              - { label: "Accent Soft", name: "accent_soft", widget: "string" }
               - { label: "Highlight", name: "highlight", widget: "string" }
 
+      - name: "quote"
+        label: "Quote Banner"
+        file: "_data/quote.json"
+        fields:
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "Attribution", name: "attr", widget: "string" }
+
       - name: "enroll"
-        label: "Enrollment + Footer"
+        label: "Legacy Enrollment + Footer"
         file: "_data/enroll.json"
         fields:
           - { label: "Tag", name: "tag", widget: "string" }
@@ -236,7 +281,7 @@ collections:
             field: { label: "Method", name: "method", widget: "string" }
           - { label: "Right Heading", name: "right_heading", widget: "string" }
           - { label: "Right Body 1", name: "right_body_1", widget: "text" }
-          - { label: "Right Body 2 (HTML ok)", name: "right_body_2", widget: "text" }
+          - { label: "Right Body 2", name: "right_body_2", widget: "text" }
           - { label: "Footer Brand", name: "footer_brand", widget: "string" }
           - label: "Footer Links"
             name: "footer_links"
@@ -244,39 +289,3 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
-
-  - name: "courses"
-    label: "Course Cards"
-    files:
-      - name: "iliad"
-        label: "Homer's Iliad"
-        file: "_data/courses/iliad.json"
-        fields: &course_fields
-          - { label: "Display Order", name: "order", widget: "number", value_type: "int" }
-          - { label: "Badge", name: "badge", widget: "string" }
-          - { label: "Badge Class", name: "badge_class", widget: "select", options: ["badge-red", "badge-blue", "badge-dk"] }
-          - { label: "Poet", name: "poet", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt Text", name: "image_alt", widget: "string" }
-          - label: "Meta Lines"
-            name: "meta"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Value", name: "value", widget: "string" }
-          - { label: "Link Label", name: "link_label", widget: "string" }
-          - { label: "Link URL", name: "link_url", widget: "string" }
-      - name: "aeneid"
-        label: "Virgil's Aeneid"
-        file: "_data/courses/aeneid.json"
-        fields: *course_fields
-      - name: "divine-comedy"
-        label: "Dante's Divine Comedy"
-        file: "_data/courses/divine-comedy.json"
-        fields: *course_fields
-      - name: "paradise-lost"
-        label: "Milton's Paradise Lost"
-        file: "_data/courses/paradise-lost.json"
-        fields: *course_fields
