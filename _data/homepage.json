@@ -138,16 +138,16 @@
     "heading_line_2": "One year.",
     "cards": [
       {
-        "badge": "Now Enrolling",
+        "badge": "Course Built",
         "image_alt": "Achilles statue",
         "link_url": "#iliad",
         "poet": "Homer",
         "link_label": "Enroll Now",
-        "meta_1": "Q2 2026 · $250 · 11 classes",
+        "meta_1": "Available Now · $300 · 12 classes",
         "meta_2": "Translation · E.V. Rieu",
         "title": "The Iliad",
         "image": "/Achilles.jpg",
-        "badge_class": "badge-red",
+        "badge_class": "badge-blue",
         "description": "Injustice, glory, grief and the price of life. The oldest epic in the Western tradition — read not as ancient history, but as the first western tragedy."
       },
       {
@@ -169,7 +169,7 @@
         "link_url": "#enroll",
         "poet": "Dante",
         "link_label": "Inquire",
-        "meta_1": "Available Now · $250 · 11 classes",
+        "meta_1": "Available Now · $300 · 11 classes",
         "meta_2": "Translation · John C. Ciardi",
         "title": "The Divine Comedy",
         "image": "/Divine_Comedy.jpg",
