@@ -151,7 +151,7 @@
         "description": "Injustice, glory, grief and the price of life. The oldest epic in the Western tradition — read not as ancient history, but as the first western tragedy."
       },
       {
-        "badge": "Coming Q3",
+        "badge": "Now Enrolling ",
         "image_alt": "Aeneid artwork",
         "link_url": "#enroll",
         "poet": "Virgil",
@@ -160,7 +160,7 @@
         "meta_2": "Translation · Robert Fagles",
         "title": "The Aeneid",
         "image": "/Aeneid_Book_4.jpg",
-        "badge_class": "badge-dk",
+        "badge_class": "badge-red",
         "description": "Rome's founding epic — a meditation on duty, love and the price of empire through Aeneas, a hero who pursued greatness and paid for it."
       },
       {
@@ -177,7 +177,7 @@
         "description": "A journey through Hell and Purgatory. Inferno and Purgatorio fully built and taught — for readers who seek a true grasp of Dante."
       },
       {
-        "badge": "Coming Q4",
+        "badge": "In Development ",
         "image_alt": "Paradise Lost artwork",
         "link_url": "#enroll",
         "poet": "Milton",
