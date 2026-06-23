@@ -5,9 +5,9 @@
     "left_tag": "Ready to Enroll?",
     "heading_line_1": "Reserve your",
     "heading_line_2": "place in",
-    "heading_line_3": "The Iliad",
+    "heading_line_3": "The Aeneid ",
     "button_label": "Email to Enroll",
-    "price_note": "Per Course · Iliad Q2 2026",
+    "price_note": "Per Course · Aeneid Q4 2026",
     "price": "$300",
     "right_body_1": "To enroll or ask questions, email <a href=\"mailto:Unshelledcoast@gmail.com\">Unshelledcoast@gmail.com</a> and indicate your preferred payment method.",
     "right_tag": "Get in Touch",
@@ -97,14 +97,14 @@
     "secondary_label": "Contact Nick",
     "art_caption": "Homer · Iliad",
     "art_alt": "Homer portrait",
-    "title_line_1": "Homer's",
-    "title_line_2": "Iliad",
+    "title_line_1": "Virgil's ",
+    "title_line_2": "Aeneid ",
     "primary_url": "mailto:Unshelledcoast@gmail.com",
     "course_class": "course-virgil",
     "section_id": "iliad",
     "primary_label": "Enroll in This Course",
-    "subtitle": "Translated by E.V. Rieu · Instructor: Nick Rosado",
-    "tag": "Now Enrolling · Q2 2026",
+    "subtitle": "Translated by Robert Fitzgerald · Instructor: Nick Rosado",
+    "tag": "Now Enrolling · Q4 2026",
     "description": "The <em>Iliad</em> is not a poem primarily about war. It is a poem fundamentally about life and what makes it worth living — captured in grief, triumph, and in the choices that cannot be unmade. Homer's great insight is that his heroes know this, and choose glory anyway. We will sit with their choices for two and a half months.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading, a live one-hour session to discuss it together and the kind of close attention to the text that most readers never get. All sessions are recorded. Asynchronous enrollment is available.",
     "art_image": "/homer.jpg"
   },
@@ -250,8 +250,8 @@
   },
   "quote": {
     "course_class": "course-virgil",
-    "text_line_1": "Sing, goddess, the anger of Achilles —",
-    "text_line_2": "and the grief it brought upon the Greeks.",
-    "attribution": "Homer · Iliad · Book I · Opening Line"
+    "text_line_1": "I sing of warfare —",
+    "text_line_2": "and a man at war.",
+    "attribution": "Virgil · Aeneid · Book I · Opening Line"
   }
 }
