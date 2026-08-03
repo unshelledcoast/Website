@@ -1563,6 +1563,7 @@ nav {
 </section>
 
 <!-- S2: ABOUT -->
+{% if homepage.about.enabled %}
 <section class="about" id="about">
   <div class="about-l">
     <img src="{{ homepage.about.symbol }}" alt="" class="about-seal">
@@ -1577,6 +1578,7 @@ nav {
     <img src="{{ homepage.about.image }}" alt="{{ homepage.about.image_alt }}">
   </div>
 </section>
+{% endif %}
 
 <!-- S3: COURSES -->
 <section class="courses" id="courses">
