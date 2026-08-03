@@ -29,6 +29,7 @@
     "site_url": "https://enlightenmenteducator.com/"
   },
   "about": {
+    "enabled": true,
     "pull_quote": "I teach literature for the same reason Homer sang — because these stories matter, and the ancient flames of the heroes within are worthy of spending a lifetime fanning.",
     "button_url": "mailto:Unshelledcoast@gmail.com",
     "heading_line_1": "Taught by",
