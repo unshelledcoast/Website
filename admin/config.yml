@@ -65,6 +65,7 @@ collections:
             name: "about"
             widget: "object"
             fields:
+              - { label: "Show Section", name: "enabled", widget: "boolean", default: true }
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Symbol", name: "symbol", widget: "image" }
               - { label: "Heading Line 1", name: "heading_line_1", widget: "string" }
