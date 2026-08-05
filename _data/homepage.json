@@ -1,6 +1,6 @@
 {
   "enrollment": {
-    "body": "Each course is $300. All enrollment is handled personally by Nick. To reserve your place — or to be notified when the next course opens — reach out directly.",
+    "body": "Each course is $375. All enrollment is handled personally by Nick. To reserve your place — or to be notified when the next course opens — reach out directly.",
     "button_url": "mailto:Unshelledcoast@gmail.com",
     "left_tag": "Ready to Enroll?",
     "heading_line_1": "Reserve your",
@@ -144,7 +144,7 @@
         "link_url": "#iliad",
         "poet": "Homer",
         "link_label": "Inquire ",
-        "meta_1": "Available Now · $300 · 12 classes",
+        "meta_1": "Available Now · $375 · 12 classes",
         "meta_2": "Translation · E.V. Rieu",
         "title": "The Iliad",
         "image": "/Achilles.jpg",
@@ -170,7 +170,7 @@
         "link_url": "#enroll",
         "poet": "Dante",
         "link_label": "Inquire",
-        "meta_1": "Available Now · $300 · 11 classes",
+        "meta_1": "Available Now · $375 · 11 classes",
         "meta_2": "Translation · John C. Ciardi",
         "title": "The Divine Comedy",
         "image": "/Divine_Comedy.jpg",
