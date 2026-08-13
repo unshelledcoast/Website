@@ -47,7 +47,7 @@
     "details": [
       {
         "label": "Duration",
-        "value": "2½ months"
+        "value": "2½+ months"
       },
       {
         "label": "Format",
@@ -67,22 +67,22 @@
       {
         "kicker": "Course Overview",
         "title": "Format & Expectations",
-        "content": "<ul><li>10 weekly live sessions, one hour each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Aeneid</em>, translated by Robert Fitzgerald</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
+        "content": "<ul><li>11 weekly live sessions, one hour each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Aeneid</em>, translated by Robert Fitzgerald</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
       },
       {
         "kicker": "Course Method",
         "title": "How the Lectures Work",
-        "content": "Each pre-recorded lecture has two parts. Before you read, you listen to the introduction — essential context, background and what to look for. After you read, you return for the integrations section, which draws on copious poetic research and connects the Book to broader themes.<br><br>Recommended order: Introduction → Read the Book → Integrations."
+        "content": "Each pre-recorded lecture has two parts. Before you read the text, you listen to the introduction — essential context, background and what to look for. After you read the text, you return for the integrations section, which draws on copious research and connects the Book to broader themes.<br><br>Recommended order: Introduction → Read the Book → Integrations."
       },
       {
         "kicker": "Weekly Work",
         "title": "Recurring Assignments",
-        "content": "<ul><li><strong style=\"color:var(--warm)\">Weekly line selection:</strong> Each student chooses one line or passage — one they love, hate or have a question about — and shares it during class with a brief explanation at to why the student chose the excerpt.</li><li><strong style=\"color:var(--warm)\">Plot summary:</strong> Two or three students per week each write a ~seven-sentence summary for one assigned Book, shared at the start of discussion.</li></ul>"
+        "content": "<ul><li><strong style=\"color:var(--warm)\">Weekly line selection:</strong> Each student chooses one line or passage — one they love, hate or have a question about — and shares it during class with a brief explanation at to why the student chose the excerpt.</li><li><strong style=\"color:var(--warm)\">Plot summary:</strong> One student each week writes a summary for the assigned Book, shared at the start of discussion.</li></ul>"
       },
       {
         "kicker": "Live Sessions",
         "title": "Class Structure",
-        "content": "Each Book gets the same three-part structure: (1) Student's short plot summary, (2) Instructor's one to two thematic focus points from the lecture, (3) All students' line selections and open discussion. After class, students have open access to the instructor for further questions."
+        "content": "Each Book gets the same three-part structure: (1) student's short plot summary, (2) instructor's one-to-two thematic focus points from the lecture, (3) all students' line selections and open discussion. After class, students have open access to the instructor for further questions."
       },
       {
         "kicker": "Part I",
@@ -92,7 +92,7 @@
       {
         "kicker": "Part II",
         "title": "Classes 2–10: Book-by-Book",
-        "content": "Each subsequent class covers one (sometimes two) Books of the <em>Aeneid</em> (Books 1–12 across 9 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
+        "content": "Each subsequent class covers one (sometimes two) Books of the <em>Aeneid</em> (Books 1–12 across 10 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
       }
     ],
     "secondary_label": "Contact Nick",
