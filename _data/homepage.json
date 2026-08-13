@@ -77,7 +77,7 @@
       {
         "kicker": "Weekly Work",
         "title": "Recurring Assignments",
-        "content": "<ul><li><strong style=\"color:var(--warm)\">Weekly line selection:</strong> Each student chooses one line or short passage — one they love, hate or have a question about — and shares it during class with a brief explanation.</li><li><strong style=\"color:var(--warm)\">Plot summary:</strong> Two or three students per week each write a ~seven-sentence summary for one assigned Book, shared at the start of discussion.</li></ul>"
+        "content": "<ul><li><strong style=\"color:var(--warm)\">Weekly line selection:</strong> Each student chooses one line or passage — one they love, hate or have a question about — and shares it during class with a brief explanation at to why the student chose the excerpt.</li><li><strong style=\"color:var(--warm)\">Plot summary:</strong> Two or three students per week each write a ~seven-sentence summary for one assigned Book, shared at the start of discussion.</li></ul>"
       },
       {
         "kicker": "Live Sessions",
