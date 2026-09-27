@@ -55,7 +55,7 @@
       },
       {
         "label": "Sessions",
-        "value": "11 Classes"
+        "value": "12 Classes"
       },
       {
         "label": "Price",
@@ -72,7 +72,7 @@
       {
         "kicker": "Course Method",
         "title": "How the Lectures Work",
-        "content": "Each pre-recorded lecture has two parts. Before you read the text, you listen to the introduction — essential context, background and what to look for. After you read the text, you return for the integrations section, which draws on copious research and connects the Book to broader themes.<br><br>Recommended order: Introduction → Read the Book → Integrations."
+        "content": "Each pre-recorded lecture has two parts. Before you read the text, you listen to the introduction — essential context, background and what to look for. After you read the text, you return for the integrations section, which draws on copious research and connects the Book to broader themes.<br><br>Recommended order: Pre-Reading Introduction → Read the Book → Post-Reading Integrations."
       },
       {
         "kicker": "Weekly Work",
@@ -91,8 +91,8 @@
       },
       {
         "kicker": "Part II",
-        "title": "Classes 2–10: Book-by-Book",
-        "content": "Each subsequent class covers one (sometimes two) Books of the <em>Aeneid</em> (Books 1–12 across 10 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
+        "title": "Classes 2–12: Book-by-Book",
+        "content": "Each subsequent class covers one Book of the <em>Aeneid</em> (Books 1–12 across 10 sessions). Pre-class work includes the pre-recorded lecture and reading assignment. During class: student summaries, instructor's thematic focus, and group line discussion."
       }
     ],
     "secondary_label": "Contact Nick",
@@ -104,8 +104,8 @@
     "course_class": "course-virgil",
     "section_id": "iliad",
     "primary_label": "Enroll in This Course",
-    "subtitle": "Translated by Robert Fitzgerald · Instructor: Nick Rosado",
-    "tag": "Upcoming · September, 2026",
+    "subtitle": "Translated by Shadi Bartsch · Instructor: Nick Rosado",
+    "tag": "Upcoming · October, 2026",
     "description": "The <em>Aeneid</em> is not a poem about the Roman empire. It is a poem fundamentally about greatness and what it requires — captured in grief, triumph, and in the choices that cannot be unmade.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading; a live, one-hour session to discuss. All sessions are recorded. Asynchronous enrollment is available.",
     "art_image": "/Aeneid_Book_4.jpg"
   },
@@ -158,7 +158,7 @@
         "poet": "Virgil",
         "link_label": "Enroll Now",
         "meta_1": "Q4 2026 · Now Enrolling",
-        "meta_2": "Translation · Robert Fitzgerald",
+        "meta_2": "Translation · Shadi Bartsch",
         "title": "The Aeneid",
         "image": "/Aeneid_Book_4.jpg",
         "badge_class": "badge-red",
