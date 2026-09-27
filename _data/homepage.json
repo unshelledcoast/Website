@@ -67,7 +67,7 @@
       {
         "kicker": "Course Overview",
         "title": "Format & Expectations",
-        "content": "<ul><li>11 weekly live sessions, one hour each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Aeneid</em>, translated by Robert Fitzgerald</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
+        "content": "<ul><li>12 weekly live sessions, one hour and 15 minutes each</li><li>Pre-recorded lectures for every Book, split into pre-reading and post-reading sections</li><li>Required text: <em>Aeneid</em>, translated by Robert Fitzgerald</li><li>~2–3 hours of total weekly commitment (lecture + reading + session)</li><li>All sessions recorded and shared via private link with passcode</li><li>Full asynchronous option available</li></ul>"
       },
       {
         "kicker": "Course Method",
@@ -104,7 +104,7 @@
     "course_class": "course-virgil",
     "section_id": "iliad",
     "primary_label": "Enroll in This Course",
-    "subtitle": "Translated by Shadi Bartsch ",
+    "subtitle": " ",
     "tag": "Upcoming · October, 2026",
     "description": "The <em>Aeneid</em> is not a poem about the Roman empire. It is a poem fundamentally about greatness and what it requires — captured in grief, triumph, and in the choices that cannot be unmade.<br><br>Each week: a pre-recorded lecture to prepare and unpack the reading; a live, one-hour session to discuss. All sessions are recorded. Asynchronous enrollment is available.",
     "art_image": "/Aeneid_Book_4.jpg"
