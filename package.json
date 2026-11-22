@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "build:recovery": "esbuild _includes/identity-recovery.js --bundle --minify --outfile=_site/admin/recovery.bundle.js",
+    "prebuild": "npm run build:recovery",
+    "prestart": "npm run build:recovery"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@netlify/identity": "1.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.3"
   }
 }

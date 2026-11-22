@@ -1,0 +1,26 @@
+---
+permalink: /admin/recovery.html
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Reset CMS password — Enlightenment Educator</title>
+  <script type="module" src="/admin/recovery.bundle.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Reset your CMS password</h1>
+    <form id="recovery-form" hidden>
+      <p><label>New password <input name="password" type="password" autocomplete="new-password" minlength="6" required></label></p>
+      <p><label>Confirm new password <input name="confirmation" type="password" autocomplete="new-password" minlength="6" required></label></p>
+      <button type="submit">Update password</button>
+    </form>
+    <p id="recovery-status" role="status">Loading the password reset form…</p>
+    <p><a href="/admin/">Go to the CMS sign-in page</a></p>
+  </main>
+</body>
+</html>
