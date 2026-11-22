@@ -4,6 +4,11 @@ title: "Nick Rosado · Enlightenment Educator"
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if (/^#recovery_token=[^&]+/.test(window.location.hash)) {
+      window.location.replace("/admin/recovery.html" + window.location.hash);
+    }
+  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ homepage.meta.title }}</title>
